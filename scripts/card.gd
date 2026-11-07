@@ -19,3 +19,4 @@ func _ready() -> void:
 	button_1.set_text(option_1)
 	button_2.set_text(option_2)
 	button_3.set_text(option_3)
+	button_3.visible = false

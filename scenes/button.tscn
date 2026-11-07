@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dsm0gysm47txb"]
+
+[ext_resource type="Script" uid="uid://qxtbo2ug7jxn" path="res://scripts/button.gd" id="1_mi6dp"]
+
+[node name="Button" type="Button" unique_id=1965029988]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_mi6dp")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

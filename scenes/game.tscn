@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b8hmxj2dgu2ei"]
 
 [ext_resource type="PackedScene" uid="uid://yl33ltvvgh44" path="res://scenes/card.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://dsm0gysm47txb" path="res://scenes/button.tscn" id="2_yqjtg"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e7i1q"]
 
@@ -113,17 +114,13 @@ offset_transform_enabled = true
 columns = 2
 metadata/_tab_index = 0
 
-[node name="Button" type="Button" parent="UI/MarginContainer/VBoxContainer/Bottom/Actions" unique_id=708111056]
+[node name="DrawButton" parent="UI/MarginContainer/VBoxContainer/Bottom/Actions" unique_id=1965029988 instance=ExtResource("2_yqjtg")]
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
 text = "Draw"
 
-[node name="Button2" type="Button" parent="UI/MarginContainer/VBoxContainer/Bottom/Actions" unique_id=1128409805]
+[node name="SleepButton" parent="UI/MarginContainer/VBoxContainer/Bottom/Actions" unique_id=82622137 instance=ExtResource("2_yqjtg")]
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Rest"
+text = "Sleep"
 
 [node name="Pack" type="GridContainer" parent="UI/MarginContainer/VBoxContainer/Bottom" unique_id=1888671232]
 visible = false
