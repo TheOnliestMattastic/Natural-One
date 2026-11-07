@@ -1,0 +1,141 @@
+[gd_scene format=3 uid="uid://b8hmxj2dgu2ei"]
+
+[ext_resource type="PackedScene" uid="uid://yl33ltvvgh44" path="res://scenes/card.tscn" id="1_uwrxv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e7i1q"]
+
+[node name="Game" type="Node" unique_id=568490508]
+
+[node name="UI" type="Control" parent="." unique_id=2128815973]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UI" unique_id=375090825]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MarginContainer" unique_id=972279510]
+layout_mode = 2
+
+[node name="Header" type="PanelContainer" parent="UI/MarginContainer/VBoxContainer" unique_id=1018927282]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MarginContainer/VBoxContainer/Header" unique_id=190760425]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/MarginContainer/VBoxContainer/Header/VBoxContainer" unique_id=1997765952]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Day" type="RichTextLabel" parent="UI/MarginContainer/VBoxContainer/Header/VBoxContainer/HBoxContainer" unique_id=1155939434]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "Day: 1/7"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Phase" type="RichTextLabel" parent="UI/MarginContainer/VBoxContainer/Header/VBoxContainer/HBoxContainer" unique_id=1797351527]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Morning"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Actions" type="RichTextLabel" parent="UI/MarginContainer/VBoxContainer/Header/VBoxContainer/HBoxContainer" unique_id=189139775]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "Actions: 4/4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="UI/MarginContainer/VBoxContainer/Header/VBoxContainer" unique_id=900049445]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Health" type="RichTextLabel" parent="UI/MarginContainer/VBoxContainer/Header/VBoxContainer/HBoxContainer2" unique_id=185848864]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "Health: 6/6"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Hunger" type="RichTextLabel" parent="UI/MarginContainer/VBoxContainer/Header/VBoxContainer/HBoxContainer2" unique_id=729018240]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Hunger: 5/6"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Actions" type="RichTextLabel" parent="UI/MarginContainer/VBoxContainer/Header/VBoxContainer/HBoxContainer2" unique_id=1071419539]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "Thirst: 4/6"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Center" type="PanelContainer" parent="UI/MarginContainer/VBoxContainer" unique_id=807976130]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_e7i1q")
+
+[node name="Card" parent="UI/MarginContainer/VBoxContainer/Center" unique_id=1644298931 instance=ExtResource("1_uwrxv")]
+layout_mode = 2
+
+[node name="Bottom" type="TabContainer" parent="UI/MarginContainer/VBoxContainer" unique_id=763367368]
+layout_mode = 2
+size_flags_vertical = 3
+current_tab = 0
+
+[node name="Actions" type="GridContainer" parent="UI/MarginContainer/VBoxContainer/Bottom" unique_id=1728438276]
+layout_mode = 2
+offset_transform_enabled = true
+columns = 2
+metadata/_tab_index = 0
+
+[node name="Button" type="Button" parent="UI/MarginContainer/VBoxContainer/Bottom/Actions" unique_id=708111056]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Draw"
+
+[node name="Button2" type="Button" parent="UI/MarginContainer/VBoxContainer/Bottom/Actions" unique_id=1128409805]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Rest"
+
+[node name="Pack" type="GridContainer" parent="UI/MarginContainer/VBoxContainer/Bottom" unique_id=1888671232]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Craft" type="GridContainer" parent="UI/MarginContainer/VBoxContainer/Bottom" unique_id=694112478]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="Settings" type="GridContainer" parent="UI/MarginContainer/VBoxContainer/Bottom" unique_id=218364477]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
