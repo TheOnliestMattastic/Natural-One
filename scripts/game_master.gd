@@ -23,4 +23,6 @@ func _on_button_pressed(button) -> void:
 			ui.discard()
 			print("Leaving...")
 		
+		"Quit":
+			get_tree().quit()
 		_: print(button)
