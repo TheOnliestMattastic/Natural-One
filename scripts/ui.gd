@@ -1,5 +1,4 @@
 extends Control
-class_name Card
 
 const CARD = preload("uid://yl33ltvvgh44")
 @onready var center: PanelContainer = $MarginContainer/VBoxContainer/Center

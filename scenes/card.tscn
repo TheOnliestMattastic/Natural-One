@@ -1,20 +1,44 @@
 [gd_scene format=3 uid="uid://yl33ltvvgh44"]
 
-[ext_resource type="Script" uid="uid://3kyhr2w6uaji" path="res://scripts/card.gd" id="1_d81rb"]
+[ext_resource type="Script" uid="uid://3kyhr2w6uaji" path="res://scripts/scenes/card.gd" id="1_d81rb"]
+[ext_resource type="Resource" uid="uid://cklx52nwsevka" path="res://scripts/res/spring_water.tres" id="2_6u4wf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hwfa1"]
+bg_color = Color(0.16924527, 0.16924533, 0.16924518, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s8enn"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
+bg_color = Color(0.2901961, 0.6392157, 0.8509804, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4gq7n"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f73s1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pl73o"]
+bg_color = Color(0.2901961, 0.6392157, 0.8509804, 1)
+corner_radius_top_left = 192
+corner_radius_top_right = 192
+corner_radius_bottom_right = 192
+corner_radius_bottom_left = 192
+
+[sub_resource type="LabelSettings" id="LabelSettings_ktuci"]
+font_size = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6u4wf"]
+bg_color = Color(0.11858138, 0.11858139, 0.11858132, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
 
 [node name="Card" type="PanelContainer" unique_id=1644298931]
 custom_minimum_size = Vector2(412, 712.5)
@@ -31,36 +55,79 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_hwfa1")
 script = ExtResource("1_d81rb")
+card = ExtResource("2_6u4wf")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1293060090]
 layout_mode = 2
-theme_override_constants/margin_left = 4
-theme_override_constants/margin_top = 4
-theme_override_constants/margin_right = 4
-theme_override_constants/margin_bottom = 4
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1143576023]
 layout_mode = 2
 
-[node name="Name" type="Label" parent="MarginContainer/VBoxContainer" unique_id=572454450]
+[node name="TypeLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=572454450]
 layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.16862746, 0.16862746, 0.16862746, 1)
+theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_s8enn")
-text = "Card Name"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=920116986]
+layout_mode = 2
+theme_override_constants/separation = 32
+theme_override_styles/separator = SubResource("StyleBoxEmpty_f73s1")
 
 [node name="Image" type="AspectRatioContainer" parent="MarginContainer/VBoxContainer" unique_id=1218454958]
 layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 2.0
 
-[node name="Description" type="PanelContainer" parent="MarginContainer/VBoxContainer" unique_id=1445235530]
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/Image" unique_id=284245731]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pl73o")
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Image/PanelContainer" unique_id=727661780]
+modulate = Color(0.16862746, 0.16862746, 0.16862746, 1)
+custom_minimum_size = Vector2(128, 128)
+custom_maximum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=567278808]
+layout_mode = 2
+theme_override_constants/separation = 32
+theme_override_styles/separator = SubResource("StyleBoxEmpty_f73s1")
+
+[node name="Description" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1769205990]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_4gq7n")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/Description" unique_id=49611460]
+[node name="NameLabel" type="Label" parent="MarginContainer/VBoxContainer/Description" unique_id=1859254402]
 layout_mode = 2
-bbcode_enabled = true
-text = "Card description"
+label_settings = SubResource("LabelSettings_ktuci")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer/Description" unique_id=1738145482]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_f73s1")
+
+[node name="DescLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/Description" unique_id=614321985]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 24
+horizontal_alignment = 1
+
+[node name="EffectsLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=2080699199]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_6u4wf")
+horizontal_alignment = 1
+vertical_alignment = 1
