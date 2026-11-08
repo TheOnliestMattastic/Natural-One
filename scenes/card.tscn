@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://yl33ltvvgh44"]
 
 [ext_resource type="Script" uid="uid://3kyhr2w6uaji" path="res://scripts/scenes/card.gd" id="1_d81rb"]
-[ext_resource type="Resource" uid="uid://cklx52nwsevka" path="res://scripts/res/spring_water.tres" id="2_6u4wf"]
+[ext_resource type="Resource" uid="uid://b6wk6lvqa5arj" path="res://scripts/res/inner_bark_strips.tres" id="2_6u4wf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hwfa1"]
 bg_color = Color(0.16924527, 0.16924533, 0.16924518, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s8enn"]
-bg_color = Color(0.2901961, 0.6392157, 0.8509804, 1)
+bg_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
@@ -20,7 +20,7 @@ expand_margin_bottom = 8.0
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f73s1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pl73o"]
-bg_color = Color(0.2901961, 0.6392157, 0.8509804, 1)
+bg_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 192
 corner_radius_top_right = 192
 corner_radius_bottom_right = 192

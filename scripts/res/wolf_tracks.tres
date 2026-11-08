@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_1wuqv")
 card_class = 3
-card_type = 2
+card_type = 4
 card_name = "Wolf Tracks"
 card_description = "Fresh prints circle your camp."
 card_effects = "Roll for Wolf encounter"
