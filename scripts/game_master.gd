@@ -11,5 +11,8 @@ func _on_button_pressed(button) -> void:
 			ui.draw_card()
 			print("Drawing...")
 		
-		"Sleep": print("Sleeping...")
+		"Sleep": 
+			ui.discard()
+			print("Sleeping...")
+		
 		_: print(button)
