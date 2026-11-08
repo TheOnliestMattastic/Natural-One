@@ -11,4 +11,4 @@ func draw_card() -> void:
 func discard() -> void: 
 	if center.get_child_count() == 0: return
 	var card = center.get_child(0)
-	if card: card.free()
+	if card: card.queue_free()

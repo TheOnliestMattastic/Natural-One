@@ -1,3 +1,5 @@
+# Tarot card pixel size: 825 x 1425
+# ----------------------------------
 extends PanelContainer
 
 @export var card_name: String = "Card Name"
@@ -16,19 +18,19 @@ extends PanelContainer
 func _ready() -> void:
 	set_values(card_name, card_description, card_image, option_1, option_2, option_3)
 
-func set_values(_card_name: String, _card_description: String, _card_image: Sprite2D, _option_1: String = "", _option_2: String = "", _option_3: String = "") -> void:
-	card_name = _card_name
-	card_description = _card_description
-	card_image = _card_image
-	option_1 = _option_1
-	option_2 = _option_2
-	option_3 = _option_3
+func set_values(text: String, description: String, image: Sprite2D, opt_1: String = "", opt_2: String = "", opt_3: String = "") -> void:
+	card_name = text
+	card_description = description
+	card_image = image
+	option_1 = opt_1
+	option_2 = opt_2
+	option_3 = opt_3
 	
 	name_label.set_text(card_name)
 	description_label.set_text(card_description)
-	button_1.set_text(option_1)
-	button_2.set_text(option_2)
-	button_3.set_text(option_3)
+	button_1.set_text(opt_1)
+	button_2.set_text(opt_2)
+	button_3.set_text(opt_3)
 	
 	# setting button visibility
 	if button_1.text == "": button_1.visible = false

@@ -15,4 +15,12 @@ func _on_button_pressed(button) -> void:
 			ui.discard()
 			print("Sleeping...")
 		
+		"Pack":
+			ui.discard()
+			print("Packing...")
+		
+		"Leave":
+			ui.discard()
+			print("Leaving...")
+		
 		_: print(button)

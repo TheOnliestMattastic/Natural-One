@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://ddd7muys8yekl" path="res://scripts/ui.gd" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://dsm0gysm47txb" path="res://scenes/button.tscn" id="2_yqjtg"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e7i1q"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pl73o"]
 
 [node name="Game" type="Node" unique_id=568490508]
 
@@ -101,11 +101,11 @@ text = "Thirst: 4/6"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Center" type="PanelContainer" parent="UI/MarginContainer/VBoxContainer" unique_id=807976130]
+[node name="Center" type="PanelContainer" parent="UI/MarginContainer/VBoxContainer" unique_id=1827196219]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 3.0
-theme_override_styles/panel = SubResource("StyleBoxEmpty_e7i1q")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_pl73o")
 
 [node name="Bottom" type="TabContainer" parent="UI/MarginContainer/VBoxContainer" unique_id=763367368]
 layout_mode = 2
