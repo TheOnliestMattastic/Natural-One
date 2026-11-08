@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b8hmxj2dgu2ei"]
 
-[ext_resource type="Script" uid="uid://bia4suaeusweh" path="res://scripts/game_master.gd" id="1_lbhrr"]
+[ext_resource type="Script" uid="uid://3jupa4urlxyp" path="res://scripts/game.gd" id="1_iywne"]
 [ext_resource type="Script" uid="uid://ddd7muys8yekl" path="res://scripts/ui.gd" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://dsm0gysm47txb" path="res://scenes/button.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://j7841f0rtjdf" path="res://scenes/item.tscn" id="4_lbhrr"]
@@ -9,13 +9,9 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pl73o"]
 
 [node name="Game" type="Node" unique_id=568490508]
-
-[node name="GameMaster" type="Node" parent="." unique_id=1397079635]
-unique_name_in_owner = true
-script = ExtResource("1_lbhrr")
+script = ExtResource("1_iywne")
 
 [node name="UI" type="Control" parent="." unique_id=2128815973]
-unique_name_in_owner = true
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

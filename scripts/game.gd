@@ -1,6 +1,6 @@
 extends Node
 
-@onready var ui: Control = %UI
+@onready var ui: Control = $UI
 
 func _ready() -> void:
 	EventBus.button_pressed.connect(_on_button_pressed)
