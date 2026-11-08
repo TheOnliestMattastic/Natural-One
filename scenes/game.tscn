@@ -1,19 +1,26 @@
 [gd_scene format=3 uid="uid://b8hmxj2dgu2ei"]
 
-[ext_resource type="PackedScene" uid="uid://yl33ltvvgh44" path="res://scenes/card.tscn" id="1_uwrxv"]
+[ext_resource type="Script" uid="uid://bia4suaeusweh" path="res://scripts/game_master.gd" id="1_lbhrr"]
+[ext_resource type="Script" uid="uid://ddd7muys8yekl" path="res://scripts/ui.gd" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://dsm0gysm47txb" path="res://scenes/button.tscn" id="2_yqjtg"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e7i1q"]
 
 [node name="Game" type="Node" unique_id=568490508]
 
+[node name="GameMaster" type="Node" parent="." unique_id=1397079635]
+unique_name_in_owner = true
+script = ExtResource("1_lbhrr")
+
 [node name="UI" type="Control" parent="." unique_id=2128815973]
+unique_name_in_owner = true
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_lnu2h")
 
 [node name="MarginContainer" type="MarginContainer" parent="UI" unique_id=375090825]
 layout_mode = 1
@@ -100,9 +107,6 @@ size_flags_vertical = 3
 size_flags_stretch_ratio = 3.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_e7i1q")
 
-[node name="Card" parent="UI/MarginContainer/VBoxContainer/Center" unique_id=1644298931 instance=ExtResource("1_uwrxv")]
-layout_mode = 2
-
 [node name="Bottom" type="TabContainer" parent="UI/MarginContainer/VBoxContainer" unique_id=763367368]
 layout_mode = 2
 size_flags_vertical = 3
@@ -114,11 +118,11 @@ offset_transform_enabled = true
 columns = 2
 metadata/_tab_index = 0
 
-[node name="DrawButton" parent="UI/MarginContainer/VBoxContainer/Bottom/Actions" unique_id=1965029988 instance=ExtResource("2_yqjtg")]
+[node name="Draw" parent="UI/MarginContainer/VBoxContainer/Bottom/Actions" unique_id=1965029988 instance=ExtResource("2_yqjtg")]
 layout_mode = 2
 text = "Draw"
 
-[node name="SleepButton" parent="UI/MarginContainer/VBoxContainer/Bottom/Actions" unique_id=82622137 instance=ExtResource("2_yqjtg")]
+[node name="Sleep" parent="UI/MarginContainer/VBoxContainer/Bottom/Actions" unique_id=82622137 instance=ExtResource("2_yqjtg")]
 layout_mode = 2
 text = "Sleep"
 

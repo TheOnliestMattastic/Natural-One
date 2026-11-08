@@ -1,4 +1,4 @@
 extends Button
 
 func _on_pressed() -> void:
-	print(text)
+	EventBus.button_pressed.emit(text)
