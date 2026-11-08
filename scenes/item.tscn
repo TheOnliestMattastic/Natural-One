@@ -2,6 +2,13 @@
 
 [ext_resource type="Script" uid="uid://i8f514p1ayub" path="res://scripts/item.gd" id="1_4gq7n"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d81rb"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
 [node name="Item" type="PanelContainer" unique_id=1644298931]
 custom_minimum_size = Vector2(103, 178)
 anchors_preset = 8
@@ -9,10 +16,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -51.5
-offset_top = -89.0
-offset_right = 51.5
-offset_bottom = 89.0
+offset_left = -53.0
+offset_top = -90.0
+offset_right = 50.0
+offset_bottom = 88.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -31,6 +38,7 @@ layout_mode = 2
 
 [node name="Name" type="Label" parent="MarginContainer/VBoxContainer" unique_id=572454450]
 layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_d81rb")
 text = "Item"
 horizontal_alignment = 1
 vertical_alignment = 1

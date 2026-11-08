@@ -2,7 +2,7 @@
 # ----------------------------------
 extends PanelContainer
 
-@export var card_name: String = "Equipment"
+@export var card_name: String = "Gear"
 @export var card_image: Sprite2D
 
 @onready var name_label: Label = $MarginContainer/VBoxContainer/Name
