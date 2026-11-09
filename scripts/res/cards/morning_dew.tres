@@ -7,6 +7,6 @@
 script = ExtResource("1_nuw2j")
 card_name = "Morning Dew"
 card_description = "Fresh droplets carefully gathered from heavy foliage at dawn using a cloth or broad leaf."
-card_effects = "Thirst +1"
+card_effects = "Water +1"
 card_image = ExtResource("1_rhalh")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"

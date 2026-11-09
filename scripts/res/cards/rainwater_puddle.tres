@@ -7,6 +7,6 @@
 script = ExtResource("1_m766l")
 card_name = "Rainwater Puddle"
 card_description = "Clear rainwater collected in the hollow of a broad stone after a storm; refreshing and safe to drink."
-card_effects = "Thirst +2"
+card_effects = "Water +2"
 card_image = ExtResource("1_3jf8e")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"

@@ -5,9 +5,8 @@
 
 [resource]
 script = ExtResource("1_87454")
-card_type = "Water"
 card_name = "Spring Water"
 card_description = "A cold, clear trickle between the rocks."
-card_effects = "Thirst +1"
+card_effects = "Water +1"
 card_image = ExtResource("1_vyqfc")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"

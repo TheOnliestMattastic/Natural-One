@@ -2,7 +2,6 @@ extends Resource
 class_name Card
 
 enum Class {RESOURCE, ITEM, GEAR, ENCOUNTER}
-
 enum Type {WATER, FOOD, WOOD, FIBER, WARNING}
 const TYPE_COLORS = {
 	Type.WATER: Color("4AA3D9"),

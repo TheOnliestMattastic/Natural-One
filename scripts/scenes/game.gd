@@ -7,7 +7,7 @@ func _ready() -> void:
 
 func _on_button_pressed(button) -> void:
 	match button:
-		"Draw": 
+		"Wayfind": 
 			ui.draw_card()
 			print("Drawing...")
 		
@@ -22,6 +22,18 @@ func _on_button_pressed(button) -> void:
 		"Leave":
 			ui.discard()
 			print("Leaving...")
+		
+		"Fight":
+			ui.discard()
+			print("Fighting...")
+		
+		"Hide":
+			ui.discard()
+			print("Hiding...")
+		
+		"Flee":
+			ui.discard()
+			print("Fleeing...")
 		
 		"Quit":
 			get_tree().quit()

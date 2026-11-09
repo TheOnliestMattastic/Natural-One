@@ -1,10 +1,8 @@
 [gd_scene format=3 uid="uid://yl33ltvvgh44"]
 
 [ext_resource type="Script" uid="uid://3kyhr2w6uaji" path="res://scripts/scenes/card.gd" id="1_d81rb"]
-[ext_resource type="Resource" uid="uid://b6wk6lvqa5arj" path="res://scripts/res/inner_bark_strips.tres" id="2_6u4wf"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hwfa1"]
-bg_color = Color(0.16924527, 0.16924533, 0.16924518, 1)
+[ext_resource type="StyleBox" uid="uid://dg52ryekxhwl5" path="res://scripts/res/style_panel.tres" id="1_ktuci"]
+[ext_resource type="Resource" uid="uid://bhhyuqa02neqf" path="res://scripts/res/cards/morning_dew.tres" id="2_6u4wf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s8enn"]
 bg_color = Color(1, 1, 1, 1)
@@ -55,7 +53,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_styles/panel = SubResource("StyleBoxFlat_hwfa1")
+theme_override_styles/panel = ExtResource("1_ktuci")
 script = ExtResource("1_d81rb")
 card = ExtResource("2_6u4wf")
 
