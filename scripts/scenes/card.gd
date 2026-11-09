@@ -32,9 +32,6 @@ func refresh_ui() -> void:
 	stylebox.bg_color = card_data.get_class_color()
 	effects_label.set_text(card_data.card_effects)
 	
-	
 	# remaining values
 	name_label.set_text(card_data.card_name)
 	desc_label.set_text(card_data.card_description)
-	
-	

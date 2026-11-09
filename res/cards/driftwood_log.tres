@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Card" format=3 uid="uid://ynqq3ds4wfm8"]
 
 [ext_resource type="Texture2D" uid="uid://cvck3acef5pb3" path="res://assets/icon-packs/delapouite/log.svg" id="1_770pb"]
-[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://res/res_card.gd" id="1_uauhw"]
+[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res_card.gd" id="1_uauhw"]
 
 [resource]
 script = ExtResource("1_uauhw")

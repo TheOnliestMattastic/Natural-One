@@ -3,7 +3,7 @@
 [ext_resource type="StyleBox" uid="uid://bwoy1qt5b1u8k" path="res://res/style_card_small.tres" id="1_7j0fb"]
 [ext_resource type="Script" uid="uid://dfew4soijx6le" path="res://scripts/scenes/gear.gd" id="1_btfrt"]
 [ext_resource type="StyleBox" uid="uid://cfdirolysueq5" path="res://res/style_bg_circle_small.tres" id="3_4l2pq"]
-[ext_resource type="Texture2D" uid="uid://cyc0qu328tkmh" path="res://assets/icon-packs/lorc/stone-axe.svg" id="4_6xtmk"]
+[ext_resource type="Texture2D" uid="uid://38lc1xqeaa64" path="res://assets/icon-packs/carl-olsen/crossbow.svg" id="3_6xtmk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7j0fb"]
 bg_color = Color(1, 1, 1, 1)
@@ -29,6 +29,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_styles/panel = ExtResource("1_7j0fb")
 script = ExtResource("1_btfrt")
+card_image = ExtResource("3_6xtmk")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1143576023]
 layout_mode = 2
@@ -37,7 +38,6 @@ layout_mode = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(0.17254902, 0.1764706, 0.19607843, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_7j0fb")
-text = "Gear"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -57,6 +57,5 @@ custom_maximum_size = Vector2(56, 56)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource("4_6xtmk")
 expand_mode = 1
 stretch_mode = 5

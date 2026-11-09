@@ -1,11 +1,10 @@
 extends Resource
 class_name Card
 
-enum Class {RESOURCE, ITEM, GEAR, ENCOUNTER}
+enum Class {RESOURCE, ITEM, ENCOUNTER}
 const CLASS_COLORS = {
 	Class.RESOURCE: Color("011627"),
 	Class.ITEM: Color("685634"),
-	Class.GEAR: Color("360A14"),
 	Class.ENCOUNTER: Color("780116")
 }
 

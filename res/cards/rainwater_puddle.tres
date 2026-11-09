@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Card" format=3 uid="uid://de44u7r5krik2"]
 
 [ext_resource type="Texture2D" uid="uid://ube4t62pk34u" path="res://assets/icon-packs/lorc/droplets.svg" id="1_3jf8e"]
-[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://res/res_card.gd" id="1_m766l"]
+[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res_card.gd" id="1_m766l"]
 
 [resource]
 script = ExtResource("1_m766l")

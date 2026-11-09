@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Card" format=3 uid="uid://cfwm505qg0hip"]
 
-[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://res/res_card.gd" id="1_dr1sa"]
+[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res_card.gd" id="1_dr1sa"]
 [ext_resource type="Texture2D" uid="uid://vhbd5h8w1l6u" path="res://assets/icon-packs/lorc/flat-paw-print.svg" id="1_pweee"]
 
 [resource]
