@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Card" format=3 uid="uid://b6wk6lvqa5arj"]
 
-[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/res_card.gd" id="1_1fx7f"]
+[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://res/res_card.gd" id="1_1fx7f"]
 [ext_resource type="Texture2D" uid="uid://d32lf2rcpxg57" path="res://assets/icon-packs/caro-asercion/birch-trees.svg" id="1_6h7ps"]
 
 [resource]

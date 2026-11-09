@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Card" format=3 uid="uid://bhhyuqa02neqf"]
 
-[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/res_card.gd" id="1_nuw2j"]
+[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://res/res_card.gd" id="1_nuw2j"]
 [ext_resource type="Texture2D" uid="uid://klgkgjmwja14" path="res://assets/icon-packs/lorc/dew.svg" id="1_rhalh"]
 
 [resource]
