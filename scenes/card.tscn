@@ -2,6 +2,7 @@
 
 [ext_resource type="StyleBox" uid="uid://dbjv1pgr0a3ei" path="res://res/style_card.tres" id="1_6u4wf"]
 [ext_resource type="Script" uid="uid://3kyhr2w6uaji" path="res://scripts/scenes/card.gd" id="1_d81rb"]
+[ext_resource type="StyleBox" uid="uid://oavj6lc088c4" path="res://res/style_bg_circle.tres" id="3_ktuci"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s8enn"]
 bg_color = Color(1, 1, 1, 1)
@@ -16,18 +17,11 @@ expand_margin_bottom = 8.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f73s1"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pl73o"]
-bg_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 192
-corner_radius_top_right = 192
-corner_radius_bottom_right = 192
-corner_radius_bottom_left = 192
-
 [sub_resource type="LabelSettings" id="LabelSettings_ktuci"]
 font_size = 32
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6u4wf"]
-bg_color = Color(0.07724262, 0.08032904, 0.09267671, 1)
+bg_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
@@ -78,7 +72,7 @@ size_flags_vertical = 3
 
 [node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/Image" unique_id=284245731]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_pl73o")
+theme_override_styles/panel = ExtResource("3_ktuci")
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer/Image/PanelContainer" unique_id=727661780]
 modulate = Color(0.16862746, 0.16862746, 0.16862746, 1)

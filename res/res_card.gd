@@ -2,6 +2,13 @@ extends Resource
 class_name Card
 
 enum Class {RESOURCE, ITEM, GEAR, ENCOUNTER}
+const CLASS_COLORS = {
+	Class.RESOURCE: Color("011627"),
+	Class.ITEM: Color("685634"),
+	Class.GEAR: Color("360A14"),
+	Class.ENCOUNTER: Color("780116")
+}
+
 enum Type {WATER, FOOD, WOOD, FIBER, WARNING}
 const TYPE_COLORS = {
 	Type.WATER: Color("4AA3D9"),
@@ -19,5 +26,8 @@ const TYPE_COLORS = {
 @export var card_effects: String = "Effect +1"
 @export var card_image: Texture2D
 
-func get_class_color() -> Color:
+func get_type_color() -> Color:
 	return TYPE_COLORS.get(card_type, Color.WHITE)
+
+func get_class_color() -> Color:
+	return CLASS_COLORS.get(card_class, Color.WHITE)

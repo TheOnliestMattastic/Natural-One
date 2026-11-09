@@ -21,13 +21,20 @@ func refresh_ui() -> void:
 	# type and color
 	var type_key = card_data.card_type
 	type_label.set_text(card_data.Type.keys()[type_key])
-	type_label.self_modulate = card_data.get_class_color()
+	type_label.self_modulate = card_data.get_type_color()
 	
 	# image and color
 	texture_rect.set_texture(card_data.card_image)
-	panel_container.self_modulate = card_data.get_class_color()
+	panel_container.self_modulate = card_data.get_type_color()
+	
+	# effects and color
+	var stylebox = effects_label.get_theme_stylebox("normal") as StyleBoxFlat
+	stylebox.bg_color = card_data.get_class_color()
+	effects_label.set_text(card_data.card_effects)
+	
 	
 	# remaining values
 	name_label.set_text(card_data.card_name)
 	desc_label.set_text(card_data.card_description)
-	effects_label.set_text(card_data.card_effects)
+	
+	

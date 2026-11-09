@@ -2,6 +2,8 @@
 
 [ext_resource type="StyleBox" uid="uid://bwoy1qt5b1u8k" path="res://res/style_card_small.tres" id="1_7j0fb"]
 [ext_resource type="Script" uid="uid://dfew4soijx6le" path="res://scripts/scenes/gear.gd" id="1_btfrt"]
+[ext_resource type="StyleBox" uid="uid://cfdirolysueq5" path="res://res/style_bg_circle_small.tres" id="3_4l2pq"]
+[ext_resource type="Texture2D" uid="uid://cyc0qu328tkmh" path="res://assets/icon-packs/lorc/stone-axe.svg" id="4_6xtmk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7j0fb"]
 bg_color = Color(1, 1, 1, 1)
@@ -43,3 +45,18 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/Image" unique_id=1222556570]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("3_4l2pq")
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Image/PanelContainer" unique_id=1494221556]
+modulate = Color(0.16862746, 0.16862746, 0.16862746, 1)
+custom_minimum_size = Vector2(56, 56)
+custom_maximum_size = Vector2(56, 56)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("4_6xtmk")
+expand_mode = 1
+stretch_mode = 5

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://i8f514p1ayub" path="res://scripts/scenes/item.gd" id="1_4gq7n"]
 [ext_resource type="StyleBox" uid="uid://bwoy1qt5b1u8k" path="res://res/style_card_small.tres" id="1_s8enn"]
+[ext_resource type="StyleBox" uid="uid://cfdirolysueq5" path="res://res/style_bg_circle_small.tres" id="3_6muww"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s8enn"]
 bg_color = Color(1, 1, 1, 1)
@@ -43,3 +44,16 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/Image" unique_id=217191821]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("3_6muww")
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Image" unique_id=1870149072]
+custom_minimum_size = Vector2(56, 56)
+custom_maximum_size = Vector2(56, 56)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+expand_mode = 1
+stretch_mode = 5
