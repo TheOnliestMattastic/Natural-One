@@ -1,11 +1,9 @@
 # Tarot card pixel size: 825 x 1425
-# ----------------------------------
 extends PanelContainer
 
 @export var card_name: String = "Item"
 @export var card_image: Sprite2D
-
-@onready var name_label: Label = $MarginContainer/VBoxContainer/Name
+@onready var name_label: Label = $VBoxContainer/Name
 
 func _ready() -> void:
 	set_values(card_name, card_image)

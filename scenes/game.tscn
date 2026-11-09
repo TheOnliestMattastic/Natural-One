@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://ddd7muys8yekl" path="res://scripts/ui.gd" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://dsm0gysm47txb" path="res://scenes/button.tscn" id="2_yqjtg"]
 [ext_resource type="Resource" uid="uid://cfwm505qg0hip" path="res://res/cards/bear_tracks.tres" id="3_264po"]
-[ext_resource type="StyleBox" uid="uid://dg52ryekxhwl5" path="res://res/style_panel.tres" id="3_p57ef"]
+[ext_resource type="StyleBox" uid="uid://dg52ryekxhwl5" path="res://res/style_panel_border.tres" id="3_p57ef"]
 [ext_resource type="Resource" uid="uid://ynqq3ds4wfm8" path="res://res/cards/driftwood_log.tres" id="4_1kice"]
 [ext_resource type="PackedScene" uid="uid://j7841f0rtjdf" path="res://scenes/item.tscn" id="4_lbhrr"]
 [ext_resource type="Resource" uid="uid://cfgn27kw7i5ik" path="res://res/cards/dry_twigs.tres" id="5_5newe"]
@@ -56,6 +56,7 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.25
+theme_override_styles/panel = ExtResource("3_p57ef")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="UI/MarginContainer/VBoxContainer/Header" unique_id=190760425]
 layout_mode = 2

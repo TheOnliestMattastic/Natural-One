@@ -2,12 +2,12 @@
 extends PanelContainer
 
 # nodes
-@onready var type_label: Label = $MarginContainer/VBoxContainer/TypeLabel
-@onready var texture_rect: TextureRect = $MarginContainer/VBoxContainer/Image/PanelContainer/TextureRect
-@onready var name_label: Label = $MarginContainer/VBoxContainer/Description/NameLabel
-@onready var desc_label: RichTextLabel = $MarginContainer/VBoxContainer/Description/DescLabel
-@onready var effects_label: Label = $MarginContainer/VBoxContainer/EffectsLabel
-@onready var panel_container: PanelContainer = $MarginContainer/VBoxContainer/Image/PanelContainer
+@onready var type_label: Label = $VBoxContainer/TypeLabel
+@onready var texture_rect: TextureRect = $VBoxContainer/Image/PanelContainer/TextureRect
+@onready var name_label: Label = $VBoxContainer/Description/NameLabel
+@onready var desc_label: RichTextLabel = $VBoxContainer/Description/DescLabel
+@onready var effects_label: Label = $VBoxContainer/EffectsLabel
+@onready var panel_container: PanelContainer = $VBoxContainer/Image/PanelContainer
 
 var card_data: Resource
 

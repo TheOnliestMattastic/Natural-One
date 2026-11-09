@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://yl33ltvvgh44"]
 
+[ext_resource type="StyleBox" uid="uid://dbjv1pgr0a3ei" path="res://res/style_card.tres" id="1_6u4wf"]
 [ext_resource type="Script" uid="uid://3kyhr2w6uaji" path="res://scripts/scenes/card.gd" id="1_d81rb"]
-[ext_resource type="StyleBox" uid="uid://dg52ryekxhwl5" path="res://res/style_panel.tres" id="1_ktuci"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s8enn"]
 bg_color = Color(1, 1, 1, 1)
@@ -27,7 +27,7 @@ corner_radius_bottom_left = 192
 font_size = 32
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6u4wf"]
-bg_color = Color(0.11858138, 0.11858139, 0.11858132, 1)
+bg_color = Color(0.07724262, 0.08032904, 0.09267671, 1)
 corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
@@ -52,42 +52,35 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_styles/panel = ExtResource("1_ktuci")
+theme_override_styles/panel = ExtResource("1_6u4wf")
 script = ExtResource("1_d81rb")
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1293060090]
-layout_mode = 2
-theme_override_constants/margin_left = 24
-theme_override_constants/margin_top = 24
-theme_override_constants/margin_right = 24
-theme_override_constants/margin_bottom = 24
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1143576023]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1143576023]
 layout_mode = 2
 
-[node name="TypeLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=572454450]
+[node name="TypeLabel" type="Label" parent="VBoxContainer" unique_id=572454450]
 layout_mode = 2
 size_flags_horizontal = 0
-theme_override_colors/font_color = Color(0.16862746, 0.16862746, 0.16862746, 1)
+theme_override_colors/font_color = Color(0.19607843, 0.2, 0.22352941, 1)
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_s8enn")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=920116986]
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer" unique_id=920116986]
 layout_mode = 2
 theme_override_constants/separation = 32
 theme_override_styles/separator = SubResource("StyleBoxEmpty_f73s1")
 
-[node name="Image" type="AspectRatioContainer" parent="MarginContainer/VBoxContainer" unique_id=1218454958]
+[node name="Image" type="AspectRatioContainer" parent="VBoxContainer" unique_id=1218454958]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/Image" unique_id=284245731]
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/Image" unique_id=284245731]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_pl73o")
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Image/PanelContainer" unique_id=727661780]
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Image/PanelContainer" unique_id=727661780]
 modulate = Color(0.16862746, 0.16862746, 0.16862746, 1)
 custom_minimum_size = Vector2(128, 128)
 custom_maximum_size = Vector2(128, 128)
@@ -97,32 +90,32 @@ size_flags_vertical = 4
 expand_mode = 1
 stretch_mode = 5
 
-[node name="HSeparator2" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=567278808]
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer" unique_id=567278808]
 layout_mode = 2
 theme_override_constants/separation = 32
 theme_override_styles/separator = SubResource("StyleBoxEmpty_f73s1")
 
-[node name="Description" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1769205990]
+[node name="Description" type="VBoxContainer" parent="VBoxContainer" unique_id=1769205990]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="NameLabel" type="Label" parent="MarginContainer/VBoxContainer/Description" unique_id=1859254402]
+[node name="NameLabel" type="Label" parent="VBoxContainer/Description" unique_id=1859254402]
 layout_mode = 2
 label_settings = SubResource("LabelSettings_ktuci")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer/Description" unique_id=1738145482]
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/Description" unique_id=1738145482]
 layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxEmpty_f73s1")
 
-[node name="DescLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/Description" unique_id=614321985]
+[node name="DescLabel" type="RichTextLabel" parent="VBoxContainer/Description" unique_id=614321985]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/normal_font_size = 24
 horizontal_alignment = 1
 
-[node name="EffectsLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=2080699199]
+[node name="EffectsLabel" type="Label" parent="VBoxContainer" unique_id=2080699199]
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_6u4wf")
 horizontal_alignment = 1
