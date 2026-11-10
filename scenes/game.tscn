@@ -1,29 +1,28 @@
 [gd_scene format=3 uid="uid://b8hmxj2dgu2ei"]
 
 [ext_resource type="Script" uid="uid://3jupa4urlxyp" path="res://scripts/scenes/game.gd" id="1_iywne"]
-[ext_resource type="Script" uid="uid://ddd7muys8yekl" path="res://scripts/ui.gd" id="1_lnu2h"]
+[ext_resource type="Script" uid="uid://ddd7muys8yekl" path="res://scripts/sys/ui.gd" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://dsm0gysm47txb" path="res://scenes/button.tscn" id="2_yqjtg"]
-[ext_resource type="Resource" uid="uid://cfwm505qg0hip" path="res://res/cards/bear_tracks.tres" id="3_264po"]
+[ext_resource type="Resource" uid="uid://cfwm505qg0hip" path="res://res/cards/encounter/bear_tracks.tres" id="3_264po"]
 [ext_resource type="StyleBox" uid="uid://dg52ryekxhwl5" path="res://res/style_panel_border.tres" id="3_p57ef"]
-[ext_resource type="Resource" uid="uid://ynqq3ds4wfm8" path="res://res/cards/driftwood_log.tres" id="4_1kice"]
-[ext_resource type="PackedScene" uid="uid://j7841f0rtjdf" path="res://scenes/item.tscn" id="4_lbhrr"]
-[ext_resource type="Resource" uid="uid://cfgn27kw7i5ik" path="res://res/cards/dry_twigs.tres" id="5_5newe"]
-[ext_resource type="PackedScene" uid="uid://cf6mastkla0xp" path="res://scenes/gear.tscn" id="5_iywne"]
-[ext_resource type="Resource" uid="uid://dj5g1rs1gfgeh" path="res://res/cards/fallen_branch.tres" id="6_37s47"]
-[ext_resource type="Resource" uid="uid://cab65vdlbmelq" path="res://res/cards/foraged_berries.tres" id="7_bt5mj"]
-[ext_resource type="Resource" uid="uid://b6wk6lvqa5arj" path="res://res/cards/inner_bark_strips.tres" id="8_e1j6l"]
-[ext_resource type="Resource" uid="uid://bhhyuqa02neqf" path="res://res/cards/morning_dew.tres" id="9_pl11u"]
-[ext_resource type="Resource" uid="uid://de44u7r5krik2" path="res://res/cards/rainwater_puddle.tres" id="10_bhx41"]
-[ext_resource type="Resource" uid="uid://cklx52nwsevka" path="res://res/cards/spring_water.tres" id="11_qnb83"]
-[ext_resource type="Resource" uid="uid://dtkpbaji2arho" path="res://res/cards/stream_water.tres" id="12_sww3w"]
-[ext_resource type="Resource" uid="uid://cosdggqbefk86" path="res://res/cards/tough_vine_tendrils.tres" id="13_suyxu"]
-[ext_resource type="Resource" uid="uid://dn7dgf61mtspb" path="res://res/cards/wild_plant_fibers.tres" id="14_sgl2t"]
-[ext_resource type="Resource" uid="uid://8syr8xpgueiw" path="res://res/cards/wolf_tracks.tres" id="15_qouja"]
+[ext_resource type="Resource" uid="uid://ynqq3ds4wfm8" path="res://res/cards/resource/driftwood_log.tres" id="4_1kice"]
+[ext_resource type="Resource" uid="uid://cfgn27kw7i5ik" path="res://res/cards/resource/dry_twigs.tres" id="5_5newe"]
+[ext_resource type="Resource" uid="uid://dj5g1rs1gfgeh" path="res://res/cards/resource/fallen_branch.tres" id="6_37s47"]
+[ext_resource type="Resource" uid="uid://cab65vdlbmelq" path="res://res/cards/resource/foraged_berries.tres" id="7_bt5mj"]
+[ext_resource type="Resource" uid="uid://b6wk6lvqa5arj" path="res://res/cards/resource/inner_bark_strips.tres" id="8_e1j6l"]
+[ext_resource type="Resource" uid="uid://bhhyuqa02neqf" path="res://res/cards/resource/morning_dew.tres" id="9_pl11u"]
+[ext_resource type="Resource" uid="uid://de44u7r5krik2" path="res://res/cards/resource/rainwater_puddle.tres" id="10_bhx41"]
+[ext_resource type="Resource" uid="uid://cklx52nwsevka" path="res://res/cards/resource/spring_water.tres" id="11_qnb83"]
+[ext_resource type="Resource" uid="uid://dtkpbaji2arho" path="res://res/cards/resource/stream_water.tres" id="12_sww3w"]
+[ext_resource type="Resource" uid="uid://cosdggqbefk86" path="res://res/cards/resource/tough_vine_tendrils.tres" id="13_suyxu"]
+[ext_resource type="Resource" uid="uid://dn7dgf61mtspb" path="res://res/cards/resource/wild_plant_fibers.tres" id="14_sgl2t"]
+[ext_resource type="Resource" uid="uid://8syr8xpgueiw" path="res://res/cards/encounter/wolf_tracks.tres" id="15_qouja"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pl73o"]
 
 [node name="Game" type="Node" unique_id=568490508]
 script = ExtResource("1_iywne")
+card_database = Array[Resource]([ExtResource("4_1kice"), ExtResource("5_5newe"), ExtResource("6_37s47"), ExtResource("7_bt5mj"), ExtResource("8_e1j6l"), ExtResource("9_pl11u"), ExtResource("10_bhx41"), ExtResource("11_qnb83"), ExtResource("12_sww3w"), ExtResource("13_suyxu"), ExtResource("14_sgl2t"), ExtResource("3_264po"), ExtResource("15_qouja")])
 
 [node name="UI" type="Control" parent="." unique_id=2128815973]
 layout_mode = 3
@@ -33,7 +32,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lnu2h")
-card_database = Array[Resource]([ExtResource("3_264po"), ExtResource("4_1kice"), ExtResource("5_5newe"), ExtResource("6_37s47"), ExtResource("7_bt5mj"), ExtResource("8_e1j6l"), ExtResource("9_pl11u"), ExtResource("10_bhx41"), ExtResource("11_qnb83"), ExtResource("12_sww3w"), ExtResource("13_suyxu"), ExtResource("14_sgl2t"), ExtResource("15_qouja")])
 
 [node name="MarginContainer" type="MarginContainer" parent="UI" unique_id=375090825]
 layout_mode = 1
@@ -127,10 +125,9 @@ custom_maximum_size = Vector2(640, 280)
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/panel = ExtResource("3_p57ef")
-current_tab = 1
+current_tab = 0
 
 [node name="Camp" type="HBoxContainer" parent="UI/MarginContainer/VBoxContainer/Bottom" unique_id=759099236]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 
@@ -157,25 +154,11 @@ layout_mode = 2
 text = "Flee"
 
 [node name="Pack" type="HBoxContainer" parent="UI/MarginContainer/VBoxContainer/Bottom" unique_id=1333313854]
+visible = false
 layout_mode = 2
 theme_override_constants/separation = 16
 alignment = 1
 metadata/_tab_index = 1
-
-[node name="Item" parent="UI/MarginContainer/VBoxContainer/Bottom/Pack" unique_id=1644298931 instance=ExtResource("4_lbhrr")]
-layout_mode = 2
-
-[node name="Item2" parent="UI/MarginContainer/VBoxContainer/Bottom/Pack" unique_id=1976353025 instance=ExtResource("4_lbhrr")]
-layout_mode = 2
-
-[node name="Item3" parent="UI/MarginContainer/VBoxContainer/Bottom/Pack" unique_id=774851614 instance=ExtResource("4_lbhrr")]
-layout_mode = 2
-
-[node name="Item4" parent="UI/MarginContainer/VBoxContainer/Bottom/Pack" unique_id=32348748 instance=ExtResource("4_lbhrr")]
-layout_mode = 2
-
-[node name="Item5" parent="UI/MarginContainer/VBoxContainer/Bottom/Pack" unique_id=1940708894 instance=ExtResource("4_lbhrr")]
-layout_mode = 2
 
 [node name="Gear" type="HBoxContainer" parent="UI/MarginContainer/VBoxContainer/Bottom" unique_id=1435809089]
 visible = false
@@ -183,30 +166,16 @@ layout_mode = 2
 alignment = 1
 metadata/_tab_index = 2
 
-[node name="Gear" parent="UI/MarginContainer/VBoxContainer/Bottom/Gear" unique_id=1987308068 instance=ExtResource("5_iywne")]
-layout_mode = 2
-
-[node name="Gear2" parent="UI/MarginContainer/VBoxContainer/Bottom/Gear" unique_id=1195706735 instance=ExtResource("5_iywne")]
-layout_mode = 2
-
-[node name="Gear3" parent="UI/MarginContainer/VBoxContainer/Bottom/Gear" unique_id=1792363500 instance=ExtResource("5_iywne")]
-layout_mode = 2
-
 [node name="Craft" type="GridContainer" parent="UI/MarginContainer/VBoxContainer/Bottom" unique_id=694112478]
 visible = false
 layout_mode = 2
 metadata/_tab_index = 3
 
-[node name="Map" type="PanelContainer" parent="UI/MarginContainer/VBoxContainer/Bottom" unique_id=155847322]
-visible = false
-layout_mode = 2
-metadata/_tab_index = 4
-
 [node name="Settings" type="GridContainer" parent="UI/MarginContainer/VBoxContainer/Bottom" unique_id=218364477]
 visible = false
 layout_mode = 2
 columns = 2
-metadata/_tab_index = 5
+metadata/_tab_index = 4
 
 [node name="Help" parent="UI/MarginContainer/VBoxContainer/Bottom/Settings" unique_id=863445315 instance=ExtResource("2_yqjtg")]
 layout_mode = 2

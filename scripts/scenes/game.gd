@@ -1,41 +1,30 @@
 extends Node
 
+@export var card_database: Array[Resource] = []
 @onready var ui: Control = $UI
 
-func _ready() -> void:
-	EventBus.button_pressed.connect(_on_button_pressed)
+const CARD: PackedScene = preload("uid://yl33ltvvgh44")
+var deck_wayfinder: Array[Resource] = []
+var discard_pile: Array[Resource] = []
 
-func _on_button_pressed(button) -> void:
-	match button:
-		"Wayfind": 
-			ui.draw_card()
-			print("Drawing...")
-		
-		"Sleep": 
-			ui.discard()
-			print("Sleeping...")
-		
-		"Pack":
-			ui.discard()
-			print("Packing...")
-		
-		"Leave":
-			ui.discard()
-			print("Leaving...")
-		
-		"Fight":
-			ui.discard()
-			print("Fighting...")
-		
-		"Hide":
-			ui.discard()
-			print("Hiding...")
-		
-		"Flee":
-			ui.discard()
-			print("Fleeing...")
-		
-		"Quit":
-			get_tree().quit()
-		
-		_: print(button)
+func _ready() -> void:
+	# prepare decks
+	deck_wayfinder = card_database.duplicate()
+	deck_wayfinder.shuffle()
+
+func draw_card() -> CardScene:
+	var card_data = deck_wayfinder.pop_back()
+	var card = CARD.instantiate()
+	if card.has_method("set_attributes"):
+		card.set_attributes(card_data)
+	card.set_meta("card_data", card_data)
+	return card
+
+func discard() -> void:
+	var card = ui.get_card()
+	if !card: return
+	if card.has_meta("card_data"):
+		var card_data = card.get_meta("card_data")
+		discard_pile.append(card_data)
+	card.queue_free()
+	print(discard_pile)

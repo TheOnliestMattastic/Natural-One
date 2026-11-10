@@ -1,5 +1,6 @@
 # Tarot card pixel size: 825 x 1425
 extends PanelContainer
+class_name CardScene
 
 # nodes
 @onready var type_label: Label = $VBoxContainer/TypeLabel
@@ -24,8 +25,8 @@ func refresh_ui() -> void:
 	type_label.self_modulate = card_data.get_type_color()
 	
 	# image and color
-	texture_rect.set_texture(card_data.card_image)
 	panel_container.self_modulate = card_data.get_type_color()
+	texture_rect.set_texture(card_data.card_image)
 	
 	# effects and color
 	var stylebox = effects_label.get_theme_stylebox("normal") as StyleBoxFlat

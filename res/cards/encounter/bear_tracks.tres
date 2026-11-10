@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Card" format=3 uid="uid://cfwm505qg0hip"]
+
+[ext_resource type="Texture2D" uid="uid://vhbd5h8w1l6u" path="res://assets/icon-packs/lorc/flat-paw-print.svg" id="1_pweee"]
+[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/res_card.gd" id="2_d4o4w"]
+
+[resource]
+script = ExtResource("2_d4o4w")
+card_class = 2
+card_type = 4
+card_name = "Bear Tracks"
+card_description = "Heavy prints pressed deep into the mud. Something large and predatory has been pacing through the area recently."
+card_effects = "Roll for Bear encounter"
+card_image = ExtResource("1_pweee")
+metadata/_custom_type_script = "uid://bbvbfp88y36by"

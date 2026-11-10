@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://gd53t2c1ma2x"]
+
+[ext_resource type="Script" uid="uid://cgeengxwuvtt5" path="res://scripts/res/res_item.gd" id="1_q4riu"]
+
+[resource]
+script = ExtResource("1_q4riu")
+type = 5
+name = "Axe"
+metadata/_custom_type_script = "uid://cgeengxwuvtt5"
