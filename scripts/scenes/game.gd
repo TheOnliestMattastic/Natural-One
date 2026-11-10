@@ -6,19 +6,20 @@ class_name Game
 
 # cards
 const CARD: PackedScene = preload("uid://yl33ltvvgh44")
-var deck_wayfinder: Array[Resource] = []
+var deck_forage: Array[Resource] = []
 var discard_pile: Array[Resource] = []
 
 # game stats
 var day: int = 1
-var day_max: int = 7
+var day_win: int = 7
+var campfire_lit: bool = false
 
 func _ready() -> void:
 	EventBus.button_pressed.connect(_on_button_pressed)
 	
 	# prepare decks
-	deck_wayfinder = card_database.duplicate()
-	deck_wayfinder.shuffle()
+	deck_forage = card_database.duplicate()
+	deck_forage.shuffle()
 
 func _on_button_pressed(button) -> void:
 	match button:
@@ -46,16 +47,20 @@ func _on_button_pressed(button) -> void:
 			ui.refresh_hunger()
 			ui.refresh_thirst()
 		
+		"Campfire":
+			toggle_campfire()
+			ui.refresh_campfire()
+		
 		"Quit":
 			get_tree().quit()
 		
 		_: print(button)
 
 func get_card() -> CardScene:
-	if deck_wayfinder.is_empty(): 
+	if deck_forage.is_empty(): 
 		print("No more cards...")
 		return
-	var card_data = deck_wayfinder.pop_back()
+	var card_data = deck_forage.pop_back()
 	var card = CARD.instantiate()
 	if card.has_method("set_attributes"): card.set_attributes(card_data)
 	card.set_meta("card_data", card_data)
@@ -71,4 +76,7 @@ func discard() -> void:
 	print(discard_pile)
 
 func new_day() -> void:
-	day = clampi(day + 1, 1, day_max)
+	day = clampi(day + 1, 1, day_win)
+
+func toggle_campfire() -> void:
+	campfire_lit = not campfire_lit

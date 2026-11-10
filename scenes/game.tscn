@@ -17,6 +17,9 @@
 [ext_resource type="Resource" uid="uid://cosdggqbefk86" path="res://res/cards/resource/tough_vine_tendrils.tres" id="13_suyxu"]
 [ext_resource type="Resource" uid="uid://dn7dgf61mtspb" path="res://res/cards/resource/wild_plant_fibers.tres" id="14_sgl2t"]
 [ext_resource type="Resource" uid="uid://8syr8xpgueiw" path="res://res/cards/encounter/wolf_tracks.tres" id="15_qouja"]
+[ext_resource type="Texture2D" uid="uid://b7fcgd502agg1" path="res://assets/campfire-unlit.png" id="16_1kice"]
+[ext_resource type="Texture2D" uid="uid://cd7q6vk6jy8ph" path="res://assets/campfire-lit.png" id="17_1kice"]
+[ext_resource type="Texture2D" uid="uid://bq2lphdwwh8p3" path="res://assets/icon-packs/lorc/smoking-orb.svg" id="17_ssvqc"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pl73o"]
 
@@ -32,6 +35,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lnu2h")
+campfire_icon = ExtResource("16_1kice")
+campfire_lit_icon = ExtResource("17_1kice")
 
 [node name="MarginContainer" type="MarginContainer" parent="UI" unique_id=375090825]
 layout_mode = 1
@@ -56,41 +61,18 @@ size_flags_vertical = 3
 size_flags_stretch_ratio = 0.25
 theme_override_styles/panel = ExtResource("3_p57ef")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="UI/MarginContainer/VBoxContainer/Header" unique_id=190760425]
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/MarginContainer/VBoxContainer/Header" unique_id=204845859]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="UI/MarginContainer/VBoxContainer/Header/VBoxContainer" unique_id=1997765952]
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MarginContainer/VBoxContainer/Header/HBoxContainer" unique_id=190760425]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="UI/MarginContainer/VBoxContainer/Header/HBoxContainer/VBoxContainer" unique_id=900049445]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Day" type="RichTextLabel" parent="UI/MarginContainer/VBoxContainer/Header/VBoxContainer/HBoxContainer" unique_id=1155939434]
-layout_mode = 2
-size_flags_horizontal = 3
-bbcode_enabled = true
-text = "Day: 1/7"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Phase" type="RichTextLabel" parent="UI/MarginContainer/VBoxContainer/Header/VBoxContainer/HBoxContainer" unique_id=1797351527]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Morning"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Actions" type="RichTextLabel" parent="UI/MarginContainer/VBoxContainer/Header/VBoxContainer/HBoxContainer" unique_id=189139775]
-layout_mode = 2
-size_flags_horizontal = 3
-bbcode_enabled = true
-text = "Actions: 6/6"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="UI/MarginContainer/VBoxContainer/Header/VBoxContainer" unique_id=900049445]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="Health" type="RichTextLabel" parent="UI/MarginContainer/VBoxContainer/Header/VBoxContainer/HBoxContainer2" unique_id=185848864]
+[node name="Health" type="RichTextLabel" parent="UI/MarginContainer/VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer2" unique_id=185848864]
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
@@ -98,20 +80,51 @@ text = "Health: 6/6"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Hunger" type="RichTextLabel" parent="UI/MarginContainer/VBoxContainer/Header/VBoxContainer/HBoxContainer2" unique_id=729018240]
+[node name="Hunger" type="RichTextLabel" parent="UI/MarginContainer/VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer2" unique_id=729018240]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Hunger: 5/6"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Thirst" type="RichTextLabel" parent="UI/MarginContainer/VBoxContainer/Header/VBoxContainer/HBoxContainer2" unique_id=1071419539]
+[node name="Thirst" type="RichTextLabel" parent="UI/MarginContainer/VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer2" unique_id=1071419539]
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
 text = "Thirst: 4/6"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/MarginContainer/VBoxContainer/Header/HBoxContainer/VBoxContainer" unique_id=1997765952]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Day" type="RichTextLabel" parent="UI/MarginContainer/VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1155939434]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "Day: 1/7"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Actions" type="RichTextLabel" parent="UI/MarginContainer/VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=189139775]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "Actions: 6/6"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Phase" type="AspectRatioContainer" parent="UI/MarginContainer/VBoxContainer/Header/HBoxContainer" unique_id=724344743]
+custom_minimum_size = Vector2(57, 57)
+custom_maximum_size = Vector2(57, 57)
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="Campfire" type="TextureRect" parent="UI/MarginContainer/VBoxContainer/Header/HBoxContainer/Phase" unique_id=1627718379]
+layout_mode = 2
+texture = ExtResource("17_ssvqc")
+expand_mode = 1
 
 [node name="Center" type="PanelContainer" parent="UI/MarginContainer/VBoxContainer" unique_id=1827196219]
 layout_mode = 2
@@ -125,13 +138,14 @@ custom_maximum_size = Vector2(640, 280)
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/panel = ExtResource("3_p57ef")
-current_tab = 0
+current_tab = 3
 
 [node name="Camp" type="HBoxContainer" parent="UI/MarginContainer/VBoxContainer/Bottom" unique_id=759099236]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 
-[node name="Wayfinder" parent="UI/MarginContainer/VBoxContainer/Bottom/Camp" unique_id=1965029988 instance=ExtResource("2_yqjtg")]
+[node name="Forage" parent="UI/MarginContainer/VBoxContainer/Bottom/Camp" unique_id=1965029988 instance=ExtResource("2_yqjtg")]
 custom_minimum_size = Vector2(137, 237)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -172,9 +186,13 @@ alignment = 1
 metadata/_tab_index = 2
 
 [node name="Craft" type="GridContainer" parent="UI/MarginContainer/VBoxContainer/Bottom" unique_id=694112478]
-visible = false
 layout_mode = 2
+columns = 2
 metadata/_tab_index = 3
+
+[node name="Button" parent="UI/MarginContainer/VBoxContainer/Bottom/Craft" unique_id=1397188623 instance=ExtResource("2_yqjtg")]
+layout_mode = 2
+text = "Campfire"
 
 [node name="Settings" type="GridContainer" parent="UI/MarginContainer/VBoxContainer/Bottom" unique_id=218364477]
 visible = false
