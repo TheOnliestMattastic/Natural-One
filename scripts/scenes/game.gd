@@ -1,15 +1,45 @@
 extends Node
+class_name Game
 
 @export var card_database: Array[Resource] = []
 @onready var ui: Control = $UI
+
+# cards
 const CARD: PackedScene = preload("uid://yl33ltvvgh44")
 var deck_wayfinder: Array[Resource] = []
 var discard_pile: Array[Resource] = []
 
+# game stats
+var day: int = 1
+var day_max: int = 7
+
 func _ready() -> void:
+	EventBus.button_pressed.connect(_on_button_pressed)
 	# prepare decks
 	deck_wayfinder = card_database.duplicate()
 	deck_wayfinder.shuffle()
+
+func _on_button_pressed(button) -> void:
+	match button:
+		"Forage": 
+			var card = get_card()
+			if card: ui.draw_card(card)
+		
+		"Discard":
+			discard()
+		
+		"Damage":
+			Player.take_damage()
+			ui.refresh_health()
+		
+		"Sleep":
+			new_day()
+			ui.refresh_day()
+		
+		"Quit":
+			get_tree().quit()
+		
+		_: print(button)
 
 func get_card() -> CardScene:
 	if deck_wayfinder.is_empty(): 
@@ -31,9 +61,4 @@ func discard() -> void:
 	print(discard_pile)
 
 func new_day() -> void:
-	Player.day = mini(Player.day + 1, 7)
-	ui.refresh_day()
-
-func take_damage(amount: int = 1) -> void:
-	Player.health = clampi(Player.health - amount, 0, Player.health_max)
-	print(Player.health)
+	day = clampi(day + 1, 1, day_max)

@@ -8,5 +8,6 @@ var hunger: int = 6
 var hunger_max: int = 6
 var actions: int = 4
 var actions_max: int = 4
-var day: int = 1
-var day_max: int = 7
+
+func take_damage(amount: int = 1) -> void:
+	health = clampi(health - amount, 0, health_max)
