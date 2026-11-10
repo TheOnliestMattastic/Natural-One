@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 
 EventBus="*uid://fujo6vwpq7pw"
 Player="*uid://dx8gakuw54ifd"
+Dice="*uid://udq5ccu54fag"
 
 [display]
 

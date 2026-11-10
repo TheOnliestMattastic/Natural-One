@@ -26,7 +26,30 @@ Burgundy: 780116
 	a. Forage: -1 action
 	b. Craft: -1 action; roll for success
 2. Draw Night card
-	a. Encounters
-	b. Debuffs
+	a. Encounters/debuffs/etc
 3. Apply upkeep damage
-	a. -1 Thirst & Hunger
+	a. -2 Thirst & Hunger
+
+## Crafts
+
+Campfire
+- Prevents certain Night card encounters
+- Cost: 1 Wood
+
+Axe
+- Cost: 1 Wood, Stone, & Fiber
+- Receive 1 extra Wood whenever gaining wood
+- Add +1 to damage rolls
+
+Spear
+- Cost: 2 Wood, 1 Stone & Fiber
+- Add fish (Food resource) to the Forage deck
+- Add +2 to damage rolls
+
+Basket
+- Cost: 2 Fiber
+- Increase pack limit
+
+Traps
+- Cost: 1 Food, Wood, & Fiber
+- Add meat (Food resource) to the Forage deck
