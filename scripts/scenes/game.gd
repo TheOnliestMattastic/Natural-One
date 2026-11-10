@@ -32,4 +32,4 @@ func discard() -> void:
 
 func new_day() -> void:
 	Player.day = mini(Player.day + 1, 7)
-	print(Player.day)
+	ui.refresh_day()
