@@ -4,7 +4,6 @@ extends PanelContainer
 @onready var name_label: Label = $VBoxContainer/Name
 @onready var panel_container: PanelContainer = $VBoxContainer/Image/PanelContainer
 @onready var texture_rect: TextureRect = $VBoxContainer/Image/TextureRect
-
 var item_data: Resource
 
 func _ready() -> void:

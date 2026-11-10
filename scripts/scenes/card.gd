@@ -9,7 +9,6 @@ class_name CardScene
 @onready var desc_label: RichTextLabel = $VBoxContainer/Description/DescLabel
 @onready var effects_label: Label = $VBoxContainer/EffectsLabel
 @onready var panel_container: PanelContainer = $VBoxContainer/Image/PanelContainer
-
 var card_data: Resource
 
 func _ready() -> void:
