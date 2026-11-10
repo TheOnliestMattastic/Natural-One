@@ -1,13 +1,16 @@
 extends Node
 class_name Game
 
-@export var card_database: Array[Resource] = []
+@export var card_database: Array[Card] = []
+@export var items_database: Array[Item] = []
 @onready var ui: Control = $UI
 
 # cards
 const CARD: PackedScene = preload("uid://yl33ltvvgh44")
-var deck_forage: Array[Resource] = []
-var discard_pile: Array[Resource] = []
+const ITEM: PackedScene = preload("uid://j7841f0rtjdf")
+var deck_forage: Array[Card] = []
+var discard_pile: Array[Card] = []
+var deck_items: Dictionary = {}
 
 # game stats
 var day: int = 1
@@ -20,6 +23,9 @@ func _ready() -> void:
 	# prepare decks
 	deck_forage = card_database.duplicate()
 	deck_forage.shuffle()
+	for item in items_database:
+		if item and not item.name.is_empty():
+			deck_items[item.name] = item
 
 func _on_button_pressed(button) -> void:
 	match button:
@@ -51,6 +57,10 @@ func _on_button_pressed(button) -> void:
 			toggle_campfire()
 			ui.refresh_campfire()
 		
+		"Gear":
+			var gear = get_item_card("Axe")
+			ui.draw_item_card(gear)
+		
 		"Quit":
 			get_tree().quit()
 		
@@ -80,3 +90,12 @@ func new_day() -> void:
 
 func toggle_campfire() -> void:
 	campfire_lit = not campfire_lit
+
+func get_item_card(item_name: String) -> ItemScene:
+	if !deck_items.has(item_name):
+		print("[I AM ERROR] " + item_name + " not found...")
+		return null
+	var item_data = deck_items[item_name].duplicate()
+	var item = ITEM.instantiate()
+	if item.has_method("set_attributes"): item.set_attributes(item_data)
+	return item

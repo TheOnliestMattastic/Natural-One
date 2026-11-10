@@ -10,12 +10,14 @@ extends Control
 @onready var thirst: RichTextLabel = $MarginContainer/VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer2/Thirst
 @onready var day: RichTextLabel = $MarginContainer/VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer/Day
 @onready var actions: RichTextLabel = $MarginContainer/VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer/Actions
-@onready var campfire: TextureRect = $MarginContainer/VBoxContainer/Header/HBoxContainer/Phase/Campfire
+@onready var campfire: TextureRect = $MarginContainer/VBoxContainer/Header/HBoxContainer/AspectRatioContainer/Campfire
+@onready var cards_hand: HBoxContainer = $MarginContainer/VBoxContainer/Bottom/Hand/CardsHand
+@onready var cards_gear: HBoxContainer = $MarginContainer/VBoxContainer/Bottom/Gear/CardsGear
 
 func _ready() -> void:
 	refresh_ui()
 
-func draw_card(card: PanelContainer) -> void:
+func draw_card(card: CardScene) -> void:
 	center.add_child(card)
 
 func get_card_scene()-> CardScene:
@@ -48,3 +50,6 @@ func refresh_ui() -> void:
 	refresh_hunger()
 	refresh_thirst()
 	refresh_campfire()
+
+func draw_item_card(item: ItemScene) -> void:
+	cards_gear.add_child(item)

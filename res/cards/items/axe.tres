@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="Item" format=3 uid="uid://gd53t2c1ma2x"]
 
 [ext_resource type="Script" uid="uid://cgeengxwuvtt5" path="res://scripts/res/res_item.gd" id="1_q4riu"]
+[ext_resource type="Texture2D" uid="uid://cyc0qu328tkmh" path="res://assets/icon-packs/lorc/stone-axe.svg" id="1_y5ef4"]
 
 [resource]
 script = ExtResource("1_q4riu")
 type = 5
 name = "Axe"
+image = ExtResource("1_y5ef4")
 metadata/_custom_type_script = "uid://cgeengxwuvtt5"

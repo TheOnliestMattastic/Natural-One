@@ -15,7 +15,6 @@ const TYPE_COLORS = {
 @export var type: Type
 @export var name: String = "Gear"
 @export var image: Texture
-@export var effects: String = "Effect +1"
 
 func get_type_color() -> Color:
 	return TYPE_COLORS.get(type, Color.WHITE)

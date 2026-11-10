@@ -1,5 +1,6 @@
 # Tarot card pixel size: 825 x 1425
 extends PanelContainer
+class_name ItemScene
 
 @onready var name_label: Label = $VBoxContainer/Name
 @onready var panel_container: PanelContainer = $VBoxContainer/Image/PanelContainer
@@ -14,4 +15,5 @@ func set_attributes(data: Resource) -> void:
 
 func refresh_ui() -> void:
 	name_label.set_text(item_data.name)
+	panel_container.self_modulate = item_data.get_type_color()
 	texture_rect.set_texture(item_data.image)
