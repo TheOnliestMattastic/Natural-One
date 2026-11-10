@@ -1,8 +1,12 @@
 extends Node
 
 var health: int = 6
+var health_max: int = 6
 var thirst: int = 6
+var thirst_max: int = 6
 var hunger: int = 6
-var actions: int = 6
+var hunger_max: int = 6
+var actions: int = 4
+var actions_max: int = 4
 var day: int = 1
-var day_win: int = 7
+var day_max: int = 7

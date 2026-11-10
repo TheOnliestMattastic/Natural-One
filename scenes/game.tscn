@@ -143,15 +143,15 @@ size_flags_horizontal = 3
 
 [node name="Button1" parent="UI/MarginContainer/VBoxContainer/Bottom/Camp/VBoxContainer" unique_id=82622137 instance=ExtResource("2_yqjtg")]
 layout_mode = 2
-text = "Fight"
+text = "Discard"
 
 [node name="Button2" parent="UI/MarginContainer/VBoxContainer/Bottom/Camp/VBoxContainer" unique_id=484711930 instance=ExtResource("2_yqjtg")]
 layout_mode = 2
-text = "Hide"
+text = "Damage"
 
 [node name="Button3" parent="UI/MarginContainer/VBoxContainer/Bottom/Camp/VBoxContainer" unique_id=762052207 instance=ExtResource("2_yqjtg")]
 layout_mode = 2
-text = "Flee"
+text = "Sleep"
 
 [node name="Pack" type="HBoxContainer" parent="UI/MarginContainer/VBoxContainer/Bottom" unique_id=1333313854]
 visible = false

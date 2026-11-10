@@ -33,3 +33,7 @@ func discard() -> void:
 func new_day() -> void:
 	Player.day = mini(Player.day + 1, 7)
 	ui.refresh_day()
+
+func take_damage(amount: int = 1) -> void:
+	Player.health = clampi(Player.health - amount, 0, Player.health_max)
+	print(Player.health)
