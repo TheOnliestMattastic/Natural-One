@@ -3,7 +3,7 @@ class_name Game
 
 @export var card_database: Array[Card] = []
 @export var items_database: Array[Item] = []
-@onready var ui: Control = $UI
+@onready var ui: Control = %UI
 
 # cards
 const CARD: PackedScene = preload("uid://yl33ltvvgh44")

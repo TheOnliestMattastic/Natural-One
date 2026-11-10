@@ -3,16 +3,18 @@ extends Control
 @export var campfire_icon: Texture
 @export var campfire_lit_icon: Texture
 
-@onready var game = $".."
-@onready var center: PanelContainer = $MarginContainer/VBoxContainer/Center
-@onready var health: RichTextLabel = $MarginContainer/VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer2/Health
-@onready var hunger: RichTextLabel = $MarginContainer/VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer2/Hunger
-@onready var thirst: RichTextLabel = $MarginContainer/VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer2/Thirst
-@onready var day: RichTextLabel = $MarginContainer/VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer/Day
-@onready var actions: RichTextLabel = $MarginContainer/VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer/Actions
-@onready var campfire: TextureRect = $MarginContainer/VBoxContainer/Header/HBoxContainer/AspectRatioContainer/Campfire
-@onready var cards_hand: HBoxContainer = $MarginContainer/VBoxContainer/Bottom/Hand/CardsHand
-@onready var cards_gear: HBoxContainer = $MarginContainer/VBoxContainer/Bottom/Gear/CardsGear
+@onready var game = $"../.."
+@onready var health: RichTextLabel = $VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer2/Health
+@onready var hunger: RichTextLabel = $VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer2/Hunger
+@onready var thirst: RichTextLabel = $VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer2/Thirst
+@onready var day: RichTextLabel = $VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer/Day
+@onready var actions: RichTextLabel = $VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer/Actions
+@onready var campfire: TextureRect = $VBoxContainer/Header/HBoxContainer/AspectRatioContainer/Campfire
+@onready var center: PanelContainer = $VBoxContainer/Center
+@onready var hand_limit: RichTextLabel = $VBoxContainer/Bottom/Hand/HandLimit
+@onready var cards_hand: HBoxContainer = $VBoxContainer/Bottom/Hand/CardsHand
+@onready var cards_gear: HBoxContainer = $VBoxContainer/Bottom/Gear/CardsGear
+
 
 func _ready() -> void:
 	refresh_ui()
