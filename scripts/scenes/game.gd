@@ -29,3 +29,7 @@ func discard() -> void:
 		discard_pile.append(card_data)
 	card.queue_free()
 	print(discard_pile)
+
+func new_day() -> void:
+	Player.day = mini(Player.day + 1, 7)
+	print(Player.day)

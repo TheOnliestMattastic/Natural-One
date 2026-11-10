@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 EventBus="*uid://fujo6vwpq7pw"
+Player="*uid://dx8gakuw54ifd"
 
 [display]
 

@@ -14,7 +14,7 @@ func get_card_scene()-> CardScene:
 
 func _on_button_pressed(button) -> void:
 	match button:
-		"Wayfind": 
+		"Forage": 
 			var card = get_parent().get_card()
 			if card: draw_card(card)
 			print("Drawing...")
@@ -42,6 +42,7 @@ func _on_button_pressed(button) -> void:
 		"Flee":
 			get_parent().discard()
 			print("Fleeing...")
+			get_parent().new_day()
 		
 		"Quit":
 			get_tree().quit()
