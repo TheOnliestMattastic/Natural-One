@@ -15,6 +15,7 @@ var day_max: int = 7
 
 func _ready() -> void:
 	EventBus.button_pressed.connect(_on_button_pressed)
+	
 	# prepare decks
 	deck_wayfinder = card_database.duplicate()
 	deck_wayfinder.shuffle()
@@ -23,7 +24,10 @@ func _on_button_pressed(button) -> void:
 	match button:
 		"Forage": 
 			var card = get_card()
-			if card: ui.draw_card(card)
+			if card: 
+				ui.draw_card(card)
+				Player.take_action()
+				ui.refresh_actions()
 		
 		"Discard":
 			discard()
@@ -35,6 +39,12 @@ func _on_button_pressed(button) -> void:
 		"Sleep":
 			new_day()
 			ui.refresh_day()
+		
+		"Upkeep":
+			Player.reduce_hunger()
+			Player.reduce_thirst()
+			ui.refresh_hunger()
+			ui.refresh_thirst()
 		
 		"Quit":
 			get_tree().quit()
