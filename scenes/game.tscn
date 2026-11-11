@@ -29,16 +29,21 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hwfa1"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f73s1"]
+size = Vector2(648, 841)
+
 [node name="Game" type="Node" unique_id=568490508]
 script = ExtResource("1_iywne")
 card_database = Array[ExtResource("2_37s47")]([ExtResource("4_1kice"), ExtResource("5_5newe"), ExtResource("6_37s47"), ExtResource("7_bt5mj"), ExtResource("8_e1j6l"), ExtResource("9_pl11u"), ExtResource("10_bhx41"), ExtResource("11_qnb83"), ExtResource("12_sww3w"), ExtResource("13_suyxu"), ExtResource("14_sgl2t"), ExtResource("3_264po"), ExtResource("15_qouja")])
 items_database = Array[ExtResource("16_bt5mj")]([ExtResource("15_5newe")])
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=157521430]
-
-[node name="UI" type="Control" parent="CanvasLayer" unique_id=2128815973]
+[node name="UI" type="CanvasLayer" parent="." unique_id=68547935 groups=["ui_layer"]]
 unique_name_in_owner = true
-layout_mode = 3
+script = ExtResource("1_lnu2h")
+campfire_icon = ExtResource("16_1kice")
+campfire_lit_icon = ExtResource("17_1kice")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI" unique_id=972279510]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -46,36 +51,26 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-script = ExtResource("1_lnu2h")
-campfire_icon = ExtResource("16_1kice")
-campfire_lit_icon = ExtResource("17_1kice")
+metadata/_edit_lock_ = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/UI" unique_id=972279510]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Header" type="PanelContainer" parent="CanvasLayer/UI/VBoxContainer" unique_id=1018927282]
+[node name="Header" type="PanelContainer" parent="UI/VBoxContainer" unique_id=1018927282]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.25
 theme_override_styles/panel = ExtResource("3_p57ef")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/UI/VBoxContainer/Header" unique_id=204845859]
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/VBoxContainer/Header" unique_id=204845859]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/UI/VBoxContainer/Header/HBoxContainer" unique_id=190760425]
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/VBoxContainer/Header/HBoxContainer" unique_id=190760425]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/UI/VBoxContainer/Header/HBoxContainer/VBoxContainer" unique_id=900049445]
+[node name="HBoxContainer2" type="HBoxContainer" parent="UI/VBoxContainer/Header/HBoxContainer/VBoxContainer" unique_id=900049445]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Health" type="RichTextLabel" parent="CanvasLayer/UI/VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer2" unique_id=185848864]
+[node name="Health" type="RichTextLabel" parent="UI/VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer2" unique_id=185848864]
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
@@ -83,14 +78,14 @@ text = "Health: 6/6"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Hunger" type="RichTextLabel" parent="CanvasLayer/UI/VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer2" unique_id=729018240]
+[node name="Hunger" type="RichTextLabel" parent="UI/VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer2" unique_id=729018240]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Hunger: 5/6"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Thirst" type="RichTextLabel" parent="CanvasLayer/UI/VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer2" unique_id=1071419539]
+[node name="Thirst" type="RichTextLabel" parent="UI/VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer2" unique_id=1071419539]
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
@@ -98,11 +93,11 @@ text = "Thirst: 4/6"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/UI/VBoxContainer/Header/HBoxContainer/VBoxContainer" unique_id=1997765952]
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/VBoxContainer/Header/HBoxContainer/VBoxContainer" unique_id=1997765952]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Day" type="RichTextLabel" parent="CanvasLayer/UI/VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1155939434]
+[node name="Day" type="RichTextLabel" parent="UI/VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1155939434]
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
@@ -110,7 +105,7 @@ text = "Day: 1/7"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Actions" type="RichTextLabel" parent="CanvasLayer/UI/VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=189139775]
+[node name="Actions" type="RichTextLabel" parent="UI/VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=189139775]
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
@@ -118,102 +113,114 @@ text = "Actions: 6/6"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="AspectRatioContainer" type="AspectRatioContainer" parent="CanvasLayer/UI/VBoxContainer/Header/HBoxContainer" unique_id=724344743]
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="UI/VBoxContainer/Header/HBoxContainer" unique_id=724344743]
 custom_minimum_size = Vector2(57, 57)
 custom_maximum_size = Vector2(57, 57)
 layout_mode = 2
 size_flags_horizontal = 8
 
-[node name="Campfire" type="TextureRect" parent="CanvasLayer/UI/VBoxContainer/Header/HBoxContainer/AspectRatioContainer" unique_id=1627718379]
+[node name="Campfire" type="TextureRect" parent="UI/VBoxContainer/Header/HBoxContainer/AspectRatioContainer" unique_id=1627718379]
 layout_mode = 2
 texture = ExtResource("16_1kice")
 expand_mode = 1
 
-[node name="Center" type="PanelContainer" parent="CanvasLayer/UI/VBoxContainer" unique_id=1827196219]
+[node name="Center" type="PanelContainer" parent="UI/VBoxContainer" unique_id=1827196219]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 3.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_pl73o")
 
-[node name="Bottom" type="TabContainer" parent="CanvasLayer/UI/VBoxContainer" unique_id=763367368]
+[node name="Bottom" type="TabContainer" parent="UI/VBoxContainer" unique_id=763367368]
 custom_minimum_size = Vector2(0, 276)
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/panel = ExtResource("3_p57ef")
-current_tab = 0
+current_tab = 2
 
-[node name="Camp" type="HBoxContainer" parent="CanvasLayer/UI/VBoxContainer/Bottom" unique_id=759099236]
+[node name="Camp" type="HBoxContainer" parent="UI/VBoxContainer/Bottom" unique_id=759099236]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 
-[node name="Forage" parent="CanvasLayer/UI/VBoxContainer/Bottom/Camp" unique_id=1965029988 instance=ExtResource("2_yqjtg")]
+[node name="DayDeck" parent="UI/VBoxContainer/Bottom/Camp" unique_id=1965029988 instance=ExtResource("2_yqjtg")]
 custom_minimum_size = Vector2(137, 237)
 layout_mode = 2
 size_flags_horizontal = 0
-text = "Forage"
+text = "Day"
 
-[node name="GridContainer" type="GridContainer" parent="CanvasLayer/UI/VBoxContainer/Bottom/Camp" unique_id=1956037760]
+[node name="NightDeck" parent="UI/VBoxContainer/Bottom/Camp" unique_id=528228054 instance=ExtResource("2_yqjtg")]
+custom_minimum_size = Vector2(137, 237)
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Night"
+
+[node name="GridContainer" type="GridContainer" parent="UI/VBoxContainer/Bottom/Camp" unique_id=1956037760]
 layout_mode = 2
 size_flags_horizontal = 3
 columns = 2
 
-[node name="Button1" parent="CanvasLayer/UI/VBoxContainer/Bottom/Camp/GridContainer" unique_id=82622137 instance=ExtResource("2_yqjtg")]
+[node name="Button1" parent="UI/VBoxContainer/Bottom/Camp/GridContainer" unique_id=82622137 instance=ExtResource("2_yqjtg")]
 layout_mode = 2
 text = "Discard"
 
-[node name="Button2" parent="CanvasLayer/UI/VBoxContainer/Bottom/Camp/GridContainer" unique_id=484711930 instance=ExtResource("2_yqjtg")]
+[node name="Button2" parent="UI/VBoxContainer/Bottom/Camp/GridContainer" unique_id=484711930 instance=ExtResource("2_yqjtg")]
 layout_mode = 2
 text = "Damage"
 
-[node name="Button3" parent="CanvasLayer/UI/VBoxContainer/Bottom/Camp/GridContainer" unique_id=762052207 instance=ExtResource("2_yqjtg")]
+[node name="Button3" parent="UI/VBoxContainer/Bottom/Camp/GridContainer" unique_id=762052207 instance=ExtResource("2_yqjtg")]
 layout_mode = 2
 text = "Upkeep"
 
-[node name="Button4" parent="CanvasLayer/UI/VBoxContainer/Bottom/Camp/GridContainer" unique_id=56977093 instance=ExtResource("2_yqjtg")]
+[node name="Button4" parent="UI/VBoxContainer/Bottom/Camp/GridContainer" unique_id=56977093 instance=ExtResource("2_yqjtg")]
 layout_mode = 2
 text = "Sleep"
 
-[node name="Hand" type="PanelContainer" parent="CanvasLayer/UI/VBoxContainer/Bottom" unique_id=648864474]
+[node name="Hand" type="PanelContainer" parent="UI/VBoxContainer/Bottom" unique_id=648864474]
 visible = false
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_f73s1")
 metadata/_tab_index = 1
 
-[node name="HandLimit" type="RichTextLabel" parent="CanvasLayer/UI/VBoxContainer/Bottom/Hand" unique_id=160842794]
+[node name="HandLimit" type="RichTextLabel" parent="UI/VBoxContainer/Bottom/Hand" unique_id=160842794]
 layout_mode = 2
 text = "1/5"
 horizontal_alignment = 2
 
-[node name="CardsHand" type="HBoxContainer" parent="CanvasLayer/UI/VBoxContainer/Bottom/Hand" unique_id=496587611]
+[node name="CardsHand" type="HBoxContainer" parent="UI/VBoxContainer/Bottom/Hand" unique_id=496587611]
 layout_mode = 2
 alignment = 1
 
-[node name="Gear" type="PanelContainer" parent="CanvasLayer/UI/VBoxContainer/Bottom" unique_id=1291089039]
-visible = false
+[node name="Gear" type="PanelContainer" parent="UI/VBoxContainer/Bottom" unique_id=1291089039]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_hwfa1")
 metadata/_tab_index = 2
 
-[node name="CardsGear" type="HBoxContainer" parent="CanvasLayer/UI/VBoxContainer/Bottom/Gear" unique_id=170147208]
+[node name="CardsGear" type="HBoxContainer" parent="UI/VBoxContainer/Bottom/Gear" unique_id=170147208]
 layout_mode = 2
 alignment = 1
 
-[node name="Button" parent="CanvasLayer/UI/VBoxContainer/Bottom/Gear" unique_id=1543390844 instance=ExtResource("2_yqjtg")]
+[node name="Button" parent="UI/VBoxContainer/Bottom/Gear" unique_id=1543390844 instance=ExtResource("2_yqjtg")]
 layout_mode = 2
 size_flags_horizontal = 10
 size_flags_vertical = 2
 text = "Gear"
 
-[node name="Settings" type="GridContainer" parent="CanvasLayer/UI/VBoxContainer/Bottom" unique_id=218364477]
+[node name="Settings" type="GridContainer" parent="UI/VBoxContainer/Bottom" unique_id=218364477]
 visible = false
 layout_mode = 2
 columns = 2
 metadata/_tab_index = 3
 
-[node name="Button" parent="CanvasLayer/UI/VBoxContainer/Bottom/Settings" unique_id=1397188623 instance=ExtResource("2_yqjtg")]
+[node name="Button" parent="UI/VBoxContainer/Bottom/Settings" unique_id=1397188623 instance=ExtResource("2_yqjtg")]
 layout_mode = 2
 text = "Campfire"
 
-[node name="Quit" parent="CanvasLayer/UI/VBoxContainer/Bottom/Settings" unique_id=255229118 instance=ExtResource("2_yqjtg")]
+[node name="Quit" parent="UI/VBoxContainer/Bottom/Settings" unique_id=255229118 instance=ExtResource("2_yqjtg")]
 layout_mode = 2
 text = "Quit"
+
+[node name="CardDropArea" type="Area2D" parent="." unique_id=558984230]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CardDropArea" unique_id=2061524743]
+position = Vector2(324, 486.5)
+shape = SubResource("RectangleShape2D_f73s1")

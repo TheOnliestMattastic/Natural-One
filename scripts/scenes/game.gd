@@ -3,7 +3,7 @@ class_name Game
 
 @export var card_database: Array[Card] = []
 @export var items_database: Array[Item] = []
-@onready var ui: Control = %UI
+@onready var ui: CanvasLayer = %UI
 
 # cards
 const CARD: PackedScene = preload("uid://yl33ltvvgh44")
@@ -29,7 +29,7 @@ func _ready() -> void:
 
 func _on_button_pressed(button) -> void:
 	match button:
-		"Forage": 
+		"Day": 
 			var card = get_card()
 			if card: 
 				ui.draw_card(card)
@@ -43,7 +43,7 @@ func _on_button_pressed(button) -> void:
 			Player.take_damage()
 			ui.refresh_health()
 		
-		"Sleep":
+		"Night":
 			new_day()
 			ui.refresh_day()
 		

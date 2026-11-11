@@ -1,9 +1,9 @@
-extends Control
+extends CanvasLayer
 
 @export var campfire_icon: Texture
 @export var campfire_lit_icon: Texture
 
-@onready var game = $"../.."
+@onready var game = $".."
 @onready var health: RichTextLabel = $VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer2/Health
 @onready var hunger: RichTextLabel = $VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer2/Hunger
 @onready var thirst: RichTextLabel = $VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer2/Thirst
