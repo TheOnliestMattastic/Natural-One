@@ -11,6 +11,7 @@ var item_data: Resource
 
 # state machine
 @onready var item_state_machine: ItemStateMachine = $ItemStateMachine as ItemStateMachine
+@onready var targets: Array[Node] = []
 signal reparent_requested(item: ItemScene)
 
 func _ready() -> void:
@@ -36,3 +37,10 @@ func _on_mouse_entered() -> void:
 
 func _on_mouse_exited() -> void:
 	item_state_machine.on_mouse_exited()
+
+func _on_drop_point_detector_area_entered(area: Area2D) -> void:
+	if not targets.has(area):
+		targets.append(area)
+
+func _on_drop_point_detector_area_exited(area: Area2D) -> void:
+	targets.erase(area)

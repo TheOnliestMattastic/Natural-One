@@ -4,6 +4,7 @@ class_name Game
 @export var card_database: Array[Card] = []
 @export var items_database: Array[Item] = []
 @onready var ui: CanvasLayer = %UI
+@onready var hand: Hand = $UI/VBoxContainer/Bottom/HandPanel
 
 # cards
 const CARD: PackedScene = preload("uid://yl33ltvvgh44")
@@ -57,9 +58,14 @@ func _on_button_pressed(button) -> void:
 			toggle_campfire()
 			ui.refresh_campfire()
 		
+		"Item":
+			var item = get_item_card("Axe")
+			ui.draw_item_card(item)
+			hand.connect_hand()
+		
 		"Gear":
 			var gear = get_item_card("Axe")
-			ui.draw_item_card(gear)
+			ui.draw_gear_card(gear)
 		
 		"Quit":
 			get_tree().quit()

@@ -11,8 +11,8 @@ extends CanvasLayer
 @onready var actions: RichTextLabel = $VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer/Actions
 @onready var campfire: TextureRect = $VBoxContainer/Header/HBoxContainer/AspectRatioContainer/Campfire
 @onready var center: PanelContainer = $VBoxContainer/Center
-@onready var hand_limit: RichTextLabel = $VBoxContainer/Bottom/Hand/HandLimit
-@onready var cards_hand: HBoxContainer = $VBoxContainer/Bottom/Hand/CardsHand
+@onready var hand_limit: RichTextLabel = $VBoxContainer/Bottom/HandPanel/HandLimit
+@onready var hand: HBoxContainer = $VBoxContainer/Bottom/HandPanel/Hand
 @onready var cards_gear: HBoxContainer = $VBoxContainer/Bottom/Gear/CardsGear
 
 
@@ -54,4 +54,7 @@ func refresh_ui() -> void:
 	refresh_campfire()
 
 func draw_item_card(item: ItemScene) -> void:
-	cards_gear.add_child(item)
+	hand.add_child(item)
+
+func draw_gear_card(gear: ItemScene) -> void:
+	cards_gear.add_child(gear)

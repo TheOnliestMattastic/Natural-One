@@ -3,6 +3,7 @@ extends ItemState
 func enter() -> void:
 	var ui_layer := get_tree().get_first_node_in_group("ui_layer")
 	if ui_layer: item_scene.reparent(ui_layer)
+	print("ItemState: DRAGGING")
 
 func on_input(_event: InputEvent) -> void:
 	var mouse_motion := _event is InputEventMouseMotion
