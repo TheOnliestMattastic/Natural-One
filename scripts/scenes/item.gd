@@ -3,7 +3,7 @@ extends PanelContainer
 class_name ItemScene
 
 # data
-var item_data: Resource
+@export var item_data: Resource
 @onready var name_label: Label = $VBoxContainer/Name
 @onready var panel_container: PanelContainer = $VBoxContainer/Image/PanelContainer
 @onready var texture_rect: TextureRect = $VBoxContainer/Image/TextureRect

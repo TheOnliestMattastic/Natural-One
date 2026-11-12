@@ -7,7 +7,10 @@ func enter() -> void:
 	played = false
 	if not item_scene.targets.is_empty():
 		played = true
+		
+		# TODO: replace with crafting logic
 		print("Card played!", item_scene.targets)
+		item_scene.queue_free()
 
 func on_input(_event: InputEvent) -> void:
 	if played: return
