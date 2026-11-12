@@ -31,7 +31,7 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hwfa1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f73s1"]
-size = Vector2(648, 841)
+size = Vector2(648, 483)
 
 [node name="Game" type="Node" unique_id=568490508]
 script = ExtResource("1_iywne")
@@ -176,23 +176,23 @@ text = "Upkeep"
 layout_mode = 2
 text = "Sleep"
 
-[node name="HandPanel" type="PanelContainer" parent="UI/VBoxContainer/Bottom" unique_id=648864474]
+[node name="Hand" type="PanelContainer" parent="UI/VBoxContainer/Bottom" unique_id=648864474]
 visible = false
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_f73s1")
 script = ExtResource("23_bt5mj")
 metadata/_tab_index = 1
 
-[node name="HandLimit" type="RichTextLabel" parent="UI/VBoxContainer/Bottom/HandPanel" unique_id=160842794]
+[node name="HandLimit" type="RichTextLabel" parent="UI/VBoxContainer/Bottom/Hand" unique_id=160842794]
 layout_mode = 2
 text = "1/5"
 horizontal_alignment = 2
 
-[node name="Hand" type="HBoxContainer" parent="UI/VBoxContainer/Bottom/HandPanel" unique_id=496587611]
+[node name="Items" type="HBoxContainer" parent="UI/VBoxContainer/Bottom/Hand" unique_id=496587611]
 layout_mode = 2
 alignment = 1
 
-[node name="Button" parent="UI/VBoxContainer/Bottom/HandPanel" unique_id=701325892 instance=ExtResource("2_yqjtg")]
+[node name="Button" parent="UI/VBoxContainer/Bottom/Hand" unique_id=701325892 instance=ExtResource("2_yqjtg")]
 layout_mode = 2
 size_flags_horizontal = 10
 size_flags_vertical = 10
@@ -203,7 +203,7 @@ layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_hwfa1")
 metadata/_tab_index = 2
 
-[node name="CardsGear" type="HBoxContainer" parent="UI/VBoxContainer/Bottom/Gear" unique_id=170147208]
+[node name="Gears" type="HBoxContainer" parent="UI/VBoxContainer/Bottom/Gear" unique_id=170147208]
 layout_mode = 2
 alignment = 1
 
