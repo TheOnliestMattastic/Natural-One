@@ -1,8 +1,10 @@
 extends CanvasLayer
 
+# campfire icons
 @export var campfire_icon: Texture
 @export var campfire_lit_icon: Texture
 
+# nodes
 @onready var game = $".."
 @onready var health: RichTextLabel = $VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer2/Health
 @onready var hunger: RichTextLabel = $VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer2/Hunger
@@ -11,9 +13,12 @@ extends CanvasLayer
 @onready var actions: RichTextLabel = $VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer/Actions
 @onready var campfire: TextureRect = $VBoxContainer/Header/HBoxContainer/AspectRatioContainer/Campfire
 @onready var center: PanelContainer = $VBoxContainer/Center
-@onready var hand_limit: RichTextLabel = $VBoxContainer/Bottom/Hand/HandLimit
-@onready var resources: HBoxContainer = $VBoxContainer/Bottom/Hand/Resources
-@onready var items: HBoxContainer = $VBoxContainer/Bottom/Equipment/Items
+@onready var resources: HBoxContainer = $VBoxContainer/MenuTabContainer/Hand/Resources
+@onready var items: HBoxContainer = $VBoxContainer/MenuTabContainer/Equipment/Items
+
+# crafting menu
+const CRAFTING_MENU := preload("uid://qgf6n34ehc5f")
+var crafting_menu: CraftingMenu = null
 
 func _ready() -> void:
 	refresh_ui()
@@ -57,3 +62,11 @@ func draw_resource_card(item: ItemScene) -> void:
 
 func draw_equipment_card(gear: ItemScene) -> void:
 	items.add_child(gear)
+
+func toggle_crafting_menu() -> void:
+	if is_instance_valid(crafting_menu): # free menu if it already exists
+		crafting_menu.queue_free()
+		crafting_menu = null
+	else: # draw menu
+		crafting_menu = CRAFTING_MENU.instantiate()
+		center.add_child(crafting_menu)

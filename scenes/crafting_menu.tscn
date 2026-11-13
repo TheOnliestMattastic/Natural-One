@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://qgf6n34ehc5f"]
 
+[ext_resource type="Script" uid="uid://bkuxjmm6lq3ta" path="res://scripts/scenes/crafting_menu.gd" id="1_8qu5l"]
 [ext_resource type="PackedScene" uid="uid://dsm0gysm47txb" path="res://scenes/button.tscn" id="1_uiuyx"]
 
 [node name="CraftingMenu" type="GridContainer" unique_id=390444517]
@@ -8,6 +9,7 @@ size_flags_vertical = 4
 theme_override_constants/h_separation = 24
 theme_override_constants/v_separation = 24
 columns = 5
+script = ExtResource("1_8qu5l")
 
 [node name="Button" parent="." unique_id=1965029988 instance=ExtResource("1_uiuyx")]
 custom_minimum_size = Vector2(103, 178)

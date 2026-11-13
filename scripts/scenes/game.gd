@@ -4,8 +4,9 @@ class_name Game
 @export var card_database: Array[Card] = []
 @export var items_database: Array[Item] = []
 @onready var ui: CanvasLayer = %UI
-@onready var hand: Hand = $UI/VBoxContainer/Bottom/Hand
-@onready var equipment: PanelContainer = $UI/VBoxContainer/Bottom/Equipment
+@onready var hand: Hand = $UI/VBoxContainer/MenuTabContainer/Hand
+@onready var equipment: Equipment = $UI/VBoxContainer/MenuTabContainer/Equipment
+
 
 # cards
 const CARD: PackedScene = preload("uid://yl33ltvvgh44")
@@ -68,6 +69,10 @@ func _on_button_pressed(button) -> void:
 			var item = get_item_card("Axe")
 			ui.draw_equipment_card(item)
 			equipment.connect_hand()
+		
+		"Craft":
+			print("Crafting...")
+			ui.toggle_crafting_menu()
 		
 		"Quit":
 			get_tree().quit()
