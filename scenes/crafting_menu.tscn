@@ -1,0 +1,110 @@
+[gd_scene format=3 uid="uid://qgf6n34ehc5f"]
+
+[ext_resource type="PackedScene" uid="uid://dsm0gysm47txb" path="res://scenes/button.tscn" id="1_uiuyx"]
+
+[node name="CraftingMenu" type="GridContainer" unique_id=390444517]
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 24
+theme_override_constants/v_separation = 24
+columns = 5
+
+[node name="Button" parent="." unique_id=1965029988 instance=ExtResource("1_uiuyx")]
+custom_minimum_size = Vector2(103, 178)
+custom_maximum_size = Vector2(103, 178)
+layout_mode = 2
+
+[node name="Button2" parent="." unique_id=1322468082 instance=ExtResource("1_uiuyx")]
+custom_minimum_size = Vector2(103, 178)
+custom_maximum_size = Vector2(103, 178)
+layout_mode = 2
+
+[node name="Button3" parent="." unique_id=2082349147 instance=ExtResource("1_uiuyx")]
+custom_minimum_size = Vector2(103, 178)
+custom_maximum_size = Vector2(103, 178)
+layout_mode = 2
+
+[node name="Button4" parent="." unique_id=2056321173 instance=ExtResource("1_uiuyx")]
+custom_minimum_size = Vector2(103, 178)
+custom_maximum_size = Vector2(103, 178)
+layout_mode = 2
+
+[node name="Button5" parent="." unique_id=594805124 instance=ExtResource("1_uiuyx")]
+custom_minimum_size = Vector2(103, 178)
+custom_maximum_size = Vector2(103, 178)
+layout_mode = 2
+
+[node name="Button6" parent="." unique_id=1445061690 instance=ExtResource("1_uiuyx")]
+custom_minimum_size = Vector2(103, 178)
+custom_maximum_size = Vector2(103, 178)
+layout_mode = 2
+
+[node name="Button7" parent="." unique_id=1059390560 instance=ExtResource("1_uiuyx")]
+custom_minimum_size = Vector2(103, 178)
+custom_maximum_size = Vector2(103, 178)
+layout_mode = 2
+
+[node name="Button8" parent="." unique_id=258157537 instance=ExtResource("1_uiuyx")]
+custom_minimum_size = Vector2(103, 178)
+custom_maximum_size = Vector2(103, 178)
+layout_mode = 2
+
+[node name="Button9" parent="." unique_id=461196192 instance=ExtResource("1_uiuyx")]
+custom_minimum_size = Vector2(103, 178)
+custom_maximum_size = Vector2(103, 178)
+layout_mode = 2
+
+[node name="Button10" parent="." unique_id=915283534 instance=ExtResource("1_uiuyx")]
+custom_minimum_size = Vector2(103, 178)
+custom_maximum_size = Vector2(103, 178)
+layout_mode = 2
+
+[node name="Button11" parent="." unique_id=607080148 instance=ExtResource("1_uiuyx")]
+custom_minimum_size = Vector2(103, 178)
+custom_maximum_size = Vector2(103, 178)
+layout_mode = 2
+
+[node name="Button12" parent="." unique_id=357984057 instance=ExtResource("1_uiuyx")]
+custom_minimum_size = Vector2(103, 178)
+custom_maximum_size = Vector2(103, 178)
+layout_mode = 2
+
+[node name="Button13" parent="." unique_id=1174689228 instance=ExtResource("1_uiuyx")]
+custom_minimum_size = Vector2(103, 178)
+custom_maximum_size = Vector2(103, 178)
+layout_mode = 2
+
+[node name="Button14" parent="." unique_id=238235775 instance=ExtResource("1_uiuyx")]
+custom_minimum_size = Vector2(103, 178)
+custom_maximum_size = Vector2(103, 178)
+layout_mode = 2
+
+[node name="Button15" parent="." unique_id=825570148 instance=ExtResource("1_uiuyx")]
+custom_minimum_size = Vector2(103, 178)
+custom_maximum_size = Vector2(103, 178)
+layout_mode = 2
+
+[node name="Button16" parent="." unique_id=1590718558 instance=ExtResource("1_uiuyx")]
+custom_minimum_size = Vector2(103, 178)
+custom_maximum_size = Vector2(103, 178)
+layout_mode = 2
+
+[node name="Button17" parent="." unique_id=1187618993 instance=ExtResource("1_uiuyx")]
+custom_minimum_size = Vector2(103, 178)
+custom_maximum_size = Vector2(103, 178)
+layout_mode = 2
+
+[node name="Button18" parent="." unique_id=1586881824 instance=ExtResource("1_uiuyx")]
+custom_minimum_size = Vector2(103, 178)
+custom_maximum_size = Vector2(103, 178)
+layout_mode = 2
+
+[node name="Button19" parent="." unique_id=1097063986 instance=ExtResource("1_uiuyx")]
+custom_minimum_size = Vector2(103, 178)
+custom_maximum_size = Vector2(103, 178)
+layout_mode = 2
+
+[node name="Button20" parent="." unique_id=2070695914 instance=ExtResource("1_uiuyx")]
+custom_minimum_size = Vector2(103, 178)
+custom_maximum_size = Vector2(103, 178)
+layout_mode = 2
