@@ -12,8 +12,8 @@ extends CanvasLayer
 @onready var campfire: TextureRect = $VBoxContainer/Header/HBoxContainer/AspectRatioContainer/Campfire
 @onready var center: PanelContainer = $VBoxContainer/Center
 @onready var hand_limit: RichTextLabel = $VBoxContainer/Bottom/Hand/HandLimit
-@onready var items: HBoxContainer = $VBoxContainer/Bottom/Hand/Items
-@onready var gears: HBoxContainer = $VBoxContainer/Bottom/Gear/Gears
+@onready var resources: HBoxContainer = $VBoxContainer/Bottom/Hand/Resources
+@onready var items: HBoxContainer = $VBoxContainer/Bottom/Equipment/Items
 
 func _ready() -> void:
 	refresh_ui()
@@ -52,8 +52,8 @@ func refresh_ui() -> void:
 	refresh_thirst()
 	refresh_campfire()
 
-func draw_item_card(item: ItemScene) -> void:
-	items.add_child(item)
+func draw_resource_card(item: ItemScene) -> void:
+	resources.add_child(item)
 
-func draw_gear_card(gear: ItemScene) -> void:
-	gears.add_child(gear)
+func draw_equipment_card(gear: ItemScene) -> void:
+	items.add_child(gear)
