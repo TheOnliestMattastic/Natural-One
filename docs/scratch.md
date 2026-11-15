@@ -18,6 +18,24 @@ Dim Grey: 666B6A
 Ink Black: 011627
 Burgundy: 780116
 
+### Set 3
+
+Primary Canvas, Charred Slate, 181A1B
+Elevated Surface, Basalt Stone , 232729,
+Card Stock (Base), Sun-Bleached Parchment, D8CEBC
+Primary Ink, Iron Oxide, 1E1B18
+Secondary Text, Weathered Ash, 9A948A
+Hairline Dividers, Tarnished Pewter, 3E4346 
+
+### Set 4
+
+Health / Vital, Dried Crimson, 8C2D27
+Stamina / Endurance, Ochre Clay, B5762A
+Food / Sustenance, Harvest Amber, C48A3B
+Water / Purity, Deep River Slate, 3B6373
+Spiritual / Omen Accent, Aged Gold Leaf, B89656
+Occult / Night Undertone, Midnight Indigo, 272E42
+Patina / Relic Accent, Oxidized Verdigris, 4A6B62
 
 ## Game Loop
 

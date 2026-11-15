@@ -1,7 +1,7 @@
 extends Node
 class_name Game
 
-@export var card_database: Array[Card] = []
+@export var card_database: Array[CardData] = []
 @export var items_database: Array[Item] = []
 @onready var ui: CanvasLayer = %UI
 @onready var hand: Hand = $UI/VBoxContainer/MenuTabContainer/Hand
@@ -11,8 +11,8 @@ class_name Game
 # cards
 const CARD: PackedScene = preload("uid://yl33ltvvgh44")
 const ITEM: PackedScene = preload("uid://j7841f0rtjdf")
-var deck_forage: Array[Card] = []
-var discard_pile: Array[Card] = []
+var deck_forage: Array[CardData] = []
+var discard_pile: Array[CardData] = []
 var deck_items: Dictionary = {}
 
 # game stats
@@ -79,7 +79,7 @@ func _on_button_pressed(button) -> void:
 		
 		_: print(button)
 
-func get_card() -> CardScene:
+func get_card() -> CardUI:
 	if deck_forage.is_empty(): 
 		print("No more cards...")
 		return
@@ -90,8 +90,8 @@ func get_card() -> CardScene:
 	return card
 
 func discard() -> void:
-	var card = ui.get_card_scene()
-	if !card: return
+	var card = ui.get_card_deck()
+	if !card: return print("No card found")
 	if card.has_meta("card_data"):
 		var card_data = card.get_meta("card_data")
 		discard_pile.append(card_data)
@@ -104,7 +104,7 @@ func new_day() -> void:
 func toggle_campfire() -> void:
 	campfire_lit = not campfire_lit
 
-func get_item_card(item_name: String) -> ItemScene:
+func get_item_card(item_name: String) -> CardHand:
 	if !deck_items.has(item_name):
 		print("[I AM ERROR] " + item_name + " not found...")
 		return null

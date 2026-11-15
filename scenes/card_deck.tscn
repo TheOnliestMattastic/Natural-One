@@ -2,7 +2,11 @@
 
 [ext_resource type="StyleBox" uid="uid://dbjv1pgr0a3ei" path="res://res/styles/style_card.tres" id="1_6u4wf"]
 [ext_resource type="Script" uid="uid://3kyhr2w6uaji" path="res://scripts/scenes/card.gd" id="1_d81rb"]
+[ext_resource type="Resource" uid="uid://cygpsacm6ph0n" path="res://res/cards/resource/water_1.tres" id="3_4g4gu"]
 [ext_resource type="StyleBox" uid="uid://oavj6lc088c4" path="res://res/styles/style_bg_circle.tres" id="3_ktuci"]
+[ext_resource type="LabelSettings" uid="uid://cp0jwg4olle66" path="res://res/styles/style_label_large.tres" id="4_4g4gu"]
+[ext_resource type="LabelSettings" uid="uid://vx80p1jlrbi0" path="res://res/styles/style_label_xlarge.tres" id="6_js426"]
+[ext_resource type="LabelSettings" uid="uid://bsuebgsqe8qnx" path="res://res/styles/style_label.tres" id="7_5a0ah"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s8enn"]
 bg_color = Color(1, 1, 1, 1)
@@ -17,9 +21,6 @@ expand_margin_bottom = 8.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f73s1"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_ktuci"]
-font_size = 32
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6u4wf"]
 bg_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 20
@@ -31,7 +32,7 @@ expand_margin_top = 8.0
 expand_margin_right = 8.0
 expand_margin_bottom = 8.0
 
-[node name="Card" type="PanelContainer" unique_id=1644298931]
+[node name="CardDeck" type="PanelContainer" unique_id=1644298931]
 custom_minimum_size = Vector2(412, 712.5)
 anchors_preset = 8
 anchor_left = 0.5
@@ -48,16 +49,16 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_styles/panel = ExtResource("1_6u4wf")
 script = ExtResource("1_d81rb")
+card_data = ExtResource("3_4g4gu")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1143576023]
 layout_mode = 2
 
-[node name="TypeLabel" type="Label" parent="VBoxContainer" unique_id=572454450]
+[node name="Type" type="Label" parent="VBoxContainer" unique_id=572454450]
 layout_mode = 2
 size_flags_horizontal = 0
-theme_override_colors/font_color = Color(0.19607843, 0.2, 0.22352941, 1)
-theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_s8enn")
+label_settings = ExtResource("4_4g4gu")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -66,16 +67,16 @@ layout_mode = 2
 theme_override_constants/separation = 32
 theme_override_styles/separator = SubResource("StyleBoxEmpty_f73s1")
 
-[node name="Image" type="AspectRatioContainer" parent="VBoxContainer" unique_id=1218454958]
+[node name="Art" type="AspectRatioContainer" parent="VBoxContainer" unique_id=1218454958]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/Image" unique_id=284245731]
+[node name="Frame" type="PanelContainer" parent="VBoxContainer/Art" unique_id=284245731]
 layout_mode = 2
 theme_override_styles/panel = ExtResource("3_ktuci")
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Image/PanelContainer" unique_id=727661780]
-modulate = Color(0.16862746, 0.16862746, 0.16862746, 1)
+[node name="Image" type="TextureRect" parent="VBoxContainer/Art" unique_id=727661780]
+modulate = Color(0.84705883, 0.80784315, 0.7372549, 1)
 custom_minimum_size = Vector2(128, 128)
 custom_maximum_size = Vector2(128, 128)
 layout_mode = 2
@@ -93,9 +94,9 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_f73s1")
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="NameLabel" type="Label" parent="VBoxContainer/Description" unique_id=1859254402]
+[node name="Title" type="Label" parent="VBoxContainer/Description" unique_id=1859254402]
 layout_mode = 2
-label_settings = SubResource("LabelSettings_ktuci")
+label_settings = ExtResource("6_js426")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -103,14 +104,16 @@ vertical_alignment = 1
 layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxEmpty_f73s1")
 
-[node name="DescLabel" type="RichTextLabel" parent="VBoxContainer/Description" unique_id=614321985]
+[node name="Description" type="RichTextLabel" parent="VBoxContainer/Description" unique_id=614321985]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/default_color = Color(0.11764706, 0.105882354, 0.09411765, 1)
 theme_override_font_sizes/normal_font_size = 24
 horizontal_alignment = 1
 
-[node name="EffectsLabel" type="Label" parent="VBoxContainer" unique_id=2080699199]
+[node name="Effects" type="Label" parent="VBoxContainer" unique_id=2080699199]
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_6u4wf")
+label_settings = ExtResource("7_5a0ah")
 horizontal_alignment = 1
 vertical_alignment = 1

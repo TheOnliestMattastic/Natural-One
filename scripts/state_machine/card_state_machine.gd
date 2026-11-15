@@ -1,16 +1,16 @@
 extends Node
-class_name ItemStateMachine
+class_name CardStateMachine
 
-@export var inital_state: ItemState
-var current_state: ItemState
+@export var inital_state: CardState
+var current_state: CardState
 var states: Dictionary = {}
 
-func init(item: ItemScene) -> void:
+func init(item: CardHand) -> void:
 	for child in get_children():
-		if child is ItemState:
+		if child is CardState:
 			states[child.state] = child
 			child.transition_requested.connect(_on_transition_requested)
-			child.item_scene = item
+			child.card_hand = item
 	
 	if inital_state:
 		inital_state.enter()
@@ -28,9 +28,9 @@ func on_mouse_entered() -> void:
 func on_mouse_exited() -> void:
 	if current_state: current_state.on_mouse_exited()
 
-func _on_transition_requested(from: ItemState, to: ItemState.State) -> void:
+func _on_transition_requested(from: CardState, to: CardState.State) -> void:
 	if from != current_state: return
-	var new_state: ItemState = states[to]
+	var new_state: CardState = states[to]
 	if not new_state: return
 	if current_state: current_state.exit()
 	new_state.enter()

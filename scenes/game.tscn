@@ -2,29 +2,25 @@
 
 [ext_resource type="Script" uid="uid://3jupa4urlxyp" path="res://scripts/scenes/game.gd" id="1_iywne"]
 [ext_resource type="Script" uid="uid://ddd7muys8yekl" path="res://scripts/sys/ui.gd" id="1_lnu2h"]
-[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/res_card.gd" id="2_37s47"]
+[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_37s47"]
 [ext_resource type="PackedScene" uid="uid://dsm0gysm47txb" path="res://scenes/button.tscn" id="2_yqjtg"]
-[ext_resource type="Resource" uid="uid://cfwm505qg0hip" path="res://res/cards/encounter/bear_tracks.tres" id="3_264po"]
+[ext_resource type="Texture2D" uid="uid://bp4cvbxafj6vk" path="res://assets/icon-packs/lorc/drop.svg" id="3_kvuet"]
 [ext_resource type="StyleBox" uid="uid://dg52ryekxhwl5" path="res://res/styles/style_panel_border.tres" id="3_p57ef"]
-[ext_resource type="Resource" uid="uid://ynqq3ds4wfm8" path="res://res/cards/resource/driftwood_log.tres" id="4_1kice"]
-[ext_resource type="Resource" uid="uid://cfgn27kw7i5ik" path="res://res/cards/resource/dry_twigs.tres" id="5_5newe"]
-[ext_resource type="Resource" uid="uid://dj5g1rs1gfgeh" path="res://res/cards/resource/fallen_branch.tres" id="6_37s47"]
-[ext_resource type="Resource" uid="uid://cab65vdlbmelq" path="res://res/cards/resource/foraged_berries.tres" id="7_bt5mj"]
-[ext_resource type="Resource" uid="uid://b6wk6lvqa5arj" path="res://res/cards/resource/inner_bark_strips.tres" id="8_e1j6l"]
-[ext_resource type="Resource" uid="uid://bhhyuqa02neqf" path="res://res/cards/resource/morning_dew.tres" id="9_pl11u"]
-[ext_resource type="Resource" uid="uid://de44u7r5krik2" path="res://res/cards/resource/rainwater_puddle.tres" id="10_bhx41"]
-[ext_resource type="Resource" uid="uid://cklx52nwsevka" path="res://res/cards/resource/spring_water.tres" id="11_qnb83"]
-[ext_resource type="Resource" uid="uid://dtkpbaji2arho" path="res://res/cards/resource/stream_water.tres" id="12_sww3w"]
-[ext_resource type="Resource" uid="uid://cosdggqbefk86" path="res://res/cards/resource/tough_vine_tendrils.tres" id="13_suyxu"]
-[ext_resource type="Resource" uid="uid://dn7dgf61mtspb" path="res://res/cards/resource/wild_plant_fibers.tres" id="14_sgl2t"]
 [ext_resource type="Resource" uid="uid://gd53t2c1ma2x" path="res://res/cards/items/axe.tres" id="15_5newe"]
-[ext_resource type="Resource" uid="uid://8syr8xpgueiw" path="res://res/cards/encounter/wolf_tracks.tres" id="15_qouja"]
 [ext_resource type="Texture2D" uid="uid://b7fcgd502agg1" path="res://assets/campfire-unlit.png" id="16_1kice"]
 [ext_resource type="Script" uid="uid://cgeengxwuvtt5" path="res://scripts/res/res_item.gd" id="16_bt5mj"]
 [ext_resource type="Texture2D" uid="uid://cd7q6vk6jy8ph" path="res://assets/campfire-lit.png" id="17_1kice"]
 [ext_resource type="Script" uid="uid://b0uuep758nd8" path="res://scripts/menu_tab_container.gd" id="22_pl11u"]
 [ext_resource type="Script" uid="uid://c7m40actab011" path="res://scripts/hand.gd" id="23_bt5mj"]
 [ext_resource type="Script" uid="uid://b3eh1ywktd5qb" path="res://scripts/equipment.gd" id="24_e1j6l"]
+
+[sub_resource type="Resource" id="Resource_trtic"]
+script = ExtResource("2_37s47")
+title = "Water"
+description = "A short description."
+effects = "Stamina +1"
+art = ExtResource("3_kvuet")
+metadata/_custom_type_script = "uid://bbvbfp88y36by"
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fl3o2"]
 
@@ -37,8 +33,16 @@ size = Vector2(648, 483)
 
 [node name="Game" type="Node" unique_id=568490508]
 script = ExtResource("1_iywne")
-card_database = Array[ExtResource("2_37s47")]([ExtResource("4_1kice"), ExtResource("5_5newe"), ExtResource("6_37s47"), ExtResource("7_bt5mj"), ExtResource("8_e1j6l"), ExtResource("9_pl11u"), ExtResource("10_bhx41"), ExtResource("11_qnb83"), ExtResource("12_sww3w"), ExtResource("13_suyxu"), ExtResource("14_sgl2t"), ExtResource("3_264po"), ExtResource("15_qouja")])
+card_database = Array[ExtResource("2_37s47")]([SubResource("Resource_trtic")])
 items_database = Array[ExtResource("16_bt5mj")]([ExtResource("15_5newe")])
+
+[node name="Background" type="ColorRect" parent="." unique_id=1578591557]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.09411765, 0.101960786, 0.105882354, 1)
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=68547935 groups=["ui_layer"]]
 unique_name_in_owner = true
@@ -138,11 +142,10 @@ custom_minimum_size = Vector2(0, 276)
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/panel = ExtResource("3_p57ef")
-current_tab = 2
+current_tab = 0
 script = ExtResource("22_pl11u")
 
 [node name="Camp" type="HBoxContainer" parent="UI/VBoxContainer/MenuTabContainer" unique_id=759099236]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 
@@ -202,6 +205,7 @@ size_flags_vertical = 10
 text = "Item"
 
 [node name="Equipment" type="PanelContainer" parent="UI/VBoxContainer/MenuTabContainer" unique_id=1291089039]
+visible = false
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_hwfa1")
 script = ExtResource("24_e1j6l")
