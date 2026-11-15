@@ -1,8 +1,9 @@
 # Tarot card pixel size: 825 x 1425
 extends PanelContainer
-class_name CardUI
+class_name CardDeckUI
 
 const FALLBACK_BG := Color("D8CEBC")
+const FALLBACK_PRIMARY := Color("1E2D2F")
 const FALLBACK_ACCENT := Color("895D3F")
 
 @export var card_data: CardData
@@ -11,13 +12,15 @@ const FALLBACK_ACCENT := Color("895D3F")
 @onready var type: Label = $VBoxContainer/Type
 @onready var frame: PanelContainer = $VBoxContainer/Art/Frame
 @onready var image: TextureRect = $VBoxContainer/Art/Image
-@onready var title: Label = $VBoxContainer/Description/Title
-@onready var description: RichTextLabel = $VBoxContainer/Description/Description
+@onready var desc_box: PanelContainer = $VBoxContainer/DescBox
+@onready var title: Label = $VBoxContainer/DescBox/Title
+@onready var desc: RichTextLabel = $VBoxContainer/DescBox/Desc
 @onready var effects: Label = $VBoxContainer/Effects
 
 # Cached style overrides to avoid repeated heap allocations
 var _root_style: StyleBoxFlat
 var _image_frame_style: StyleBoxFlat
+var _desc_box_style: StyleBoxFlat
 var _type_label_style: StyleBoxFlat
 var _effects_label_style: StyleBoxFlat
 
@@ -36,8 +39,8 @@ func refresh_ui() -> void:
 		return
 
 	var bg_color: Color = card_data.get_bg_color()
+	var primary_color: Color = card_data.get_primary_color()
 	var accent_color: Color = card_data.get_accent_color()
-	var ink_color: Color = card_data.get_ink_color()
 
 	# Base card background
 	_apply_style_bg(self, _root_style, bg_color)
@@ -56,15 +59,17 @@ func refresh_ui() -> void:
 	_apply_label_badge(effects, _effects_label_style, accent_color)
 
 	# Title & description ink
+	var desc_ink: Color = CardData.get_ink_for(primary_color)
+	_apply_style_bg(desc_box, _desc_box_style, primary_color)
 	title.text = card_data.title
-	title.add_theme_color_override("font_color", ink_color)
-
-	description.text = card_data.description
-	description.add_theme_color_override("default_color", ink_color)
+	title.add_theme_color_override("font_color", desc_ink)
+	desc.text = card_data.description
+	desc.add_theme_color_override("default_color", desc_ink)
 
 func _cache_styles() -> void:
 	_root_style = _prepare_stylebox(self, "panel", FALLBACK_BG)
 	_image_frame_style = _prepare_stylebox(frame, "panel", FALLBACK_ACCENT)
+	_desc_box_style = _prepare_stylebox(desc_box, "panel", FALLBACK_PRIMARY)
 	_type_label_style = _prepare_stylebox(type, "normal", FALLBACK_ACCENT)
 	_effects_label_style = _prepare_stylebox(effects, "normal", FALLBACK_ACCENT)
 
@@ -94,6 +99,6 @@ func _apply_label_badge(label: Label, style: StyleBoxFlat, bg_color: Color) -> v
 func _clear_ui() -> void:
 	type.text = ""
 	title.text = ""
-	description.text = ""
+	desc.text = ""
 	effects.text = ""
 	frame.texture = null

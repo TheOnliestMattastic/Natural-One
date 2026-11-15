@@ -23,12 +23,12 @@ var crafting_menu: CraftingMenu = null
 func _ready() -> void:
 	refresh_ui()
 
-func draw_card(card: CardUI) -> void:
+func draw_card(card: CardDeckUI) -> void:
 	center.add_child(card)
 
-func get_card_deck() -> CardUI:
+func get_card_deck() -> CardDeckUI:
 	if center.get_child_count() == 0: return null
-	return center.get_child(0) as CardUI
+	return center.get_child(0) as CardDeckUI
 
 func refresh_day() -> void:
 	day.set_text("Day: " + str(game.day) + "/" + str(game.day_win))

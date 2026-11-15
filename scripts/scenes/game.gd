@@ -79,7 +79,7 @@ func _on_button_pressed(button) -> void:
 		
 		_: print(button)
 
-func get_card() -> CardUI:
+func get_card() -> CardDeckUI:
 	if deck_forage.is_empty(): 
 		print("No more cards...")
 		return

@@ -54,4 +54,7 @@ func get_accent_color() -> Color:
 	return TYPE_COLORS.get(type, Color.WHITE)
 
 func get_ink_color() -> Color:
-	return INK_LIGHT if get_bg_color().get_luminance() < 0.35 else INK_DARK
+	return get_ink_for(get_bg_color())
+
+static func get_ink_for(surface_color: Color) -> Color:
+	return INK_LIGHT if surface_color.get_luminance() < 0.35 else INK_DARK
