@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://c6qd5bkq0uccx"]
+
+[ext_resource type="Texture2D" uid="uid://b0h6kxobr8ux3" path="res://assets/icon-packs/delapouite/wood-stick.svg" id="1_8bbub"]
+[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_6sai7"]
+
+[resource]
+script = ExtResource("2_6sai7")
+id = "wood_1"
+title = "Dry Twigs"
+type = 2
+description = "Light, brittle brush gathered from the undergrowth. Highly flammable and easy to snap by hand."
+effects = "1 Wood"
+art = ExtResource("1_8bbub")
+metadata/_custom_type_script = "uid://bbvbfp88y36by"

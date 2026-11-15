@@ -63,7 +63,7 @@ theme_override_styles/panel = ExtResource("3_ktuci")
 
 [node name="Image" type="TextureRect" parent="VBoxContainer/Art" unique_id=727661780]
 modulate = Color(0.84705883, 0.80784315, 0.7372549, 1)
-custom_minimum_size = Vector2(224, 224)
+custom_minimum_size = Vector2(192, 192)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4

@@ -4,8 +4,11 @@
 [ext_resource type="Script" uid="uid://ddd7muys8yekl" path="res://scripts/sys/ui.gd" id="1_lnu2h"]
 [ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_37s47"]
 [ext_resource type="PackedScene" uid="uid://dsm0gysm47txb" path="res://scenes/button.tscn" id="2_yqjtg"]
-[ext_resource type="Texture2D" uid="uid://bp4cvbxafj6vk" path="res://assets/icon-packs/lorc/drop.svg" id="3_kvuet"]
+[ext_resource type="Resource" uid="uid://cygpsacm6ph0n" path="res://res/cards/resource/water_1.tres" id="3_ir15t"]
 [ext_resource type="StyleBox" uid="uid://dg52ryekxhwl5" path="res://res/styles/style_panel_border.tres" id="3_p57ef"]
+[ext_resource type="Resource" uid="uid://c1xetk86koaek" path="res://res/cards/resource/water_2.tres" id="4_ca42v"]
+[ext_resource type="Resource" uid="uid://b1ea4vr576ren" path="res://res/cards/resource/water_3.tres" id="5_rysoc"]
+[ext_resource type="Resource" uid="uid://c6qd5bkq0uccx" path="res://res/cards/resource/wood_1.tres" id="6_ca42v"]
 [ext_resource type="Resource" uid="uid://gd53t2c1ma2x" path="res://res/cards/items/axe.tres" id="15_5newe"]
 [ext_resource type="Texture2D" uid="uid://b7fcgd502agg1" path="res://assets/campfire-unlit.png" id="16_1kice"]
 [ext_resource type="Script" uid="uid://cgeengxwuvtt5" path="res://scripts/res/res_item.gd" id="16_bt5mj"]
@@ -13,14 +16,6 @@
 [ext_resource type="Script" uid="uid://b0uuep758nd8" path="res://scripts/menu_tab_container.gd" id="22_pl11u"]
 [ext_resource type="Script" uid="uid://c7m40actab011" path="res://scripts/hand.gd" id="23_bt5mj"]
 [ext_resource type="Script" uid="uid://b3eh1ywktd5qb" path="res://scripts/equipment.gd" id="24_e1j6l"]
-
-[sub_resource type="Resource" id="Resource_trtic"]
-script = ExtResource("2_37s47")
-title = "Water"
-description = "A short description."
-effects = "Stamina +1"
-art = ExtResource("3_kvuet")
-metadata/_custom_type_script = "uid://bbvbfp88y36by"
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fl3o2"]
 
@@ -33,7 +28,7 @@ size = Vector2(648, 483)
 
 [node name="Game" type="Node" unique_id=568490508]
 script = ExtResource("1_iywne")
-card_database = Array[ExtResource("2_37s47")]([SubResource("Resource_trtic")])
+card_database = Array[ExtResource("2_37s47")]([ExtResource("3_ir15t"), ExtResource("4_ca42v"), ExtResource("5_rysoc"), ExtResource("6_ca42v")])
 items_database = Array[ExtResource("16_bt5mj")]([ExtResource("15_5newe")])
 
 [node name="Background" type="ColorRect" parent="." unique_id=1578591557]
