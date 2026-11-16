@@ -8,14 +8,14 @@ const SUIT_COLORS: Dictionary = {
 	Suit.RESERVE: Color("C7BEAE"),
 }
 
-enum Sort {RESOURCE, ENCOUNTER, CRAFT}
+enum Sort {RESOURCE, HAZARD, CRAFT}
 const SORT_COLORS: Dictionary = {
 	Sort.RESOURCE: Color("1E2D2F"),
-	Sort.ENCOUNTER: Color("780116"),
+	Sort.HAZARD: Color("780116"),
 	Sort.CRAFT: Color("4A6B62"),
 }
 
-enum Type {WATER, FOOD, WOOD, FIBER, STONE, WARNING, SMALL, LARGE, RECIPE, EQUIPMENT}
+enum Type {WATER, FOOD, WOOD, FIBER, STONE, WARNING, ENCOUNTER, ENVIRONMENT, RECIPE, EQUIPMENT}
 const TYPE_COLORS: Dictionary = {
 	Type.WATER: Color("3B6373"),
 	Type.FOOD: Color("C48A3B"),
@@ -23,8 +23,8 @@ const TYPE_COLORS: Dictionary = {
 	Type.FIBER: Color("9B7E46"),
 	Type.STONE: Color("6E6A63"),
 	Type.WARNING: Color("B89656"),
-	Type.SMALL: Color("B5762A"),
-	Type.LARGE: Color("6B5B8C"),
+	Type.ENCOUNTER: Color("B5762A"),
+	Type.ENVIRONMENT: Color("6B5B8C"),
 	Type.RECIPE: Color("B89656"),
 	Type.EQUIPMENT: Color("4A6B62"),
 }
