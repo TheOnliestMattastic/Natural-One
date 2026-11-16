@@ -6,10 +6,10 @@
 [resource]
 script = ExtResource("2_tpfwi")
 id = "raw_food_trout"
-title = "River Trout"
+title = "Trout"
 suit = 2
 type = 1
 description = "Freshly caught fish from cold running water."
-effects = "+1 Raw Food"
+effects = "+1 Health"
 art = ExtResource("1_ah8pr")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"

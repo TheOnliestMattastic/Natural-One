@@ -71,3 +71,14 @@ Basket
 Traps
 - Cost: 1 Food, Wood, & Fiber
 - Add meat (Food resource) to the Forage deck
+
+## Rules & Mechanics
+
+1. Sleeping
+	- Players may spend up to 2 points of Stamina during the Sleep phase to
+	restore a maximum of 4 Action points
+	- 1:2 Stamina-Action ratio
+2. Pushing-on
+	- Players may spend 1 point of Stamina during the Day phase to restore 1
+	Action point
+	- Players may only do this once per day

@@ -5,7 +5,7 @@ class_name CardStateMachine
 var current_state: CardState
 var states: Dictionary = {}
 
-func init(item: CardHandUI) -> void:
+func init(item: CardHand) -> void:
 	for child in get_children():
 		if child is CardState:
 			states[child.state] = child

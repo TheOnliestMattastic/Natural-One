@@ -2,7 +2,6 @@ extends Node
 class_name Game
 
 @export var card_database: Array[CardData] = []
-@export var items_database: Array[Item] = []
 @onready var ui: CanvasLayer = %UI
 @onready var hand: Hand = $UI/VBoxContainer/MenuTabContainer/Hand
 @onready var equipment: Equipment = $UI/VBoxContainer/MenuTabContainer/Equipment
@@ -10,10 +9,8 @@ class_name Game
 
 # cards
 const CARD: PackedScene = preload("uid://yl33ltvvgh44")
-const ITEM: PackedScene = preload("uid://j7841f0rtjdf")
-var deck_forage: Array[CardData] = []
+var deck_day: Array[CardData] = []
 var discard_pile: Array[CardData] = []
-var deck_items: Dictionary = {}
 
 # game stats
 var day: int = 1
@@ -24,11 +21,8 @@ func _ready() -> void:
 	EventBus.button_pressed.connect(_on_button_pressed)
 	
 	# prepare decks
-	deck_forage = card_database.duplicate()
-	deck_forage.shuffle()
-	for item in items_database:
-		if item and not item.name.is_empty():
-			deck_items[item.name] = item
+	deck_day = card_database.duplicate()
+	deck_day.shuffle()
 
 func _on_button_pressed(button) -> void:
 	match button:
@@ -60,16 +54,6 @@ func _on_button_pressed(button) -> void:
 			toggle_campfire()
 			ui.refresh_campfire()
 		
-		"Item":
-			var item = get_item_card("Axe")
-			ui.draw_resource_card(item)
-			hand.connect_hand()
-		
-		"Gear":
-			var item = get_item_card("Axe")
-			ui.draw_equipment_card(item)
-			equipment.connect_hand()
-		
 		"Craft":
 			print("Crafting...")
 			ui.toggle_crafting_menu()
@@ -79,11 +63,11 @@ func _on_button_pressed(button) -> void:
 		
 		_: print(button)
 
-func get_card() -> CardDeckUI:
-	if deck_forage.is_empty(): 
+func get_card() -> CardDeck:
+	if deck_day.is_empty(): 
 		print("No more cards...")
 		return
-	var card_data = deck_forage.pop_back()
+	var card_data = deck_day.pop_back()
 	var card = CARD.instantiate()
 	if card.has_method("set_attributes"): card.set_attributes(card_data)
 	card.set_meta("card_data", card_data)
@@ -103,12 +87,3 @@ func new_day() -> void:
 
 func toggle_campfire() -> void:
 	campfire_lit = not campfire_lit
-
-func get_item_card(item_name: String) -> CardHandUI:
-	if !deck_items.has(item_name):
-		print("[I AM ERROR] " + item_name + " not found...")
-		return null
-	var item_data = deck_items[item_name].duplicate()
-	var item = ITEM.instantiate()
-	if item.has_method("set_attributes"): item.set_attributes(item_data)
-	return item

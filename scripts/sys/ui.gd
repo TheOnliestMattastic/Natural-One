@@ -23,12 +23,12 @@ var crafting_menu: CraftingMenu = null
 func _ready() -> void:
 	refresh_ui()
 
-func draw_card(card: CardDeckUI) -> void:
+func draw_card(card: CardDeck) -> void:
 	center.add_child(card)
 
-func get_card_deck() -> CardDeckUI:
+func get_card_deck() -> CardDeck:
 	if center.get_child_count() == 0: return null
-	return center.get_child(0) as CardDeckUI
+	return center.get_child(0) as CardDeck
 
 func refresh_day() -> void:
 	day.set_text("Day: " + str(game.day) + "/" + str(game.day_win))
@@ -57,10 +57,10 @@ func refresh_ui() -> void:
 	refresh_thirst()
 	refresh_campfire()
 
-func draw_resource_card(item: CardHandUI) -> void:
+func draw_resource_card(item: CardHand) -> void:
 	resources.add_child(item)
 
-func draw_equipment_card(gear: CardHandUI) -> void:
+func draw_equipment_card(gear: CardHand) -> void:
 	items.add_child(gear)
 
 func toggle_crafting_menu() -> void:

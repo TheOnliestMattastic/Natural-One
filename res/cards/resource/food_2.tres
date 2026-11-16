@@ -6,9 +6,9 @@
 [resource]
 script = ExtResource("2_8ceof")
 id = "food_2"
-title = "Dried Forest Mushrooms"
+title = "Forest Mushrooms"
 type = 1
 description = "A small cluster of safe, sun-dried fungi discovered growing on a decaying log."
-effects = "+2 Food"
+effects = "+2 Health"
 art = ExtResource("1_fkhne")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"

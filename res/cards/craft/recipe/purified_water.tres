@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://cd65224guoh6m"]
+
+[ext_resource type="Texture2D" uid="uid://bt8wqruj5at7h" path="res://assets/icon-packs/delapouite/camp-cooking-pot.svg" id="1_qw8l0"]
+[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_yt8gd"]
+
+[resource]
+script = ExtResource("2_yt8gd")
+id = "purified_water"
+title = "Purified Water"
+suit = 2
+sort = 2
+type = 8
+description = "Boiled water over a hot fire. Requires a lit campfire."
+effects = "+1 Purified Water"
+art = ExtResource("1_qw8l0")
+metadata/_custom_type_script = "uid://bbvbfp88y36by"

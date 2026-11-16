@@ -19,10 +19,8 @@
 [ext_resource type="Resource" uid="uid://deruner48b8fh" path="res://res/cards/resource/food_3.tres" id="10_m4url"]
 [ext_resource type="Resource" uid="uid://br2h8xpb5ulyy" path="res://res/cards/resource/stone_1.tres" id="13_05nbr"]
 [ext_resource type="Resource" uid="uid://bdy0oqj6ydt08" path="res://res/cards/resource/stone_2.tres" id="14_0sl42"]
-[ext_resource type="Resource" uid="uid://gd53t2c1ma2x" path="res://res/cards/equipment/axe.tres" id="15_5newe"]
 [ext_resource type="Resource" uid="uid://o3yctsvowg55" path="res://res/cards/resource/stone_3.tres" id="15_oaba0"]
 [ext_resource type="Texture2D" uid="uid://b7fcgd502agg1" path="res://assets/campfire-unlit.png" id="16_1kice"]
-[ext_resource type="Script" uid="uid://cgeengxwuvtt5" path="res://scripts/res/res_item.gd" id="16_bt5mj"]
 [ext_resource type="Texture2D" uid="uid://cd7q6vk6jy8ph" path="res://assets/campfire-lit.png" id="17_1kice"]
 [ext_resource type="Resource" uid="uid://dndhe2gb1opii" path="res://res/cards/hazard/day/warning_bear.tres" id="22_458eo"]
 [ext_resource type="Script" uid="uid://b0uuep758nd8" path="res://scripts/menu_tab_container.gd" id="22_pl11u"]
@@ -42,7 +40,6 @@ size = Vector2(648, 483)
 [node name="Game" type="Node" unique_id=568490508]
 script = ExtResource("1_iywne")
 card_database = Array[ExtResource("2_37s47")]([ExtResource("5_gxtfn"), ExtResource("6_twgab"), ExtResource("7_02fa5"), ExtResource("8_nepv3"), ExtResource("9_7025r"), ExtResource("10_m4url"), ExtResource("13_05nbr"), ExtResource("14_0sl42"), ExtResource("15_oaba0"), ExtResource("3_ir15t"), ExtResource("5_rysoc"), ExtResource("4_ca42v"), ExtResource("6_ca42v"), ExtResource("7_ssvqc"), ExtResource("8_264po"), ExtResource("22_458eo"), ExtResource("23_h3rex")])
-items_database = Array[ExtResource("16_bt5mj")]([ExtResource("15_5newe")])
 
 [node name="Background" type="ColorRect" parent="." unique_id=1578591557]
 anchors_preset = 15

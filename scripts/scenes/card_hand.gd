@@ -1,10 +1,10 @@
 # 1/8 Tarot card pixel size: 103 x 178
 extends PanelContainer
-class_name CardHandUI
+class_name CardHand
 
 # data
 @export var card_data: CardData
-@onready var type: Label = $VBoxContainer/Type
+@onready var title: Label = $VBoxContainer/Title
 @onready var frame: PanelContainer = $VBoxContainer/Art/Frame
 @onready var image: TextureRect = $VBoxContainer/Art/Image
 @onready var effects: Label = $VBoxContainer/Effects
@@ -12,7 +12,7 @@ class_name CardHandUI
 # state machine
 @onready var card_state_machine: CardStateMachine = $CardStateMachine as CardStateMachine
 @onready var targets: Array[Node] = []
-signal reparent_requested(item: CardHandUI)
+signal reparent_requested(item: CardHand)
 
 # ui
 const FALLBACK_BG := Color("D8CEBC")
@@ -22,7 +22,7 @@ const FALLBACK_ACCENT := Color("895D3F")
 # Cached style overrides to avoid repeated heap allocations
 var _root_style: StyleBoxFlat
 var _image_frame_style: StyleBoxFlat
-var _type_label_style: StyleBoxFlat
+var _title_label_style: StyleBoxFlat
 var _effects_label_style: StyleBoxFlat
 
 func _ready() -> void:
@@ -48,10 +48,9 @@ func refresh_ui() -> void:
 	_apply_style_bg(self, _root_style, bg_color)
 	_apply_style_border(_root_style, primary_color)
 
-	# Type badge
-	var raw_sort_key: Variant = CardData.Sort.find_key(card_data.sort)
-	type.text = str(raw_sort_key) if raw_sort_key != null else "UNKNOWN"
-	_apply_label_badge(type, _type_label_style, primary_color)
+	# Title badge
+	title.text = card_data.title
+	_apply_label_badge(title, _title_label_style, primary_color)
 
 	# Art frame & texture
 	_apply_style_bg(frame, _image_frame_style, accent_color)
@@ -64,7 +63,7 @@ func refresh_ui() -> void:
 func _cache_styles() -> void:
 	_root_style = _prepare_stylebox(self, "panel", FALLBACK_BG)
 	_image_frame_style = _prepare_stylebox(frame, "panel", FALLBACK_ACCENT)
-	_type_label_style = _prepare_stylebox(type, "normal", FALLBACK_ACCENT)
+	_title_label_style = _prepare_stylebox(title, "normal", FALLBACK_ACCENT)
 	_effects_label_style = _prepare_stylebox(effects, "normal", FALLBACK_ACCENT)
 
 func _prepare_stylebox(control: Control, style_name: StringName, fallback: Color) -> StyleBoxFlat:
@@ -95,7 +94,7 @@ func _apply_label_badge(label: Label, style: StyleBoxFlat, bg_color: Color) -> v
 	label.add_theme_color_override("font_color", box_ink)
 
 func _clear_ui() -> void:
-	type.text = ""
+	title.text = ""
 	effects.text = ""
 	image.texture = null
 

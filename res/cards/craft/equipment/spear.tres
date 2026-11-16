@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://c85hjxocp8gp"]
+
+[ext_resource type="Texture2D" uid="uid://ccew2g8ddcux1" path="res://assets/icon-packs/lorc/stone-spear.svg" id="1_r00km"]
+[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_uj8sb"]
+
+[resource]
+script = ExtResource("2_uj8sb")
+id = "spear"
+title = "Spear"
+suit = 2
+sort = 2
+type = 9
+description = "A sharpened wooden shaft crafted from branches. 
+- Adds 3 Food cards to the Day deck."
+effects = "+5 Combat"
+art = ExtResource("1_r00km")
+metadata/_custom_type_script = "uid://bbvbfp88y36by"

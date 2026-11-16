@@ -1,6 +1,6 @@
 # Tarot card pixel size: 825 x 1425
 extends PanelContainer
-class_name CardDeckUI
+class_name CardDeck
 
 const FALLBACK_BG := Color("D8CEBC")
 const FALLBACK_PRIMARY := Color("1E2D2F")

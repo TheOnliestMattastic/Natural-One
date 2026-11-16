@@ -6,10 +6,10 @@
 [resource]
 script = ExtResource("2_nayit")
 id = "raw_food_hare"
-title = "Wild Hare"
+title = "Hare"
 suit = 2
 type = 1
 description = "Small game caught in the brush, still needing fire before it is safe to eat."
-effects = "+1 Raw Food"
+effects = "+1 Health"
 art = ExtResource("1_uq6nl")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"

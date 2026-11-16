@@ -9,6 +9,6 @@ id = "food_3"
 title = "Edible Root Bulb"
 type = 1
 description = "A starchy, earthy tuber dug up from damp soil beneath a canopy of ferns."
-effects = "+3 Food"
+effects = "+3 Health"
 art = ExtResource("1_6pmyj")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"

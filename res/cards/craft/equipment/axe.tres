@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://cf37egq1wqmx0"]
+
+[ext_resource type="Texture2D" uid="uid://cyc0qu328tkmh" path="res://assets/icon-packs/lorc/stone-axe.svg" id="1_fsuq6"]
+[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_jtgme"]
+
+[resource]
+script = ExtResource("2_jtgme")
+id = "equipment_axe"
+title = "Axe"
+suit = 2
+sort = 2
+type = 9
+description = "A sharpened wooden shaft crafted from branches. 
+- Adds `3 Wood` to the Day deck."
+effects = "+3 Combat"
+art = ExtResource("1_fsuq6")
+metadata/_custom_type_script = "uid://bbvbfp88y36by"

@@ -10,7 +10,8 @@ title = "Cooked Food"
 suit = 2
 sort = 2
 type = 8
-description = "Small game roasted over hot coals until the skin crisps. Requires a lit campfire."
-effects = "-1 Raw Food, +2 Cooked Food"
+description = "Small game roasted over hot coals until the skin crisps. Requires a lit campfire.
+-1 Raw Food"
+effects = "+2 Cooked Food"
 art = ExtResource("1_624od")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"
