@@ -3,8 +3,7 @@
 [ext_resource type="Script" uid="uid://i8f514p1ayub" path="res://scripts/scenes/card_hand.gd" id="1_4gq7n"]
 [ext_resource type="StyleBox" uid="uid://bwoy1qt5b1u8k" path="res://res/styles/style_card_small.tres" id="1_s8enn"]
 [ext_resource type="StyleBox" uid="uid://cfdirolysueq5" path="res://res/styles/style_bg_circle_small.tres" id="3_6muww"]
-[ext_resource type="Resource" uid="uid://gd53t2c1ma2x" path="res://res/cards/items/axe.tres" id="3_wnc42"]
-[ext_resource type="LabelSettings" uid="uid://bsuebgsqe8qnx" path="res://res/styles/style_label.tres" id="4_rp7l2"]
+[ext_resource type="Resource" uid="uid://gd53t2c1ma2x" path="res://res/cards/equipment/axe.tres" id="3_wnc42"]
 [ext_resource type="Script" uid="uid://c2i4wyhny8efr" path="res://scripts/state_machine/card_state_machine.gd" id="4_vljjh"]
 [ext_resource type="Script" uid="uid://gdt755sqx4os" path="res://scripts/state_machine/card_base_state.gd" id="5_ro5b8"]
 [ext_resource type="Script" uid="uid://ce7qhomukbbwe" path="res://scripts/state_machine/card_clicked_state.gd" id="6_c4387"]
@@ -17,6 +16,8 @@ corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_wnc42"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f73s1"]
 size = Vector2(103, 178)
@@ -49,7 +50,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.17254902, 0.1764706, 0.19607843, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_s8enn")
 text = "Item"
-label_settings = ExtResource("4_rp7l2")
+label_settings = SubResource("LabelSettings_wnc42")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -77,7 +78,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.17254902, 0.1764706, 0.19607843, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_s8enn")
 text = "Item"
-label_settings = ExtResource("4_rp7l2")
+label_settings = SubResource("LabelSettings_wnc42")
 horizontal_alignment = 1
 vertical_alignment = 1
 

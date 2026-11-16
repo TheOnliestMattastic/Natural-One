@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://cwll1mlfhv01m"]
+
+[ext_resource type="Texture2D" uid="uid://dwk4paxuc1h3s" path="res://assets/icon-packs/lorc/paw-print.svg" id="1_0k7lu"]
+[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_imuwc"]
+
+[resource]
+script = ExtResource("2_imuwc")
+id = "warning_wolf"
+title = "Fresh Wolf Prints"
+sort = 1
+type = 5
+description = "Massive, razor-sharp paw impressions pressed deep into the muddy path ahead. The track is warm."
+effects = "+1 Encounter Card"
+art = ExtResource("1_0k7lu")
+metadata/_custom_type_script = "uid://bbvbfp88y36by"

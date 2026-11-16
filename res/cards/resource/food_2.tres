@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://25u37gw4xvug"]
+
+[ext_resource type="Texture2D" uid="uid://c3c71wpwtrdce" path="res://assets/icon-packs/delapouite/mushrooms.svg" id="1_fkhne"]
+[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_8ceof"]
+
+[resource]
+script = ExtResource("2_8ceof")
+id = "food_2"
+title = "Dried Forest Mushrooms"
+type = 1
+description = "A small cluster of safe, sun-dried fungi discovered growing on a decaying log."
+effects = "+2 Food"
+art = ExtResource("1_fkhne")
+metadata/_custom_type_script = "uid://bbvbfp88y36by"

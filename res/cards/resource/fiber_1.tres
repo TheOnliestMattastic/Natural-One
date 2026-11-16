@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://o6wjucj4bpcq"]
+
+[ext_resource type="Texture2D" uid="uid://dn5lwh30d67l1" path="res://assets/icon-packs/delapouite/plant-roots.svg" id="1_i0ajs"]
+[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_kgl5r"]
+
+[resource]
+script = ExtResource("2_kgl5r")
+id = "fiber_1"
+title = "Wild Plant Fibers"
+type = 3
+description = "Pliable strands stripped from tall river reeds, ideal for basic binding and lashing."
+effects = "+1 Fiber"
+art = ExtResource("1_i0ajs")
+metadata/_custom_type_script = "uid://bbvbfp88y36by"

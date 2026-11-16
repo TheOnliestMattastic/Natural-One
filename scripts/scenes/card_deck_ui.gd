@@ -13,8 +13,8 @@ const FALLBACK_ACCENT := Color("895D3F")
 @onready var frame: PanelContainer = $VBoxContainer/Art/Frame
 @onready var image: TextureRect = $VBoxContainer/Art/Image
 @onready var desc_box: PanelContainer = $VBoxContainer/DescBox
-@onready var title: Label = $VBoxContainer/DescBox/Title
-@onready var desc: RichTextLabel = $VBoxContainer/DescBox/Desc
+@onready var title: Label = $VBoxContainer/DescBox/VBoxContainer/Title
+@onready var desc: RichTextLabel = $VBoxContainer/DescBox/VBoxContainer/Desc
 @onready var effects: Label = $VBoxContainer/Effects
 
 # Cached style overrides to avoid repeated heap allocations
@@ -44,11 +44,12 @@ func refresh_ui() -> void:
 
 	# Base card background
 	_apply_style_bg(self, _root_style, bg_color)
+	_apply_style_border(_root_style, primary_color)
 
 	# Type badge
-	var raw_type_key: Variant = CardData.Type.find_key(card_data.type)
-	type.text = str(raw_type_key) if raw_type_key != null else "UNKNOWN"
-	_apply_label_badge(type, _type_label_style, accent_color)
+	var raw_sort_key: Variant = CardData.Sort.find_key(card_data.sort)
+	type.text = str(raw_sort_key) if raw_sort_key != null else "UNKNOWN"
+	_apply_label_badge(type, _type_label_style, primary_color)
 
 	# Art frame & texture
 	_apply_style_bg(frame, _image_frame_style, accent_color)
@@ -90,6 +91,10 @@ func _apply_style_bg(control: Control, style: StyleBoxFlat, color: Color) -> voi
 	if style != null: style.bg_color = color
 	else: control.self_modulate = color
 
+func _apply_style_border(style: StyleBoxFlat, color: Color) -> void:
+	if style == null: return
+	style.border_color = color
+
 func _apply_label_badge(label: Label, style: StyleBoxFlat, bg_color: Color) -> void:
 	if label == null: return
 	_apply_style_bg(label, style, bg_color)
@@ -101,4 +106,4 @@ func _clear_ui() -> void:
 	title.text = ""
 	desc.text = ""
 	effects.text = ""
-	frame.texture = null
+	image.texture = null

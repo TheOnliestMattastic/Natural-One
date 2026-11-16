@@ -1,13 +1,13 @@
-[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://c1xetk86koaek"]
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://b1ea4vr576ren"]
 
-[ext_resource type="Texture2D" uid="uid://ube4t62pk34u" path="res://assets/icon-packs/lorc/droplets.svg" id="1_sicgi"]
-[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_cwxpn"]
+[ext_resource type="Texture2D" uid="uid://cof8bhymws014" path="res://assets/icon-packs/delapouite/swamp.svg" id="1_xrrjx"]
+[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_rncvp"]
 
 [resource]
-script = ExtResource("2_cwxpn")
+script = ExtResource("2_rncvp")
 id = "water_2"
-title = "Rainwater Puddle"
-description = "Clear rainwater collected in the hollow of a broad stone after a storm. Refreshing and safe to drink."
-effects = "Stamina +1"
-art = ExtResource("1_sicgi")
+title = "Stagnant Pond Water"
+description = "Murky water pooled in a low-lying basin. It carries a risk, but it will keep dehydration at bay."
+effects = "+2 Water"
+art = ExtResource("1_xrrjx")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"

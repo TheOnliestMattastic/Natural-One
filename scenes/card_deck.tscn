@@ -24,6 +24,9 @@ corner_radius_bottom_left = 17
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5qhvs"]
 content_margin_top = 16.0
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pl73o"]
+content_margin_top = 16.0
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6u4wf"]
 bg_color = Color(0.5372549, 0.3647059, 0.24705882, 1)
 corner_radius_top_left = 17
@@ -63,7 +66,7 @@ theme_override_styles/panel = ExtResource("3_ktuci")
 
 [node name="Image" type="TextureRect" parent="VBoxContainer/Art" unique_id=727661780]
 modulate = Color(0.84705883, 0.80784315, 0.7372549, 1)
-custom_minimum_size = Vector2(192, 192)
+custom_minimum_size = Vector2(208, 208)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -75,19 +78,23 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_5qhvs")
 
-[node name="Title" type="Label" parent="VBoxContainer/DescBox" unique_id=1859254402]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/DescBox" unique_id=533912084]
 layout_mode = 2
-size_flags_vertical = 0
+
+[node name="Title" type="Label" parent="VBoxContainer/DescBox/VBoxContainer" unique_id=1859254402]
+layout_mode = 2
+size_flags_vertical = 1
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxEmpty_5qhvs")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Desc" type="RichTextLabel" parent="VBoxContainer/DescBox" unique_id=614321985]
+[node name="Desc" type="RichTextLabel" parent="VBoxContainer/DescBox/VBoxContainer" unique_id=614321985]
 custom_minimum_size = Vector2(0, 192)
 layout_mode = 2
-size_flags_vertical = 10
+size_flags_vertical = 3
 theme_override_font_sizes/normal_font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxEmpty_pl73o")
 horizontal_alignment = 1
 
 [node name="Effects" type="Label" parent="VBoxContainer" unique_id=2080699199]
