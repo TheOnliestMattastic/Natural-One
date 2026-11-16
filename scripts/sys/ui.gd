@@ -57,10 +57,10 @@ func refresh_ui() -> void:
 	refresh_thirst()
 	refresh_campfire()
 
-func draw_resource_card(item: CardHand) -> void:
+func draw_resource_card(item: CardHandUI) -> void:
 	resources.add_child(item)
 
-func draw_equipment_card(gear: CardHand) -> void:
+func draw_equipment_card(gear: CardHandUI) -> void:
 	items.add_child(gear)
 
 func toggle_crafting_menu() -> void:

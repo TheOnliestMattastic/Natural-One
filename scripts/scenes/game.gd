@@ -104,7 +104,7 @@ func new_day() -> void:
 func toggle_campfire() -> void:
 	campfire_lit = not campfire_lit
 
-func get_item_card(item_name: String) -> CardHand:
+func get_item_card(item_name: String) -> CardHandUI:
 	if !deck_items.has(item_name):
 		print("[I AM ERROR] " + item_name + " not found...")
 		return null

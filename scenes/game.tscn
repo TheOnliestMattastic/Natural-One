@@ -24,10 +24,10 @@
 [ext_resource type="Texture2D" uid="uid://b7fcgd502agg1" path="res://assets/campfire-unlit.png" id="16_1kice"]
 [ext_resource type="Script" uid="uid://cgeengxwuvtt5" path="res://scripts/res/res_item.gd" id="16_bt5mj"]
 [ext_resource type="Texture2D" uid="uid://cd7q6vk6jy8ph" path="res://assets/campfire-lit.png" id="17_1kice"]
-[ext_resource type="Resource" uid="uid://dndhe2gb1opii" path="res://res/cards/hazard/warning_bear.tres" id="22_458eo"]
+[ext_resource type="Resource" uid="uid://dndhe2gb1opii" path="res://res/cards/hazard/day/warning_bear.tres" id="22_458eo"]
 [ext_resource type="Script" uid="uid://b0uuep758nd8" path="res://scripts/menu_tab_container.gd" id="22_pl11u"]
 [ext_resource type="Script" uid="uid://c7m40actab011" path="res://scripts/hand.gd" id="23_bt5mj"]
-[ext_resource type="Resource" uid="uid://cwll1mlfhv01m" path="res://res/cards/hazard/warning_wolf.tres" id="23_h3rex"]
+[ext_resource type="Resource" uid="uid://cwll1mlfhv01m" path="res://res/cards/hazard/day/warning_wolf.tres" id="23_h3rex"]
 [ext_resource type="Script" uid="uid://b3eh1ywktd5qb" path="res://scripts/equipment.gd" id="24_e1j6l"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fl3o2"]

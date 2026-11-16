@@ -1,15 +1,15 @@
 [gd_resource type="Resource" script_class="CardData" format=3 uid="uid://dndhe2gb1opii"]
 
-[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="1_0pnms"]
-[ext_resource type="Texture2D" uid="uid://vhbd5h8w1l6u" path="res://assets/icon-packs/lorc/flat-paw-print.svg" id="1_ujhko"]
+[ext_resource type="Texture2D" uid="uid://vhbd5h8w1l6u" path="res://assets/icon-packs/lorc/flat-paw-print.svg" id="1_fyv75"]
+[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_u8mu7"]
 
 [resource]
-script = ExtResource("1_0pnms")
+script = ExtResource("2_u8mu7")
 id = "warning_bear"
 title = "Fresh Predator Prints"
 sort = 1
 type = 5
 description = "Heavy prints pressed deep into the mud. Something large and predatory has been pacing through the area recently."
 effects = "+1 Encounter Card"
-art = ExtResource("1_ujhko")
+art = ExtResource("1_fyv75")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"

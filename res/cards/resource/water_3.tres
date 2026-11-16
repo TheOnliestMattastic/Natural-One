@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="CardData" format=3 uid="uid://c1xetk86koaek"]
 
-[ext_resource type="Texture2D" uid="uid://ube4t62pk34u" path="res://assets/icon-packs/lorc/droplets.svg" id="1_dyw3p"]
+[ext_resource type="Texture2D" uid="uid://cqbgc355nsa8y" path="res://assets/icon-packs/lorc/splashy-stream.svg" id="1_dyw3p"]
 [ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_edefe"]
 
 [resource]
 script = ExtResource("2_edefe")
 id = "water_3"
 title = "Rainwater Puddle"
-description = "Clear rainwater collected in the hollow of a broad stone after a storm."
+description = "Clear water gathered from a running stream"
 effects = "+3 Water"
 art = ExtResource("1_dyw3p")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"

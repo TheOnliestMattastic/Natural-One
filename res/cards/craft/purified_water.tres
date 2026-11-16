@@ -11,6 +11,6 @@ suit = 2
 sort = 2
 type = 8
 description = "Boiled water over a hot fire. Requires a lit campfire."
-effects = "-1 Water, +1 Purified Food"
+effects = "1 Purified Water"
 art = ExtResource("1_e3cf0")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"
