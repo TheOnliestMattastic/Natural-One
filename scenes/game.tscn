@@ -257,7 +257,7 @@ alignment = 1
 layout_mode = 2
 size_flags_horizontal = 10
 size_flags_vertical = 10
-text = "Item"
+text = "Take"
 
 [node name="Equipment" type="PanelContainer" parent="UI/VBoxContainer/MenuTabContainer" unique_id=1291089039]
 visible = false
@@ -274,13 +274,13 @@ alignment = 1
 layout_mode = 2
 size_flags_horizontal = 2
 size_flags_vertical = 10
-text = "Craft"
+text = "Recipes"
 
 [node name="Button2" parent="UI/VBoxContainer/MenuTabContainer/Equipment" unique_id=1965029988 instance=ExtResource("2_yqjtg")]
 layout_mode = 2
 size_flags_horizontal = 10
 size_flags_vertical = 10
-text = "Gear"
+text = "Craft"
 
 [node name="Settings" type="GridContainer" parent="UI/VBoxContainer/MenuTabContainer" unique_id=218364477]
 visible = false

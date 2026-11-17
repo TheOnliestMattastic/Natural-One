@@ -15,6 +15,8 @@ extends CanvasLayer
 @onready var center: PanelContainer = $VBoxContainer/Center
 @onready var resources: HBoxContainer = $VBoxContainer/MenuTabContainer/Hand/Resources
 @onready var items: HBoxContainer = $VBoxContainer/MenuTabContainer/Equipment/Items
+@onready var hand: Hand = $VBoxContainer/MenuTabContainer/Hand
+@onready var equipment: Equipment = $VBoxContainer/MenuTabContainer/Equipment
 
 # crafting menu
 const CRAFTING_MENU := preload("uid://qgf6n34ehc5f")
@@ -57,11 +59,13 @@ func refresh_ui() -> void:
 	refresh_thirst()
 	refresh_campfire()
 
-func draw_resource_card(item: CardHand) -> void:
-	resources.add_child(item)
+func draw_resource_card(card: CardHand) -> void:
+	resources.add_child(card)
+	hand.connect_hand()
 
-func draw_equipment_card(gear: CardHand) -> void:
-	items.add_child(gear)
+func draw_equipment_card(card: CardHand) -> void:
+	items.add_child(card)
+	equipment.connect_hand()
 
 func toggle_crafting_menu() -> void:
 	if is_instance_valid(crafting_menu): # free menu if it already exists

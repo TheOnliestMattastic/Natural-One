@@ -11,7 +11,7 @@ const CARD_DECK: PackedScene = preload("uid://yl33ltvvgh44")
 const CARD_HAND: PackedScene = preload("uid://j7841f0rtjdf")
 var deck_day: Array[CardData] = []
 var deck_night: Array[CardData] = []
-var reserve_deck: Array[CardData] = []
+var reserve_deck: Dictionary = {}
 var discard_pile: Array[CardData] = []
 
 # game stats
@@ -25,6 +25,10 @@ func _ready() -> void:
 	deck_day.shuffle()
 	deck_night = night_database.duplicate()
 	deck_night.shuffle()
+	
+	for card in reserve_database:
+		if card and not card.id.is_empty():
+			reserve_deck[card.id] = card
 
 func get_card(deck: Array[CardData]) -> CardDeck:
 	if deck.is_empty(): 
@@ -32,6 +36,16 @@ func get_card(deck: Array[CardData]) -> CardDeck:
 		return
 	var card_data = deck.pop_back()
 	var card = CARD_DECK.instantiate()
+	if card.has_method("set_attributes"): card.set_attributes(card_data)
+	card.set_meta("card_data", card_data)
+	return card
+
+func get_card_hand(card_id: String) -> CardHand:
+	if not reserve_deck.has(card_id):
+		push_error("Card ID not found: " + card_id)
+		return null
+	var card_data = reserve_deck[card_id].duplicate()
+	var card = CARD_HAND.instantiate()
 	if card.has_method("set_attributes"): card.set_attributes(card_data)
 	card.set_meta("card_data", card_data)
 	return card

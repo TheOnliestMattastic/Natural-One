@@ -27,6 +27,10 @@ func _on_button_pressed(button) -> void:
 			var card = game_master.get_card(game_master.deck_night)
 			if card: ui.draw_card(card)
 		
+		"Sleep":
+			game_master.new_day()
+			ui.refresh_day()
+		
 		"Upkeep":
 			Player.reduce_hunger()
 			Player.reduce_thirst()
@@ -37,9 +41,13 @@ func _on_button_pressed(button) -> void:
 			game_master.toggle_campfire()
 			ui.refresh_campfire()
 		
-		"Craft":
-			print("Crafting...")
+		"Recipes":
+			print("Recipes...")
 			ui.toggle_crafting_menu()
+		
+		"Take":
+			var card = game_master.get_card_hand("wood")
+			if card: ui.draw_resource_card(card)
 		
 		"Quit":
 			get_tree().quit()
