@@ -27,9 +27,46 @@
 [ext_resource type="Texture2D" uid="uid://cd7q6vk6jy8ph" path="res://assets/campfire-lit.png" id="17_1kice"]
 [ext_resource type="Script" uid="uid://k5a4pggidva8" path="res://scripts/sys/input_controller.gd" id="21_suyxu"]
 [ext_resource type="Resource" uid="uid://dndhe2gb1opii" path="res://res/cards/hazard/day/warn_bear.tres" id="22_458eo"]
+[ext_resource type="Resource" uid="uid://d1kn1cbvonnfv" path="res://res/cards/hazard/night/enc_rats.tres" id="22_bnuda"]
 [ext_resource type="Script" uid="uid://b0uuep758nd8" path="res://scripts/menu_tab_container.gd" id="22_pl11u"]
+[ext_resource type="Resource" uid="uid://d2cbp62w1f6m4" path="res://res/cards/hazard/night/enc_spider.tres" id="23_0rmfi"]
 [ext_resource type="Script" uid="uid://c7m40actab011" path="res://scripts/hand.gd" id="23_bt5mj"]
 [ext_resource type="Script" uid="uid://b3eh1ywktd5qb" path="res://scripts/equipment.gd" id="24_e1j6l"]
+[ext_resource type="Resource" uid="uid://u4lctj0jqrvd" path="res://res/cards/hazard/night/env_ants.tres" id="24_xbak0"]
+[ext_resource type="Resource" uid="uid://bc8nwdbbcnxp4" path="res://res/cards/hazard/night/env_fog.tres" id="25_3x28f"]
+[ext_resource type="Resource" uid="uid://djwn5dwc1d5ec" path="res://res/cards/hazard/night/env_midge.tres" id="26_l6q63"]
+[ext_resource type="Resource" uid="uid://lqf8xl57dc2c" path="res://res/cards/hazard/night/env_rain.tres" id="27_mmvbu"]
+[ext_resource type="Resource" uid="uid://dh050xcb10lhh" path="res://res/cards/hazard/night/env_storm.tres" id="28_weeiq"]
+[ext_resource type="Resource" uid="uid://cf37egq1wqmx0" path="res://res/cards/craft/equipment/axe.tres" id="29_uxocx"]
+[ext_resource type="Resource" uid="uid://em740nn8wadj" path="res://res/cards/craft/equipment/basket.tres" id="30_7nv0b"]
+[ext_resource type="Resource" uid="uid://menqujqv17b5" path="res://res/cards/craft/equipment/campfire.tres" id="31_o8oq8"]
+[ext_resource type="Resource" uid="uid://002gc26m2x5e" path="res://res/cards/craft/equipment/knife.tres" id="32_sxt1d"]
+[ext_resource type="Resource" uid="uid://cuxpkrr28utyb" path="res://res/cards/craft/equipment/shelter.tres" id="33_2iuns"]
+[ext_resource type="Resource" uid="uid://c85hjxocp8gp" path="res://res/cards/craft/equipment/spear.tres" id="34_7gkqi"]
+[ext_resource type="Resource" uid="uid://djparnsrmx2os" path="res://res/cards/craft/recipe/recipe_axe.tres" id="35_753oq"]
+[ext_resource type="Resource" uid="uid://dfm0y3ibjwrl1" path="res://res/cards/craft/recipe/recipe_basket.tres" id="36_3x338"]
+[ext_resource type="Resource" uid="uid://tj3ppbndppdf" path="res://res/cards/craft/recipe/recipe_campfire.tres" id="37_1yg85"]
+[ext_resource type="Resource" uid="uid://cd65224guoh6m" path="res://res/cards/craft/recipe/recipe_clean_water.tres" id="38_s0g06"]
+[ext_resource type="Resource" uid="uid://erx33myo73v4" path="res://res/cards/craft/recipe/recipe_cooked_fish.tres" id="39_2gnni"]
+[ext_resource type="Resource" uid="uid://d1s4im7kr42wn" path="res://res/cards/craft/recipe/recipe_cooked_meat.tres" id="40_vgxg3"]
+[ext_resource type="Resource" uid="uid://cex8yp7aijang" path="res://res/cards/craft/recipe/recipe_knife.tres" id="41_4nbsr"]
+[ext_resource type="Resource" uid="uid://bjewbrm1x1yiu" path="res://res/cards/craft/recipe/recipe_shelter.tres" id="42_fkywm"]
+[ext_resource type="Resource" uid="uid://bugs76iw4pfub" path="res://res/cards/craft/recipe/recipe_spear.tres" id="43_dku7i"]
+[ext_resource type="Resource" uid="uid://e2eukrckqw45" path="res://res/cards/craft/recipe/recipe_traps.tres" id="44_veaf0"]
+[ext_resource type="Resource" uid="uid://do8i17et5gvhy" path="res://res/cards/hazard/day/enc_bear.tres" id="45_flw08"]
+[ext_resource type="Resource" uid="uid://dyerlv4gbngri" path="res://res/cards/hazard/day/enc_wolves.tres" id="46_84hbc"]
+[ext_resource type="Resource" uid="uid://dw8e1suaifvck" path="res://res/cards/resource/deck/food_hare.tres" id="47_15b3c"]
+[ext_resource type="Resource" uid="uid://cfgn1hccnufbm" path="res://res/cards/resource/deck/food_trout.tres" id="48_veukt"]
+[ext_resource type="Resource" uid="uid://b4xnffyemxpnn" path="res://res/cards/resource/hand/clean_water.tres" id="49_nbjts"]
+[ext_resource type="Resource" uid="uid://8ayj465hia8c" path="res://res/cards/resource/hand/cooked_fish.tres" id="50_i1hsc"]
+[ext_resource type="Resource" uid="uid://b82viw0rfrrbq" path="res://res/cards/resource/hand/cooked_meat.tres" id="51_ounyb"]
+[ext_resource type="Resource" uid="uid://7vhvuoq508gq" path="res://res/cards/resource/hand/fiber.tres" id="52_iekjf"]
+[ext_resource type="Resource" uid="uid://u35tvot7gg1e" path="res://res/cards/resource/hand/food.tres" id="53_okmmv"]
+[ext_resource type="Resource" uid="uid://bd3gfktgb0kcy" path="res://res/cards/resource/hand/raw_fish.tres" id="54_mmvbu"]
+[ext_resource type="Resource" uid="uid://clsswulcktlpt" path="res://res/cards/resource/hand/raw_meat.tres" id="55_weeiq"]
+[ext_resource type="Resource" uid="uid://dygrmmokxqctx" path="res://res/cards/resource/hand/stone.tres" id="56_uxocx"]
+[ext_resource type="Resource" uid="uid://td2hun3ftln1" path="res://res/cards/resource/hand/water.tres" id="57_7nv0b"]
+[ext_resource type="Resource" uid="uid://l4tq2lficpw5" path="res://res/cards/resource/hand/wood.tres" id="58_o8oq8"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fl3o2"]
 
@@ -46,7 +83,9 @@ script = ExtResource("1_iywne")
 [node name="GameMaster" type="Node" parent="." unique_id=1876482683]
 unique_name_in_owner = true
 script = ExtResource("2_kvpfn")
-card_database = Array[ExtResource("2_37s47")]([ExtResource("3_kvuet"), ExtResource("4_trtic"), ExtResource("22_458eo"), ExtResource("6_sww3w"), ExtResource("5_gxtfn"), ExtResource("6_twgab"), ExtResource("6_twgab"), ExtResource("7_02fa5"), ExtResource("7_02fa5"), ExtResource("9_7025r"), ExtResource("9_7025r"), ExtResource("8_nepv3"), ExtResource("8_nepv3"), ExtResource("13_05nbr"), ExtResource("13_05nbr"), ExtResource("14_0sl42"), ExtResource("14_0sl42"), ExtResource("15_oaba0"), ExtResource("3_ir15t"), ExtResource("3_ir15t"), ExtResource("5_rysoc"), ExtResource("5_rysoc"), ExtResource("4_ca42v"), ExtResource("6_ca42v"), ExtResource("7_ssvqc"), ExtResource("7_ssvqc"), ExtResource("8_264po"), ExtResource("8_264po")])
+day_database = Array[ExtResource("2_37s47")]([ExtResource("3_kvuet"), ExtResource("4_trtic"), ExtResource("22_458eo"), ExtResource("6_sww3w"), ExtResource("5_gxtfn"), ExtResource("6_twgab"), ExtResource("6_twgab"), ExtResource("7_02fa5"), ExtResource("7_02fa5"), ExtResource("9_7025r"), ExtResource("9_7025r"), ExtResource("8_nepv3"), ExtResource("8_nepv3"), ExtResource("13_05nbr"), ExtResource("13_05nbr"), ExtResource("14_0sl42"), ExtResource("14_0sl42"), ExtResource("15_oaba0"), ExtResource("3_ir15t"), ExtResource("3_ir15t"), ExtResource("5_rysoc"), ExtResource("5_rysoc"), ExtResource("4_ca42v"), ExtResource("6_ca42v"), ExtResource("7_ssvqc"), ExtResource("7_ssvqc"), ExtResource("8_264po"), ExtResource("8_264po")])
+night_database = Array[ExtResource("2_37s47")]([ExtResource("22_bnuda"), ExtResource("22_bnuda"), ExtResource("23_0rmfi"), ExtResource("24_xbak0"), ExtResource("24_xbak0"), ExtResource("25_3x28f"), ExtResource("25_3x28f"), ExtResource("26_l6q63"), ExtResource("26_l6q63"), ExtResource("27_mmvbu"), ExtResource("27_mmvbu"), ExtResource("27_mmvbu"), ExtResource("28_weeiq"), ExtResource("28_weeiq")])
+reserve_database = Array[ExtResource("2_37s47")]([ExtResource("29_uxocx"), ExtResource("30_7nv0b"), ExtResource("31_o8oq8"), ExtResource("32_sxt1d"), ExtResource("33_2iuns"), ExtResource("34_7gkqi"), ExtResource("35_753oq"), ExtResource("36_3x338"), ExtResource("37_1yg85"), ExtResource("38_s0g06"), ExtResource("39_2gnni"), ExtResource("40_vgxg3"), ExtResource("41_4nbsr"), ExtResource("42_fkywm"), ExtResource("43_dku7i"), ExtResource("44_veaf0"), ExtResource("45_flw08"), ExtResource("46_84hbc"), ExtResource("47_15b3c"), ExtResource("48_veukt"), ExtResource("49_nbjts"), ExtResource("50_i1hsc"), ExtResource("51_ounyb"), ExtResource("52_iekjf"), ExtResource("53_okmmv"), ExtResource("54_mmvbu"), ExtResource("55_weeiq"), ExtResource("56_uxocx"), ExtResource("57_7nv0b"), ExtResource("58_o8oq8")])
 
 [node name="InputController" type="Node" parent="." unique_id=862894232]
 unique_name_in_owner = true

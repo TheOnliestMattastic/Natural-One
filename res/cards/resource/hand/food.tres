@@ -5,11 +5,11 @@
 
 [resource]
 script = ExtResource("2_n4jwn")
-id = "fresh_food"
-title = "Fresh Food"
+id = "food"
+title = "Food"
 suit = 2
 type = 1
-description = "Gathered plant-based food safe to eat."
+description = "Gathered plant-based food fresh and safe to eat."
 effects = "+1 Health"
 art = ExtResource("1_iwbqj")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"

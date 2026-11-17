@@ -10,7 +10,7 @@ func _ready() -> void:
 func _on_button_pressed(button) -> void:
 	match button:
 		"Day": 
-			var card = game_master.get_card()
+			var card = game_master.get_card(game_master.deck_day)
 			if card: 
 				ui.draw_card(card)
 				Player.take_action()
@@ -24,8 +24,8 @@ func _on_button_pressed(button) -> void:
 			ui.refresh_health()
 		
 		"Night":
-			game_master.new_day()
-			ui.refresh_day()
+			var card = game_master.get_card(game_master.deck_night)
+			if card: ui.draw_card(card)
 		
 		"Upkeep":
 			Player.reduce_hunger()
