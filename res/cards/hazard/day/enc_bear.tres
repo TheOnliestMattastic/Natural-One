@@ -11,9 +11,9 @@ suit = 2
 sort = 1
 type = 6
 description = "Nat20: +3 Raw Meat
-18+: -2 Health +3 Raw Meat
-<18: -5 Health
+17+: -2 Health +3 Raw Meat
+<17: -5 Health
 Nat1: Death"
-effects = "Unavoidable"
+effects = "DC 17"
 art = ExtResource("1_akkls")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"

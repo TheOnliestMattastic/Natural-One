@@ -10,7 +10,8 @@ title = "Campfire"
 suit = 2
 sort = 2
 type = 8
-description = "+3 Crafting
+description = "+2 Crafting
++5 Environment
 Cost:
 -1 Wood"
 effects = "DC 5"

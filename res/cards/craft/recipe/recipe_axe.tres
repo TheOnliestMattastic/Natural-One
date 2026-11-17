@@ -11,7 +11,7 @@ suit = 2
 sort = 2
 type = 8
 description = "+1 Wood whenever Wood gained
-+3 Combat (breaks upon use)
++3 Encounter
 Cost:
 -1 Wood, Stone, & Fiber"
 effects = "DC 12"

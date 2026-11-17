@@ -10,7 +10,7 @@ title = "Campfire"
 suit = 2
 sort = 2
 type = 9
-description = "Extinguishes the next morning"
-effects = "+3 Crafting"
+description = "+2 Crafting
++5 Environment"
 art = ExtResource("1_comjw")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"

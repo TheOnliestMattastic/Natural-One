@@ -11,7 +11,7 @@ suit = 2
 sort = 2
 type = 8
 description = "+1 Raw Fish whenever Raw Fish gained
-+5 Combat (breaks on use)
++5 Encounter
 Cost:
 -2 Wood
 -1 Stone & Fiber"

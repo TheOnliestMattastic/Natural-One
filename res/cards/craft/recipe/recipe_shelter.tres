@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://bjewbrm1x1yiu"]
+
+[ext_resource type="Texture2D" uid="uid://dkk3qamm4joiu" path="res://assets/icon-packs/delapouite/forest-camp.svg" id="1_ncvv8"]
+[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_3ly6g"]
+
+[resource]
+script = ExtResource("2_3ly6g")
+id = "recipe_shelter"
+title = "Shelter"
+suit = 2
+sort = 2
+type = 8
+description = "+1 Crafting
++3 Environment"
+effects = "DC 6"
+art = ExtResource("1_ncvv8")
+metadata/_custom_type_script = "uid://bbvbfp88y36by"

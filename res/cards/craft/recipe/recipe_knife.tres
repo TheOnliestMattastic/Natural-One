@@ -11,7 +11,7 @@ suit = 2
 sort = 2
 type = 8
 description = "+5 Crafting
-+1 Combat (breaks upon use)
++1 Encounter
 Cost:
 -1 Stone & Fiber"
 effects = "DC 7"

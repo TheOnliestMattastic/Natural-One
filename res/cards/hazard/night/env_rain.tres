@@ -1,16 +1,16 @@
 [gd_resource type="Resource" script_class="CardData" format=3 uid="uid://lqf8xl57dc2c"]
 
-[ext_resource type="Texture2D" uid="uid://cjryjtmik8pw3" path="res://assets/icon-packs/lorc/heavy-rain.svg" id="1_4gxnk"]
-[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_8wu5e"]
+[ext_resource type="Texture2D" uid="uid://cjryjtmik8pw3" path="res://assets/icon-packs/lorc/heavy-rain.svg" id="1_tm7t8"]
+[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_wnmnx"]
 
 [resource]
-script = ExtResource("2_8wu5e")
+script = ExtResource("2_wnmnx")
 id = "env_rain"
 title = "Heavy Downpour"
 suit = 1
 sort = 1
 type = 7
-description = "Relentless rain drenches your camp. Avoided with a Shelter."
-effects = "-1 Stamina"
-art = ExtResource("1_4gxnk")
+description = "-2 Stamina"
+effects = "DC 11"
+art = ExtResource("1_tm7t8")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"

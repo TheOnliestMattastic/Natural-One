@@ -12,6 +12,6 @@ type = 6
 description = "A heavy-shouldered boar paws the dirt and lowers its tusks. 
 Flee: no repercussions
 Fight: -1 HP or +2 Raw Meat"
-effects = "DC 15"
+effects = "DC 14"
 art = ExtResource("1_c7wum")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://d1kn1cbvonnfv"]
+
+[ext_resource type="Texture2D" uid="uid://7xnghp8jywgd" path="res://assets/icon-packs/delapouite/rat.svg" id="1_kdic2"]
+[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_v4ff8"]
+
+[resource]
+script = ExtResource("2_v4ff8")
+id = "enc_rat"
+title = "Rats"
+suit = 1
+sort = 1
+type = 6
+description = "-1 Health & Food"
+effects = "DC 10"
+art = ExtResource("1_kdic2")
+metadata/_custom_type_script = "uid://bbvbfp88y36by"

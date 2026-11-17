@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://dh050xcb10lhh"]
+
+[ext_resource type="Texture2D" uid="uid://d4a4sagqbksj4" path="res://assets/icon-packs/lorc/lightning-storm.svg" id="1_11dbe"]
+[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_va25q"]
+
+[resource]
+script = ExtResource("2_va25q")
+id = "env_storm"
+title = "Thunderstorm"
+suit = 1
+sort = 1
+type = 7
+description = "-1 Health & Stamina"
+effects = "DC 13"
+art = ExtResource("1_11dbe")
+metadata/_custom_type_script = "uid://bbvbfp88y36by"

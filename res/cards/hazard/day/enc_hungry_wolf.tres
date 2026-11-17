@@ -12,6 +12,6 @@ type = 6
 description = "A gaunt wolf steps out from the treeline, watching your pack closely. 
 Feed: -1 Food
 Fight: -3 HP or +1 Raw Meat"
-effects = "DC 16"
+effects = "DC 15"
 art = ExtResource("1_wc0vg")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"

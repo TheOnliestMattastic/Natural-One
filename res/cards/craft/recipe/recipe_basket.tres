@@ -10,7 +10,7 @@ title = "Basket"
 suit = 2
 sort = 2
 type = 8
-description = "+5 Hand size
+description = "+5 Hand limit
 Cost:
 -2 Fiber"
 effects = "DC 11"
