@@ -3,7 +3,7 @@
 [ext_resource type="StyleBox" uid="uid://dbjv1pgr0a3ei" path="res://res/styles/style_card.tres" id="1_6u4wf"]
 [ext_resource type="Script" uid="uid://3kyhr2w6uaji" path="res://scripts/scenes/card_deck.gd" id="1_d81rb"]
 [ext_resource type="StyleBox" uid="uid://oavj6lc088c4" path="res://res/styles/style_bg_circle.tres" id="3_ktuci"]
-[ext_resource type="Resource" uid="uid://lqf8xl57dc2c" path="res://res/cards/hazard/night/env_rain.tres" id="3_xnwbo"]
+[ext_resource type="Resource" uid="uid://djparnsrmx2os" path="res://res/cards/craft/recipe/recipe_axe.tres" id="3_xnwbo"]
 [ext_resource type="Texture2D" uid="uid://b82sp5e4wpwx7" path="res://assets/icon-packs/delapouite/triforce.svg" id="5_xnwbo"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s8enn"]

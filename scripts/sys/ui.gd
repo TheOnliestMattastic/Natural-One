@@ -5,7 +5,7 @@ extends CanvasLayer
 @export var campfire_lit_icon: Texture
 
 # nodes
-@onready var game = $".."
+@onready var game_master: GameMaster = %GameMaster
 @onready var health: RichTextLabel = $VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer2/Health
 @onready var hunger: RichTextLabel = $VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer2/Hunger
 @onready var thirst: RichTextLabel = $VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer2/Thirst
@@ -31,7 +31,7 @@ func get_card_deck() -> CardDeck:
 	return center.get_child(0) as CardDeck
 
 func refresh_day() -> void:
-	day.set_text("Day: " + str(game.day) + "/" + str(game.day_win))
+	day.set_text("Day: " + str(game_master.day) + "/" + str(game_master.day_win))
 
 func refresh_health() -> void:
 	health.set_text("Health: " + str(Player.health) + "/" + str(Player.health_max))
@@ -46,7 +46,7 @@ func refresh_thirst() -> void:
 	thirst.set_text("Thirst: " + str(Player.thirst) + "/" + str(Player.thirst_max))
 
 func refresh_campfire() -> void:
-	if game.campfire_lit: campfire.set_texture(campfire_lit_icon)
+	if game_master.campfire_lit: campfire.set_texture(campfire_lit_icon)
 	else: campfire.set_texture(campfire_icon)
 
 func refresh_ui() -> void:

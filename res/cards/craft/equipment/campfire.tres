@@ -12,5 +12,7 @@ sort = 2
 type = 9
 description = "+2 Crafting
 +5 Environment"
+effects = "+2 Crafting
++5 Environment"
 art = ExtResource("1_comjw")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"

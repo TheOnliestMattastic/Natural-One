@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://3jupa4urlxyp" path="res://scripts/scenes/game.gd" id="1_iywne"]
 [ext_resource type="Script" uid="uid://ddd7muys8yekl" path="res://scripts/sys/ui.gd" id="1_lnu2h"]
 [ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_37s47"]
+[ext_resource type="Script" uid="uid://c8pc205ophhjr" path="res://scripts/sys/game_master.gd" id="2_kvpfn"]
 [ext_resource type="PackedScene" uid="uid://dsm0gysm47txb" path="res://scenes/button.tscn" id="2_yqjtg"]
 [ext_resource type="Resource" uid="uid://cygpsacm6ph0n" path="res://res/cards/resource/deck/water_1.tres" id="3_ir15t"]
 [ext_resource type="Resource" uid="uid://bc67mcp8korej" path="res://res/cards/hazard/day/enc_boar.tres" id="3_kvuet"]
@@ -24,6 +25,7 @@
 [ext_resource type="Resource" uid="uid://o3yctsvowg55" path="res://res/cards/resource/deck/stone_3.tres" id="15_oaba0"]
 [ext_resource type="Texture2D" uid="uid://b7fcgd502agg1" path="res://assets/campfire-unlit.png" id="16_1kice"]
 [ext_resource type="Texture2D" uid="uid://cd7q6vk6jy8ph" path="res://assets/campfire-lit.png" id="17_1kice"]
+[ext_resource type="Script" uid="uid://k5a4pggidva8" path="res://scripts/sys/input_controller.gd" id="21_suyxu"]
 [ext_resource type="Resource" uid="uid://dndhe2gb1opii" path="res://res/cards/hazard/day/warn_bear.tres" id="22_458eo"]
 [ext_resource type="Script" uid="uid://b0uuep758nd8" path="res://scripts/menu_tab_container.gd" id="22_pl11u"]
 [ext_resource type="Script" uid="uid://c7m40actab011" path="res://scripts/hand.gd" id="23_bt5mj"]
@@ -40,7 +42,15 @@ size = Vector2(648, 483)
 
 [node name="Game" type="Node" unique_id=568490508]
 script = ExtResource("1_iywne")
-card_database = Array[ExtResource("2_37s47")]([ExtResource("3_kvuet"), ExtResource("4_trtic"), ExtResource("22_458eo"), ExtResource("6_sww3w"), ExtResource("5_gxtfn"), ExtResource("5_gxtfn"), ExtResource("6_twgab"), ExtResource("6_twgab"), ExtResource("7_02fa5"), ExtResource("9_7025r"), ExtResource("9_7025r"), ExtResource("8_nepv3"), ExtResource("8_nepv3"), ExtResource("13_05nbr"), ExtResource("13_05nbr"), ExtResource("14_0sl42"), ExtResource("14_0sl42"), ExtResource("15_oaba0"), ExtResource("3_ir15t"), ExtResource("3_ir15t"), ExtResource("5_rysoc"), ExtResource("5_rysoc"), ExtResource("4_ca42v"), ExtResource("6_ca42v"), ExtResource("6_ca42v"), ExtResource("7_ssvqc"), ExtResource("7_ssvqc"), ExtResource("8_264po")])
+
+[node name="GameMaster" type="Node" parent="." unique_id=1876482683]
+unique_name_in_owner = true
+script = ExtResource("2_kvpfn")
+card_database = Array[ExtResource("2_37s47")]([ExtResource("3_kvuet"), ExtResource("4_trtic"), ExtResource("22_458eo"), ExtResource("6_sww3w"), ExtResource("5_gxtfn"), ExtResource("6_twgab"), ExtResource("6_twgab"), ExtResource("7_02fa5"), ExtResource("7_02fa5"), ExtResource("9_7025r"), ExtResource("9_7025r"), ExtResource("8_nepv3"), ExtResource("8_nepv3"), ExtResource("13_05nbr"), ExtResource("13_05nbr"), ExtResource("14_0sl42"), ExtResource("14_0sl42"), ExtResource("15_oaba0"), ExtResource("3_ir15t"), ExtResource("3_ir15t"), ExtResource("5_rysoc"), ExtResource("5_rysoc"), ExtResource("4_ca42v"), ExtResource("6_ca42v"), ExtResource("7_ssvqc"), ExtResource("7_ssvqc"), ExtResource("8_264po"), ExtResource("8_264po")])
+
+[node name="InputController" type="Node" parent="." unique_id=862894232]
+unique_name_in_owner = true
+script = ExtResource("21_suyxu")
 
 [node name="Background" type="ColorRect" parent="." unique_id=1578591557]
 anchors_preset = 15

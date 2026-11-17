@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://i8f514p1ayub" path="res://scripts/scenes/card_hand.gd" id="1_4gq7n"]
 [ext_resource type="StyleBox" uid="uid://bwoy1qt5b1u8k" path="res://res/styles/style_card_small.tres" id="1_s8enn"]
 [ext_resource type="StyleBox" uid="uid://cfdirolysueq5" path="res://res/styles/style_bg_circle_small.tres" id="3_6muww"]
-[ext_resource type="Resource" uid="uid://cf37egq1wqmx0" path="res://res/cards/craft/equipment/axe.tres" id="3_wnc42"]
+[ext_resource type="Resource" uid="uid://cuxpkrr28utyb" path="res://res/cards/craft/equipment/shelter.tres" id="3_wnc42"]
 [ext_resource type="Script" uid="uid://c2i4wyhny8efr" path="res://scripts/state_machine/card_state_machine.gd" id="4_vljjh"]
 [ext_resource type="Script" uid="uid://gdt755sqx4os" path="res://scripts/state_machine/card_base_state.gd" id="5_ro5b8"]
 [ext_resource type="Script" uid="uid://ce7qhomukbbwe" path="res://scripts/state_machine/card_clicked_state.gd" id="6_c4387"]
@@ -45,6 +45,7 @@ layout_mode = 2
 [node name="Title" type="Label" parent="VBoxContainer" unique_id=1956031529]
 layout_mode = 2
 size_flags_horizontal = 0
+size_flags_vertical = 2
 theme_override_font_sizes/font_size = 12
 theme_override_styles/normal = SubResource("StyleBoxFlat_rp7l2")
 horizontal_alignment = 1
@@ -53,6 +54,7 @@ vertical_alignment = 1
 [node name="Art" type="AspectRatioContainer" parent="VBoxContainer" unique_id=486878021]
 layout_mode = 2
 size_flags_vertical = 3
+stretch_mode = 3
 
 [node name="Frame" type="PanelContainer" parent="VBoxContainer/Art" unique_id=411109465]
 layout_mode = 2
@@ -69,7 +71,9 @@ stretch_mode = 5
 
 [node name="Effects" type="Label" parent="VBoxContainer" unique_id=1991204196]
 layout_mode = 2
-theme_override_font_sizes/font_size = 12
+size_flags_vertical = 10
+theme_override_constants/line_spacing = -4
+theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxFlat_6rdkt")
 horizontal_alignment = 1
 vertical_alignment = 1
