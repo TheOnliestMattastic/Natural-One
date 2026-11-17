@@ -12,7 +12,7 @@ extends CanvasLayer
 @onready var day: RichTextLabel = $VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer/Day
 @onready var actions: RichTextLabel = $VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer/Actions
 @onready var campfire: TextureRect = $VBoxContainer/Header/HBoxContainer/AspectRatioContainer/Campfire
-@onready var center: PanelContainer = $VBoxContainer/Center
+@onready var play_area: PlayArea = $VBoxContainer/PlayArea
 @onready var resources: HBoxContainer = $VBoxContainer/MenuTabContainer/Hand/Resources
 @onready var items: HBoxContainer = $VBoxContainer/MenuTabContainer/Equipment/Items
 @onready var hand: Hand = $VBoxContainer/MenuTabContainer/Hand
@@ -26,11 +26,12 @@ func _ready() -> void:
 	refresh_ui()
 
 func draw_card(card: CardDeck) -> void:
-	center.add_child(card)
+	play_area.add_child(card)
+	play_area.connect_play_area()
 
 func get_card_deck() -> CardDeck:
-	if center.get_child_count() == 0: return null
-	return center.get_child(0) as CardDeck
+	if play_area.get_child_count() == 0: return null
+	return play_area.get_child(0) as CardDeck
 
 func refresh_day() -> void:
 	day.set_text("Day: " + str(game_master.day) + "/" + str(game_master.day_win))
@@ -73,4 +74,4 @@ func toggle_crafting_menu() -> void:
 		crafting_menu = null
 	else: # draw menu
 		crafting_menu = CRAFTING_MENU.instantiate()
-		center.add_child(crafting_menu)
+		play_area.add_child(crafting_menu)

@@ -1,7 +1,7 @@
 extends CardState
 
 func enter() -> void:
-	card_hand.drop_point_detector.monitoring = true
+	card.drop_point_detector.monitoring = true
 	print("ItemState: CLICKED")
 
 func on_input(_event: InputEvent) -> void:

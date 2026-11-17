@@ -5,6 +5,11 @@
 [ext_resource type="StyleBox" uid="uid://oavj6lc088c4" path="res://res/styles/style_bg_circle.tres" id="3_ktuci"]
 [ext_resource type="Resource" uid="uid://djparnsrmx2os" path="res://res/cards/craft/recipe/recipe_axe.tres" id="3_xnwbo"]
 [ext_resource type="Texture2D" uid="uid://b82sp5e4wpwx7" path="res://assets/icon-packs/delapouite/triforce.svg" id="5_xnwbo"]
+[ext_resource type="Script" uid="uid://c2i4wyhny8efr" path="res://scripts/state_machine/card_state_machine.gd" id="6_qe2yw"]
+[ext_resource type="Script" uid="uid://gdt755sqx4os" path="res://scripts/state_machine/card_base_state.gd" id="7_q6p6f"]
+[ext_resource type="Script" uid="uid://ce7qhomukbbwe" path="res://scripts/state_machine/card_clicked_state.gd" id="8_3n74x"]
+[ext_resource type="Script" uid="uid://t1t8y2lcad6x" path="res://scripts/state_machine/card_dragging_state.gd" id="9_p6kbj"]
+[ext_resource type="Script" uid="uid://cvo3b0u067ctj" path="res://scripts/state_machine/card_release_state.gd" id="10_pjmbq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s8enn"]
 content_margin_left = 16.0
@@ -33,6 +38,9 @@ corner_radius_top_left = 17
 corner_radius_top_right = 17
 corner_radius_bottom_right = 17
 corner_radius_bottom_left = 17
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_38dkq"]
+size = Vector2(412, 713)
 
 [node name="CardDeck" type="PanelContainer" unique_id=1644298931]
 custom_minimum_size = Vector2(412, 713)
@@ -104,3 +112,36 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_6u4wf")
 text = "+1 Effect"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="DropPointDetector" type="Area2D" parent="." unique_id=1918830611]
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DropPointDetector" unique_id=1474500141]
+position = Vector2(206, 356.5)
+shape = SubResource("RectangleShape2D_38dkq")
+
+[node name="CardStateMachine" type="Node" parent="." unique_id=1023251763 node_paths=PackedStringArray("inital_state")]
+script = ExtResource("6_qe2yw")
+inital_state = NodePath("CardBaseState")
+
+[node name="CardBaseState" type="Node" parent="CardStateMachine" unique_id=2018090746]
+script = ExtResource("7_q6p6f")
+
+[node name="CardClickedState" type="Node" parent="CardStateMachine" unique_id=1328295434]
+script = ExtResource("8_3n74x")
+state = 1
+
+[node name="CardDraggingState" type="Node" parent="CardStateMachine" unique_id=887701580]
+script = ExtResource("9_p6kbj")
+state = 2
+
+[node name="CardReleaseState" type="Node" parent="CardStateMachine" unique_id=783091343]
+script = ExtResource("10_pjmbq")
+state = 3
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="area_entered" from="DropPointDetector" to="." method="_on_drop_point_detector_area_entered"]
+[connection signal="area_exited" from="DropPointDetector" to="." method="_on_drop_point_detector_area_exited"]

@@ -17,6 +17,12 @@ const FALLBACK_ACCENT := Color("895D3F")
 @onready var desc: RichTextLabel = $VBoxContainer/DescBox/VBoxContainer/Desc
 @onready var effects: Label = $VBoxContainer/Effects
 
+# state machine
+@onready var card_state_machine: CardStateMachine = $CardStateMachine as CardStateMachine
+@onready var targets: Array[Node] = []
+@onready var drop_point_detector: Area2D = $DropPointDetector
+signal reparent_requested(card: Control)
+
 # Cached style overrides to avoid repeated heap allocations
 var _root_style: StyleBoxFlat
 var _image_frame_style: StyleBoxFlat
@@ -27,6 +33,7 @@ var _effects_label_style: StyleBoxFlat
 func _ready() -> void:
 	_cache_styles()
 	refresh_ui()
+	card_state_machine.init(self)
 
 func set_attributes(data: CardData) -> void:
 	card_data = data.duplicate() as CardData if data != null else null
@@ -107,3 +114,23 @@ func _clear_ui() -> void:
 	desc.text = ""
 	effects.text = ""
 	image.texture = null
+
+# state machine
+func _input(event: InputEvent) -> void:
+	card_state_machine.on_input(event)
+
+func _on_gui_input(event: InputEvent) -> void:
+	card_state_machine.on_gui_input(event)
+
+func _on_mouse_entered() -> void:
+	card_state_machine.on_mouse_entered()
+
+func _on_mouse_exited() -> void:
+	card_state_machine.on_mouse_exited()
+
+func _on_drop_point_detector_area_entered(area: Area2D) -> void:
+	if not targets.has(area):
+		targets.append(area)
+
+func _on_drop_point_detector_area_exited(area: Area2D) -> void:
+	targets.erase(area)

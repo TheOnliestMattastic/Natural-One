@@ -4,7 +4,7 @@ class_name CardState
 @export var state: State
 enum State {BASE, CLICKED, DRAGGING, RELEASED}
 signal transition_requested(from: CardState, to: State)
-var card_hand: CardHand
+var card: Control
 
 func enter() -> void:
 	pass

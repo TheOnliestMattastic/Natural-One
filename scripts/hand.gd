@@ -9,5 +9,5 @@ func connect_hand() -> void:
 		if card_hand and not card_hand.reparent_requested.is_connected(_on_item_scene_reparent_requested):
 			card_hand.reparent_requested.connect(_on_item_scene_reparent_requested)
 
-func _on_item_scene_reparent_requested(card: CardHand) -> void:
+func _on_item_scene_reparent_requested(card: Control) -> void:
 	card.reparent(resources)
