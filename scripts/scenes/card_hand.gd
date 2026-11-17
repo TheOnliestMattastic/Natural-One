@@ -12,6 +12,7 @@ class_name CardHand
 # state machine
 @onready var card_state_machine: CardStateMachine = $CardStateMachine as CardStateMachine
 @onready var targets: Array[Node] = []
+@onready var drop_point_detector: Area2D = $DropPointDetector
 signal reparent_requested(item: CardHand)
 
 # ui
