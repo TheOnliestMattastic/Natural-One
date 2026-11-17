@@ -15,6 +15,6 @@ description = "+1 Raw Fish whenever Raw Fish gained
 Cost:
 -2 Wood
 -1 Stone & Fiber"
-effects = "DC 16"
+effects = "DC 15"
 art = ExtResource("1_yumci")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"

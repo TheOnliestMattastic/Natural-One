@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://tj3ppbndppdf"]
+
+[ext_resource type="Texture2D" uid="uid://c7mre7l8skfm5" path="res://assets/icon-packs/lorc/campfire.svg" id="1_kb2wv"]
+[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_wx0bt"]
+
+[resource]
+script = ExtResource("2_wx0bt")
+id = "recipe_campfire"
+title = "Campfire"
+suit = 2
+sort = 2
+type = 8
+description = "+3 Crafting
+Cost:
+-1 Wood"
+effects = "DC 5"
+art = ExtResource("1_kb2wv")
+metadata/_custom_type_script = "uid://bbvbfp88y36by"

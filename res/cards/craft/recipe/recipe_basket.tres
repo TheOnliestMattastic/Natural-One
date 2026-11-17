@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://dfm0y3ibjwrl1"]
+
+[ext_resource type="Texture2D" uid="uid://cmss4o2r4slui" path="res://assets/icon-packs/delapouite/basket.svg" id="1_4pilj"]
+[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_tbg7n"]
+
+[resource]
+script = ExtResource("2_tbg7n")
+id = "recipe_basket"
+title = "Basket"
+suit = 2
+sort = 2
+type = 8
+description = "+5 Hand size
+Cost:
+-2 Fiber"
+effects = "DC 11"
+art = ExtResource("1_4pilj")
+metadata/_custom_type_script = "uid://bbvbfp88y36by"

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://cex8yp7aijang"]
+
+[ext_resource type="Texture2D" uid="uid://23fcqo8anmrr" path="res://assets/icon-packs/delapouite/bone-knife.svg" id="1_isxrq"]
+[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_wiqto"]
+
+[resource]
+script = ExtResource("2_wiqto")
+id = "recipe_knife"
+title = "Knife"
+suit = 2
+sort = 2
+type = 8
+description = "+5 Crafting
++1 Combat (breaks upon use)
+Cost:
+-1 Stone & Fiber"
+effects = "DC 7"
+art = ExtResource("1_isxrq")
+metadata/_custom_type_script = "uid://bbvbfp88y36by"

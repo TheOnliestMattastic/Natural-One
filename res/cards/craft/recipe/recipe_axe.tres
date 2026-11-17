@@ -14,6 +14,6 @@ description = "+1 Wood whenever Wood gained
 +3 Combat (breaks upon use)
 Cost:
 -1 Wood, Stone, & Fiber"
-effects = "DC 10"
+effects = "DC 12"
 art = ExtResource("1_mg12k")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"

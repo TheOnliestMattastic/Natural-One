@@ -13,6 +13,6 @@ type = 8
 description = "Requires a Campfire:
 +2 Cooked Meat
 -1 Raw Meat"
-effects = "DC 5"
+effects = "DC 6"
 art = ExtResource("1_avuvc")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"
