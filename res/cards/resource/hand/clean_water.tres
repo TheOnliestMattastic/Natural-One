@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://b4xnffyemxpnn"]
+
+[ext_resource type="Texture2D" uid="uid://ube4t62pk34u" path="res://assets/icon-packs/lorc/droplets.svg" id="1_qqny4"]
+[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_ref6m"]
+
+[resource]
+script = ExtResource("2_ref6m")
+id = "clean_water"
+title = "Clean Water"
+suit = 2
+effects = "+2 Stamina"
+art = ExtResource("1_qqny4")
+metadata/_custom_type_script = "uid://bbvbfp88y36by"

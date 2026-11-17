@@ -4,29 +4,39 @@
 [ext_resource type="Script" uid="uid://ddd7muys8yekl" path="res://scripts/sys/ui.gd" id="1_lnu2h"]
 [ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_37s47"]
 [ext_resource type="PackedScene" uid="uid://dsm0gysm47txb" path="res://scenes/button.tscn" id="2_yqjtg"]
-[ext_resource type="Resource" uid="uid://cygpsacm6ph0n" path="res://res/cards/resource/water_1.tres" id="3_ir15t"]
+[ext_resource type="Resource" uid="uid://cygpsacm6ph0n" path="res://res/cards/resource/deck/water_1.tres" id="3_ir15t"]
 [ext_resource type="StyleBox" uid="uid://dg52ryekxhwl5" path="res://res/styles/style_panel_border.tres" id="3_p57ef"]
-[ext_resource type="Resource" uid="uid://c1xetk86koaek" path="res://res/cards/resource/water_3.tres" id="4_ca42v"]
-[ext_resource type="Resource" uid="uid://o6wjucj4bpcq" path="res://res/cards/resource/fiber_1.tres" id="5_gxtfn"]
-[ext_resource type="Resource" uid="uid://b1ea4vr576ren" path="res://res/cards/resource/water_2.tres" id="5_rysoc"]
-[ext_resource type="Resource" uid="uid://c6qd5bkq0uccx" path="res://res/cards/resource/wood_1.tres" id="6_ca42v"]
-[ext_resource type="Resource" uid="uid://bbdila6yrqcma" path="res://res/cards/resource/fiber_2.tres" id="6_twgab"]
-[ext_resource type="Resource" uid="uid://5vbwtsu5f1qo" path="res://res/cards/resource/fiber_3.tres" id="7_02fa5"]
-[ext_resource type="Resource" uid="uid://1sk24c8h4sc2" path="res://res/cards/resource/wood_2.tres" id="7_ssvqc"]
-[ext_resource type="Resource" uid="uid://bmlr77rbhsgmc" path="res://res/cards/resource/wood_3.tres" id="8_264po"]
-[ext_resource type="Resource" uid="uid://dfl6dy0j5oan8" path="res://res/cards/resource/food_1.tres" id="8_nepv3"]
-[ext_resource type="Resource" uid="uid://25u37gw4xvug" path="res://res/cards/resource/food_2.tres" id="9_7025r"]
-[ext_resource type="Resource" uid="uid://deruner48b8fh" path="res://res/cards/resource/food_3.tres" id="10_m4url"]
-[ext_resource type="Resource" uid="uid://br2h8xpb5ulyy" path="res://res/cards/resource/stone_1.tres" id="13_05nbr"]
-[ext_resource type="Resource" uid="uid://bdy0oqj6ydt08" path="res://res/cards/resource/stone_2.tres" id="14_0sl42"]
-[ext_resource type="Resource" uid="uid://o3yctsvowg55" path="res://res/cards/resource/stone_3.tres" id="15_oaba0"]
+[ext_resource type="Resource" uid="uid://c1xetk86koaek" path="res://res/cards/resource/deck/water_3.tres" id="4_ca42v"]
+[ext_resource type="Resource" uid="uid://o6wjucj4bpcq" path="res://res/cards/resource/deck/fiber_1.tres" id="5_gxtfn"]
+[ext_resource type="Resource" uid="uid://b1ea4vr576ren" path="res://res/cards/resource/deck/water_2.tres" id="5_rysoc"]
+[ext_resource type="Resource" uid="uid://c6qd5bkq0uccx" path="res://res/cards/resource/deck/wood_1.tres" id="6_ca42v"]
+[ext_resource type="Resource" uid="uid://bbdila6yrqcma" path="res://res/cards/resource/deck/fiber_2.tres" id="6_twgab"]
+[ext_resource type="Resource" uid="uid://5vbwtsu5f1qo" path="res://res/cards/resource/deck/fiber_3.tres" id="7_02fa5"]
+[ext_resource type="Resource" uid="uid://1sk24c8h4sc2" path="res://res/cards/resource/deck/wood_2.tres" id="7_ssvqc"]
+[ext_resource type="Resource" uid="uid://bmlr77rbhsgmc" path="res://res/cards/resource/deck/wood_3.tres" id="8_264po"]
+[ext_resource type="Resource" uid="uid://dfl6dy0j5oan8" path="res://res/cards/resource/deck/food_2.tres" id="8_nepv3"]
+[ext_resource type="Texture2D" uid="uid://v8dpkmds4s8a" path="res://assets/icon-packs/lorc/bulb.svg" id="8_qnb83"]
+[ext_resource type="Resource" uid="uid://25u37gw4xvug" path="res://res/cards/resource/deck/food_1.tres" id="9_7025r"]
+[ext_resource type="Resource" uid="uid://br2h8xpb5ulyy" path="res://res/cards/resource/deck/stone_1.tres" id="13_05nbr"]
+[ext_resource type="Resource" uid="uid://bdy0oqj6ydt08" path="res://res/cards/resource/deck/stone_2.tres" id="14_0sl42"]
+[ext_resource type="Resource" uid="uid://o3yctsvowg55" path="res://res/cards/resource/deck/stone_3.tres" id="15_oaba0"]
 [ext_resource type="Texture2D" uid="uid://b7fcgd502agg1" path="res://assets/campfire-unlit.png" id="16_1kice"]
 [ext_resource type="Texture2D" uid="uid://cd7q6vk6jy8ph" path="res://assets/campfire-lit.png" id="17_1kice"]
-[ext_resource type="Resource" uid="uid://dndhe2gb1opii" path="res://res/cards/hazard/day/warning_bear.tres" id="22_458eo"]
+[ext_resource type="Resource" uid="uid://dndhe2gb1opii" path="res://res/cards/hazard/day/warn_bear.tres" id="22_458eo"]
 [ext_resource type="Script" uid="uid://b0uuep758nd8" path="res://scripts/menu_tab_container.gd" id="22_pl11u"]
 [ext_resource type="Script" uid="uid://c7m40actab011" path="res://scripts/hand.gd" id="23_bt5mj"]
-[ext_resource type="Resource" uid="uid://cwll1mlfhv01m" path="res://res/cards/hazard/day/warning_wolf.tres" id="23_h3rex"]
+[ext_resource type="Resource" uid="uid://cwll1mlfhv01m" path="res://res/cards/hazard/day/warn_wolf.tres" id="23_h3rex"]
 [ext_resource type="Script" uid="uid://b3eh1ywktd5qb" path="res://scripts/equipment.gd" id="24_e1j6l"]
+
+[sub_resource type="Resource" id="Resource_sww3w"]
+script = ExtResource("2_37s47")
+id = "food_3"
+title = "Edible Root Bulb"
+type = 1
+description = "A starchy, earthy tuber dug up from damp soil beneath a canopy of ferns."
+effects = "+3 Health"
+art = ExtResource("8_qnb83")
+metadata/_custom_type_script = "uid://bbvbfp88y36by"
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fl3o2"]
 
@@ -39,7 +49,7 @@ size = Vector2(648, 483)
 
 [node name="Game" type="Node" unique_id=568490508]
 script = ExtResource("1_iywne")
-card_database = Array[ExtResource("2_37s47")]([ExtResource("5_gxtfn"), ExtResource("6_twgab"), ExtResource("7_02fa5"), ExtResource("8_nepv3"), ExtResource("9_7025r"), ExtResource("10_m4url"), ExtResource("13_05nbr"), ExtResource("14_0sl42"), ExtResource("15_oaba0"), ExtResource("3_ir15t"), ExtResource("5_rysoc"), ExtResource("4_ca42v"), ExtResource("6_ca42v"), ExtResource("7_ssvqc"), ExtResource("8_264po"), ExtResource("22_458eo"), ExtResource("23_h3rex")])
+card_database = Array[ExtResource("2_37s47")]([ExtResource("5_gxtfn"), ExtResource("6_twgab"), ExtResource("7_02fa5"), ExtResource("8_nepv3"), ExtResource("9_7025r"), SubResource("Resource_sww3w"), ExtResource("13_05nbr"), ExtResource("14_0sl42"), ExtResource("15_oaba0"), ExtResource("3_ir15t"), ExtResource("5_rysoc"), ExtResource("4_ca42v"), ExtResource("6_ca42v"), ExtResource("7_ssvqc"), ExtResource("8_264po"), ExtResource("22_458eo"), ExtResource("23_h3rex")])
 
 [node name="Background" type="ColorRect" parent="." unique_id=1578591557]
 anchors_preset = 15

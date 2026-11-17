@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://u4lctj0jqrvd"]
+
+[ext_resource type="Texture2D" uid="uid://dfdghv4qc40q7" path="res://assets/icon-packs/delapouite/ants.svg" id="1_nknk8"]
+[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_dpx4k"]
+
+[resource]
+script = ExtResource("2_dpx4k")
+id = "env_ants"
+title = "Ant Infestation"
+suit = 1
+sort = 1
+type = 7
+description = "Avoided with a Campfire"
+effects = "Discard all Food"
+art = ExtResource("1_nknk8")
+metadata/_custom_type_script = "uid://bbvbfp88y36by"

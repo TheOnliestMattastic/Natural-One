@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://bugs76iw4pfub"]
+
+[ext_resource type="Texture2D" uid="uid://ccew2g8ddcux1" path="res://assets/icon-packs/lorc/stone-spear.svg" id="1_yumci"]
+[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_8uu2h"]
+
+[resource]
+script = ExtResource("2_8uu2h")
+id = "recipe_spear"
+title = "Spear"
+suit = 2
+sort = 2
+type = 8
+description = "+1 Raw Fish whenever Raw Fish gained
++5 Combat (breaks on use)
+Cost:
+-2 Wood
+-1 Stone & Fiber"
+effects = "DC 16"
+art = ExtResource("1_yumci")
+metadata/_custom_type_script = "uid://bbvbfp88y36by"

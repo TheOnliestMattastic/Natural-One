@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://djparnsrmx2os"]
+
+[ext_resource type="Texture2D" uid="uid://cyc0qu328tkmh" path="res://assets/icon-packs/lorc/stone-axe.svg" id="1_mg12k"]
+[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_512nv"]
+
+[resource]
+script = ExtResource("2_512nv")
+id = "recipe_axe"
+title = "Axe"
+suit = 2
+sort = 2
+type = 8
+description = "+1 Wood whenever Wood gained
++3 Combat (breaks upon use)
+Cost:
+-1 Wood, Stone, & Fiber"
+effects = "DC 10"
+art = ExtResource("1_mg12k")
+metadata/_custom_type_script = "uid://bbvbfp88y36by"

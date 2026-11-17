@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://dygrmmokxqctx"]
+
+[ext_resource type="Texture2D" uid="uid://calmqd7dmfglc" path="res://assets/icon-packs/lorc/rock.svg" id="1_mlqos"]
+[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_2mrqa"]
+
+[resource]
+script = ExtResource("2_2mrqa")
+id = "stone"
+title = "Stone"
+suit = 2
+type = 4
+art = ExtResource("1_mlqos")
+metadata/_custom_type_script = "uid://bbvbfp88y36by"

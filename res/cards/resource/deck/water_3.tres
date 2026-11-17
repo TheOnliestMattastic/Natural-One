@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://c1xetk86koaek"]
+
+[ext_resource type="Texture2D" uid="uid://cqbgc355nsa8y" path="res://assets/icon-packs/lorc/splashy-stream.svg" id="1_bq6bf"]
+[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_ajm5e"]
+
+[resource]
+script = ExtResource("2_ajm5e")
+id = "water_3"
+title = "Rainwater Puddle"
+description = "Clear water gathered from a running stream"
+effects = "+1 Clean Water"
+art = ExtResource("1_bq6bf")
+metadata/_custom_type_script = "uid://bbvbfp88y36by"

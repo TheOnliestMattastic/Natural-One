@@ -5,13 +5,12 @@
 
 [resource]
 script = ExtResource("2_jtgme")
-id = "equipment_axe"
+id = "axe"
 title = "Axe"
 suit = 2
 sort = 2
 type = 9
-description = "A sharpened wooden shaft crafted from branches. 
-- Adds `3 Wood` to the Day deck."
+description = "+1 Wood whenever Wood gained"
 effects = "+3 Combat"
 art = ExtResource("1_fsuq6")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"

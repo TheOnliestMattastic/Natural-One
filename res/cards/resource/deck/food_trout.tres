@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://cfgn1hccnufbm"]
+
+[ext_resource type="Texture2D" uid="uid://6hi8nhgodcv" path="res://assets/icon-packs/delapouite/spearfishing.svg" id="1_sadob"]
+[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_qg2wy"]
+
+[resource]
+script = ExtResource("2_qg2wy")
+id = "food_trout"
+title = "River Trout"
+suit = 2
+type = 1
+description = "Freshly caught fish from cold running water."
+effects = "+1 Raw Fish"
+art = ExtResource("1_sadob")
+metadata/_custom_type_script = "uid://bbvbfp88y36by"

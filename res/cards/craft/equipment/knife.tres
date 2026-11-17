@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://002gc26m2x5e"]
+
+[ext_resource type="Texture2D" uid="uid://23fcqo8anmrr" path="res://assets/icon-packs/delapouite/bone-knife.svg" id="1_v13vn"]
+[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_683ou"]
+
+[resource]
+script = ExtResource("2_683ou")
+id = "knife"
+title = "Knife"
+suit = 2
+sort = 2
+type = 9
+description = "+5 Crafting"
+effects = "+1 Combat"
+art = ExtResource("1_v13vn")
+metadata/_custom_type_script = "uid://bbvbfp88y36by"

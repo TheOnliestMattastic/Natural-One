@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://o3yctsvowg55"]
+
+[ext_resource type="Texture2D" uid="uid://bdwikgndtpocu" path="res://assets/icon-packs/delapouite/stone-pile.svg" id="1_dauy1"]
+[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_d2mxm"]
+
+[resource]
+script = ExtResource("2_d2mxm")
+id = "stone_3"
+title = "Boulder Chunks"
+type = 4
+description = "A dense, rough fragments broken off a larger outcrop."
+effects = "+3 Stone"
+art = ExtResource("1_dauy1")
+metadata/_custom_type_script = "uid://bbvbfp88y36by"

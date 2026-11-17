@@ -5,11 +5,12 @@
 
 [resource]
 script = ExtResource("2_ycqal")
-id = "environment_fog"
+id = "env_fog"
 title = "Thick Fog"
 suit = 1
 sort = 1
 type = 7
+description = "Unavoidable"
 effects = "-1 Stamina"
 art = ExtResource("1_hv4vh")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"

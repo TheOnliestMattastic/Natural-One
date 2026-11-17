@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://7vhvuoq508gq"]
+
+[ext_resource type="Texture2D" uid="uid://7dqccmf788rp" path="res://assets/icon-packs/delapouite/rope-coil.svg" id="1_ar40g"]
+[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_h1jxu"]
+
+[resource]
+script = ExtResource("2_h1jxu")
+id = "fiber"
+title = "Fiber"
+suit = 2
+type = 3
+art = ExtResource("1_ar40g")
+metadata/_custom_type_script = "uid://bbvbfp88y36by"

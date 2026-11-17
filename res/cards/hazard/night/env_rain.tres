@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("2_8wu5e")
-id = "environment_downpour"
+id = "env_rain"
 title = "Heavy Downpour"
 suit = 1
 sort = 1

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://b82viw0rfrrbq"]
+
+[ext_resource type="Texture2D" uid="uid://cvsk8hml3ghfm" path="res://assets/icon-packs/lorc/meat.svg" id="1_vmlko"]
+[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_w5f82"]
+
+[resource]
+script = ExtResource("2_w5f82")
+id = "cooked_meat"
+title = "Cooked Meat"
+suit = 2
+type = 1
+description = "Small game roasted over hot coals until the skin crisps."
+effects = "+3 Health"
+art = ExtResource("1_vmlko")
+metadata/_custom_type_script = "uid://bbvbfp88y36by"

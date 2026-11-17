@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://degnogti5ejxl"]
+
+[ext_resource type="Texture2D" uid="uid://c0p7s0rmcr5j" path="res://assets/icon-packs/lorc/direwolf.svg" id="1_wc0vg"]
+[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_7cl8e"]
+
+[resource]
+script = ExtResource("2_7cl8e")
+id = "enc_hungry_wolf"
+title = "Hungry Wolf"
+sort = 1
+type = 6
+description = "A gaunt wolf steps out from the treeline, watching your pack closely. 
+Feed: -1 Food
+Fight: -3 HP or +1 Raw Meat"
+effects = "DC 16"
+art = ExtResource("1_wc0vg")
+metadata/_custom_type_script = "uid://bbvbfp88y36by"

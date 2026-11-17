@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="CardData" format=3 uid="uid://bdy0oqj6ydt08"]
 
-[ext_resource type="Texture2D" uid="uid://calmqd7dmfglc" path="res://assets/icon-packs/lorc/rock.svg" id="1_ao5e1"]
+[ext_resource type="Texture2D" uid="uid://pd6ilnyqlwx4" path="res://assets/icon-packs/delapouite/silex.svg" id="1_hrh5h"]
 [ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_hfiec"]
 
 [resource]
 script = ExtResource("2_hfiec")
 id = "stone_2"
-title = "Jagged Flint Shard"
+title = "Flint Shards"
 type = 4
-description = "A sharp, fractured piece of dark stone capable of holding a cutting edge."
+description = "A sharp, fractured pieces of dark stone capable of holding a cutting edge."
 effects = "+2 Stone"
-art = ExtResource("1_ao5e1")
+art = ExtResource("1_hrh5h")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"

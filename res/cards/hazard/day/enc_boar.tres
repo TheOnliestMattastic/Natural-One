@@ -5,11 +5,13 @@
 
 [resource]
 script = ExtResource("2_pu2jy")
-id = "encounter_boar"
+id = "enc_boar"
 title = "Territorial Boar"
 sort = 1
 type = 6
-description = "A heavy-shouldered boar paws the dirt and lowers its tusks. Back off or fight for a big reward."
-effects = "-2 Health or +2 Raw Food"
+description = "A heavy-shouldered boar paws the dirt and lowers its tusks. 
+Flee: no repercussions
+Fight: -1 HP or +2 Raw Meat"
+effects = "DC 15"
 art = ExtResource("1_c7wum")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"

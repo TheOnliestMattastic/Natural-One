@@ -5,8 +5,8 @@
 
 [resource]
 script = ExtResource("2_u8mu7")
-id = "warning_bear"
-title = "Fresh Predator Prints"
+id = "warn_bear"
+title = "Bear Prints"
 sort = 1
 type = 5
 description = "Heavy prints pressed deep into the mud. Something large and predatory has been pacing through the area recently."

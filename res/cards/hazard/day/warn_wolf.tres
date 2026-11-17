@@ -5,8 +5,8 @@
 
 [resource]
 script = ExtResource("2_imuwc")
-id = "warning_wolf"
-title = "Fresh Wolf Prints"
+id = "warn_wolf"
+title = "Wolf Prints"
 sort = 1
 type = 5
 description = "Massive, razor-sharp paw impressions pressed deep into the muddy path ahead. The track is warm."

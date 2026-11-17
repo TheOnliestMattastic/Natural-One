@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://menqujqv17b5"]
+
+[ext_resource type="Texture2D" uid="uid://c7mre7l8skfm5" path="res://assets/icon-packs/lorc/campfire.svg" id="1_comjw"]
+[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_n12ob"]
+
+[resource]
+script = ExtResource("2_n12ob")
+id = "campfire"
+title = "Campfire"
+suit = 2
+sort = 2
+type = 9
+description = "Extinguishes the next morning"
+effects = "+3 Crafting"
+art = ExtResource("1_comjw")
+metadata/_custom_type_script = "uid://bbvbfp88y36by"

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://clsswulcktlpt"]
+
+[ext_resource type="Texture2D" uid="uid://bknh6c0c8po37" path="res://assets/icon-packs/delapouite/steak.svg" id="1_yau24"]
+[ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_4f45n"]
+
+[resource]
+script = ExtResource("2_4f45n")
+id = "raw_meat"
+title = "Raw Meat"
+suit = 2
+type = 1
+description = "Small game caught in the brush, still needing fire before it is safe to eat."
+effects = "+1 Health"
+art = ExtResource("1_yau24")
+metadata/_custom_type_script = "uid://bbvbfp88y36by"
