@@ -1,4 +1,4 @@
-extends GridContainer
+extends Control
 class_name CraftingMenu
 
 func _ready() -> void:
