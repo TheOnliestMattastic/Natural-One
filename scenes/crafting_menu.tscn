@@ -3,76 +3,122 @@
 [ext_resource type="Script" uid="uid://bkuxjmm6lq3ta" path="res://scripts/scenes/crafting_menu.gd" id="1_8qu5l"]
 [ext_resource type="PackedScene" uid="uid://d2iamou5twka0" path="res://scenes/card_recipe.tscn" id="2_8qu5l"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wctjf"]
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8qu5l"]
+bg_color = Color(0.76240367, 0.7624037, 0.7624035, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_udled"]
+bg_color = Color(0.47397572, 0.47397578, 0.4739756, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_row00"]
+content_margin_left = 16.0
+content_margin_top = 16.0
+content_margin_right = 16.0
+content_margin_bottom = 16.0
+
+[sub_resource type="Theme" id="Theme_udled"]
+HScrollBar/styles/grabber = SubResource("StyleBoxFlat_wctjf")
+HScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_8qu5l")
+HScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_udled")
+HScrollBar/styles/scroll = SubResource("StyleBoxEmpty_row00")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lw6op"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ia6g4"]
+content_margin_top = 12.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ltxcg"]
+content_margin_top = 12.0
+
 [node name="CraftingMenu" type="PanelContainer" unique_id=1525079838]
-custom_minimum_size = Vector2(648, 802)
-custom_maximum_size = Vector2(648, 802)
 offset_right = 648.0
 offset_bottom = 802.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_udled")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_lw6op")
 script = ExtResource("1_8qu5l")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=958674817]
 layout_mode = 2
 
-[node name="LabelUnavail" type="Label" parent="VBoxContainer" unique_id=1472495038]
+[node name="Unavailable" type="FoldableContainer" parent="VBoxContainer" unique_id=128021450]
 layout_mode = 2
-text = "Unavailable"
-horizontal_alignment = 1
-vertical_alignment = 1
+theme_override_font_sizes/font_size = 24
+title = "Unavailable"
+title_alignment = 1
 
-[node name="Unavailable" type="ScrollContainer" parent="VBoxContainer" unique_id=1319197978]
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/Unavailable" unique_id=1319197978]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_constants/scrollbar_v_separation = 12
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ia6g4")
 draw_focus_border = true
-horizontal_scroll_mode = 4
+horizontal_scroll_mode = 2
 vertical_scroll_mode = 0
 scroll_horizontal_by_default = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Unavailable" unique_id=1632386441]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 6
-
-[node name="CardRecipe" parent="VBoxContainer/Unavailable/HBoxContainer" unique_id=1644298931 instance=ExtResource("2_8qu5l")]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Unavailable/ScrollContainer" unique_id=1632386441]
 layout_mode = 2
 
-[node name="CardRecipe2" parent="VBoxContainer/Unavailable/HBoxContainer" unique_id=1474099644 instance=ExtResource("2_8qu5l")]
+[node name="CardRecipe" parent="VBoxContainer/Unavailable/ScrollContainer/HBoxContainer" unique_id=1644298931 instance=ExtResource("2_8qu5l")]
 layout_mode = 2
 
-[node name="CardRecipe3" parent="VBoxContainer/Unavailable/HBoxContainer" unique_id=1372526034 instance=ExtResource("2_8qu5l")]
+[node name="CardRecipe2" parent="VBoxContainer/Unavailable/ScrollContainer/HBoxContainer" unique_id=1474099644 instance=ExtResource("2_8qu5l")]
 layout_mode = 2
 
-[node name="CardRecipe4" parent="VBoxContainer/Unavailable/HBoxContainer" unique_id=392045859 instance=ExtResource("2_8qu5l")]
+[node name="CardRecipe3" parent="VBoxContainer/Unavailable/ScrollContainer/HBoxContainer" unique_id=1372526034 instance=ExtResource("2_8qu5l")]
 layout_mode = 2
 
-[node name="CardRecipe5" parent="VBoxContainer/Unavailable/HBoxContainer" unique_id=2052797217 instance=ExtResource("2_8qu5l")]
+[node name="CardRecipe4" parent="VBoxContainer/Unavailable/ScrollContainer/HBoxContainer" unique_id=392045859 instance=ExtResource("2_8qu5l")]
 layout_mode = 2
 
-[node name="LabelAvail" type="Label" parent="VBoxContainer" unique_id=100084539]
+[node name="CardRecipe5" parent="VBoxContainer/Unavailable/ScrollContainer/HBoxContainer" unique_id=2052797217 instance=ExtResource("2_8qu5l")]
 layout_mode = 2
-text = "Available"
-horizontal_alignment = 1
-vertical_alignment = 1
 
-[node name="Available" type="ScrollContainer" parent="VBoxContainer" unique_id=1580640251]
+[node name="Available" type="FoldableContainer" parent="VBoxContainer" unique_id=892711887]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+title = "Available"
+title_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/Available" unique_id=1580640251]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_constants/scrollbar_v_separation = 12
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ltxcg")
+horizontal_scroll_mode = 2
+vertical_scroll_mode = 0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Available" unique_id=2037034704]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Available/ScrollContainer" unique_id=2037034704]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 2
 
-[node name="CardRecipe" parent="VBoxContainer/Available/HBoxContainer" unique_id=818722329 instance=ExtResource("2_8qu5l")]
+[node name="CardRecipe" parent="VBoxContainer/Available/ScrollContainer/HBoxContainer" unique_id=818722329 instance=ExtResource("2_8qu5l")]
 layout_mode = 2
 
-[node name="CardRecipe2" parent="VBoxContainer/Available/HBoxContainer" unique_id=440068736 instance=ExtResource("2_8qu5l")]
+[node name="CardRecipe2" parent="VBoxContainer/Available/ScrollContainer/HBoxContainer" unique_id=440068736 instance=ExtResource("2_8qu5l")]
 layout_mode = 2
 
-[node name="CardRecipe3" parent="VBoxContainer/Available/HBoxContainer" unique_id=992315989 instance=ExtResource("2_8qu5l")]
+[node name="CardRecipe3" parent="VBoxContainer/Available/ScrollContainer/HBoxContainer" unique_id=992315989 instance=ExtResource("2_8qu5l")]
 layout_mode = 2
 
-[node name="CardRecipe4" parent="VBoxContainer/Available/HBoxContainer" unique_id=159586669 instance=ExtResource("2_8qu5l")]
+[node name="CardRecipe4" parent="VBoxContainer/Available/ScrollContainer/HBoxContainer" unique_id=159586669 instance=ExtResource("2_8qu5l")]
 layout_mode = 2
 
-[node name="CardRecipe5" parent="VBoxContainer/Available/HBoxContainer" unique_id=603644092 instance=ExtResource("2_8qu5l")]
+[node name="CardRecipe5" parent="VBoxContainer/Available/ScrollContainer/HBoxContainer" unique_id=603644092 instance=ExtResource("2_8qu5l")]
 layout_mode = 2
