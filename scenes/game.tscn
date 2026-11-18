@@ -299,7 +299,6 @@ layout_mode = 2
 text = "Quit"
 
 [node name="CardDropArea" type="Area2D" parent="." unique_id=558984230]
-collision_layer = 2
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CardDropArea" unique_id=2061524743]

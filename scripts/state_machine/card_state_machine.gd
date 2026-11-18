@@ -6,11 +6,11 @@ var current_state: CardState
 var states: Dictionary = {}
 
 func init(card: Control) -> void:
-	for state in get_children():
-		if state is CardState:
-			states[state.state] = state
-			state.transition_requested.connect(_on_transition_requested)
-			state.card = card
+	for child in get_children():
+		if child is CardState:
+			states[child.state] = child
+			child.transition_requested.connect(_on_transition_requested)
+			child.card = card
 	
 	if inital_state:
 		inital_state.enter()
