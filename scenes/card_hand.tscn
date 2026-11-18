@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://j7841f0rtjdf"]
 
 [ext_resource type="Script" uid="uid://i8f514p1ayub" path="res://scripts/scenes/card_hand.gd" id="1_4gq7n"]
-[ext_resource type="StyleBox" uid="uid://bwoy1qt5b1u8k" path="res://res/styles/style_card_small.tres" id="1_s8enn"]
 [ext_resource type="StyleBox" uid="uid://cfdirolysueq5" path="res://res/styles/style_bg_circle_small.tres" id="3_6muww"]
 [ext_resource type="Resource" uid="uid://cuxpkrr28utyb" path="res://res/cards/craft/equipment/shelter.tres" id="3_wnc42"]
 [ext_resource type="Script" uid="uid://c2i4wyhny8efr" path="res://scripts/state_machine/card_state_machine.gd" id="4_vljjh"]
@@ -10,6 +9,22 @@
 [ext_resource type="Script" uid="uid://ce7qhomukbbwe" path="res://scripts/state_machine/card_clicked_state.gd" id="6_c4387"]
 [ext_resource type="Script" uid="uid://t1t8y2lcad6x" path="res://scripts/state_machine/card_dragging_state.gd" id="7_v0cwl"]
 [ext_resource type="Script" uid="uid://cvo3b0u067ctj" path="res://scripts/state_machine/card_release_state.gd" id="8_xr48l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wnc42"]
+content_margin_left = 6.0
+content_margin_top = 6.0
+content_margin_right = 6.0
+content_margin_bottom = 6.0
+bg_color = Color(0.84705883, 0.80784315, 0.7372549, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.11764706, 0.1764706, 0.18431373, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rp7l2"]
 content_margin_left = 8.0
@@ -36,50 +51,46 @@ offset_right = 103.0
 offset_bottom = 178.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_styles/panel = ExtResource("1_s8enn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_wnc42")
 script = ExtResource("1_4gq7n")
 card_data = ExtResource("3_wnc42")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1676763552]
-layout_mode = 2
-
-[node name="Title" type="Label" parent="VBoxContainer" unique_id=1956031529]
+[node name="Title" type="Label" parent="." unique_id=1956031529]
 layout_mode = 2
 size_flags_horizontal = 0
-size_flags_vertical = 2
+size_flags_vertical = 0
 theme_override_font_sizes/font_size = 12
 theme_override_styles/normal = SubResource("StyleBoxFlat_rp7l2")
 text = "Triforce"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Art" type="AspectRatioContainer" parent="VBoxContainer" unique_id=486878021]
+[node name="Art" type="AspectRatioContainer" parent="." unique_id=486878021]
 layout_mode = 2
 size_flags_vertical = 3
-stretch_mode = 3
 
-[node name="Frame" type="PanelContainer" parent="VBoxContainer/Art" unique_id=411109465]
+[node name="Frame" type="PanelContainer" parent="Art" unique_id=411109465]
 layout_mode = 2
 mouse_filter = 1
 theme_override_styles/panel = ExtResource("3_6muww")
 
-[node name="Image" type="TextureRect" parent="VBoxContainer/Art" unique_id=405269288]
+[node name="Image" type="TextureRect" parent="Art" unique_id=405269288]
 modulate = Color(0.84705883, 0.80784315, 0.7372549, 1)
-custom_minimum_size = Vector2(60, 60)
+custom_minimum_size = Vector2(64, 64)
+custom_maximum_size = Vector2(64, 64)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("5_rp7l2")
 expand_mode = 1
-stretch_mode = 5
+stretch_mode = 4
 
-[node name="Effects" type="Label" parent="VBoxContainer" unique_id=1991204196]
+[node name="Effects" type="Label" parent="." unique_id=1991204196]
 layout_mode = 2
-size_flags_vertical = 10
+size_flags_vertical = 8
 theme_override_constants/line_spacing = -4
 theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxFlat_6rdkt")
-text = "+1 Bravery"
 horizontal_alignment = 1
 vertical_alignment = 1
 

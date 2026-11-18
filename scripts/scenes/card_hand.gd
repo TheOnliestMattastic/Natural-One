@@ -4,10 +4,10 @@ class_name CardHand
 
 # data
 @export var card_data: CardData
-@onready var title: Label = $VBoxContainer/Title
-@onready var frame: PanelContainer = $VBoxContainer/Art/Frame
-@onready var image: TextureRect = $VBoxContainer/Art/Image
-@onready var effects: Label = $VBoxContainer/Effects
+@onready var title: Label = $Title
+@onready var frame: PanelContainer = $Art/Frame
+@onready var image: TextureRect = $Art/Image
+@onready var effects: Label = $Effects
 
 # state machine
 @onready var card_state_machine: CardStateMachine = $CardStateMachine as CardStateMachine
@@ -59,7 +59,10 @@ func refresh_ui() -> void:
 
 	# Effects badge
 	effects.text = card_data.effects
-	_apply_label_badge(effects, _effects_label_style, accent_color)
+	if effects.text == "": effects.visible = false
+	else:
+		effects.visible = true
+		_apply_label_badge(effects, _effects_label_style, accent_color)
 
 func _cache_styles() -> void:
 	_root_style = _prepare_stylebox(self, "panel", FALLBACK_BG)
