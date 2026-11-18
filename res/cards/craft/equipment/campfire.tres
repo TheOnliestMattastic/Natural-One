@@ -10,8 +10,6 @@ title = "Campfire"
 suit = 2
 sort = 2
 type = 9
-description = "+2 Crafting
-+5 Environment"
 effects = "+2 Crafting
 +5 Environment"
 art = ExtResource("1_comjw")

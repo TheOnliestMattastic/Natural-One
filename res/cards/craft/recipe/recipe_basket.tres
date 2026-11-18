@@ -10,9 +10,8 @@ title = "Basket"
 suit = 2
 sort = 2
 type = 8
-description = "+5 Hand limit
-Cost:
--2 Fiber"
-effects = "DC 11"
+description = "-2 Fiber"
+effects = "+5 Hand limit"
+difficulty_class = "DC 11"
 art = ExtResource("1_4pilj")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"

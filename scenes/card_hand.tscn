@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://j7841f0rtjdf"]
 
 [ext_resource type="Script" uid="uid://i8f514p1ayub" path="res://scripts/scenes/card_hand.gd" id="1_4gq7n"]
+[ext_resource type="Resource" uid="uid://002gc26m2x5e" path="res://res/cards/craft/equipment/knife.tres" id="2_wnc42"]
 [ext_resource type="StyleBox" uid="uid://cfdirolysueq5" path="res://res/styles/style_bg_circle_small.tres" id="3_6muww"]
-[ext_resource type="Resource" uid="uid://cuxpkrr28utyb" path="res://res/cards/craft/equipment/shelter.tres" id="3_wnc42"]
 [ext_resource type="Script" uid="uid://c2i4wyhny8efr" path="res://scripts/state_machine/card_state_machine.gd" id="4_vljjh"]
 [ext_resource type="Script" uid="uid://gdt755sqx4os" path="res://scripts/state_machine/card_base_state.gd" id="5_ro5b8"]
 [ext_resource type="Texture2D" uid="uid://b82sp5e4wpwx7" path="res://assets/icon-packs/delapouite/triforce.svg" id="5_rp7l2"]
@@ -36,6 +36,8 @@ corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6rdkt"]
+content_margin_left = 8.0
+content_margin_right = 8.0
 bg_color = Color(0.5372549, 0.3647059, 0.24705882, 1)
 corner_radius_top_left = 12
 corner_radius_top_right = 12
@@ -43,7 +45,7 @@ corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f73s1"]
-size = Vector2(103, 178)
+size = Vector2(95, 170)
 
 [node name="CardHand" type="PanelContainer" unique_id=1644298931]
 custom_minimum_size = Vector2(103, 178)
@@ -53,7 +55,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_styles/panel = SubResource("StyleBoxFlat_wnc42")
 script = ExtResource("1_4gq7n")
-card_data = ExtResource("3_wnc42")
+card_data = ExtResource("2_wnc42")
 
 [node name="Title" type="Label" parent="." unique_id=1956031529]
 layout_mode = 2
@@ -91,8 +93,9 @@ size_flags_vertical = 8
 theme_override_constants/line_spacing = -4
 theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxFlat_6rdkt")
+text = "+1 Bravery
++1 Power"
 horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="DropPointDetector" type="Area2D" parent="." unique_id=2000084488]
 visible = false

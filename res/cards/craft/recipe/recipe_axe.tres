@@ -10,10 +10,11 @@ title = "Axe"
 suit = 2
 sort = 2
 type = 8
-description = "+1 extra Wood (whenever Wood gained)
-+3 Encounter (breaks upon use)
-Cost:
--1 Wood, Stone, & Fiber"
-effects = "DC 12"
+description = "-1 Fiber
+-1 Stone
+-1 Wood"
+effects = "+1 extra Wood (whenever Wood gained)
++3 Encounter (breaks upon use)"
+difficulty_class = "DC 12"
 art = ExtResource("1_mg12k")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"

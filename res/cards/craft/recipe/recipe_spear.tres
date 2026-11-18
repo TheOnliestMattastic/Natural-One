@@ -10,11 +10,11 @@ title = "Spear"
 suit = 2
 sort = 2
 type = 8
-description = "+1 Raw Fish whenever Raw Fish gained
-+5 Encounter
-Cost:
--2 Wood
--1 Stone & Fiber"
-effects = "DC 15"
+description = "-2 Wood
+-1 Fiber
+-1 Stone"
+effects = "+1 Raw Fish whenever Raw Fish gained
++5 Encounter"
+difficulty_class = "DC 15"
 art = ExtResource("1_yumci")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"

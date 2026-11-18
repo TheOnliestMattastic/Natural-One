@@ -9,9 +9,10 @@ id = "enc_hungry_wolf"
 title = "Hungry Wolf"
 sort = 1
 type = 6
-description = "A gaunt wolf steps out from the treeline, watching your pack closely. 
-Feed: -1 Food
-Fight: -3 HP or +1 Raw Meat"
-effects = "DC 15"
+description = "A gaunt wolf steps out from the treeline, watching your pack closely. "
+effects = "d20>15: +1 Raw Meat
+d20<14: -3 Health
+Feed: -1 Food"
+difficulty_class = "DC 15"
 art = ExtResource("1_wc0vg")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"

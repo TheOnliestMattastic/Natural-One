@@ -10,7 +10,8 @@ title = "Rats"
 suit = 1
 sort = 1
 type = 6
-description = "-1 Health & Food"
-effects = "DC 10"
+effects = "-1 Health
+-1 Food"
+difficulty_class = "DC 11"
 art = ExtResource("1_kdic2")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"

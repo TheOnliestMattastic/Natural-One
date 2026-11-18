@@ -42,6 +42,7 @@ const INK_DARK := Color("1E1B18")
 @export var type: Type
 @export_multiline var description: String = ""
 @export_multiline var effects: String = ""
+@export var difficulty_class: String = ""
 @export var art: Texture2D
 
 func get_bg_color() -> Color:

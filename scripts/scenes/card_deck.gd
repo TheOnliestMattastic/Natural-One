@@ -9,7 +9,8 @@ const FALLBACK_ACCENT := Color("895D3F")
 @export var card_data: CardData
 
 # Nodes
-@onready var type: Label = $VBoxContainer/Type
+@onready var type: Label = $VBoxContainer/HBoxContainer/Type
+@onready var dc: Label = $VBoxContainer/HBoxContainer/DC
 @onready var frame: PanelContainer = $VBoxContainer/Art/Frame
 @onready var image: TextureRect = $VBoxContainer/Art/Image
 @onready var desc_box: PanelContainer = $VBoxContainer/DescBox
@@ -29,6 +30,7 @@ var _image_frame_style: StyleBoxFlat
 var _desc_box_style: StyleBoxFlat
 var _type_label_style: StyleBoxFlat
 var _effects_label_style: StyleBoxFlat
+var _dc_label_style: StyleBoxFlat
 
 func _ready() -> void:
 	_cache_styles()
@@ -57,6 +59,13 @@ func refresh_ui() -> void:
 	var raw_sort_key: Variant = CardData.Sort.find_key(card_data.sort)
 	type.text = str(raw_sort_key) if raw_sort_key != null else "UNKNOWN"
 	_apply_label_badge(type, _type_label_style, primary_color)
+	
+	# DC badge
+	dc.text = card_data.difficulty_class
+	if dc.text == "": dc.visible = false
+	else:
+		dc.visible = true
+		_apply_label_badge(dc, _dc_label_style, accent_color)
 
 	# Art frame & texture
 	_apply_style_bg(frame, _image_frame_style, accent_color)
@@ -64,11 +73,11 @@ func refresh_ui() -> void:
 
 	# Effects badge
 	effects.text = card_data.effects
-	_apply_label_badge(effects, _effects_label_style, accent_color)
+	_apply_label_badge(effects, _effects_label_style, primary_color)
 
 	# Title & description ink
-	var desc_ink: Color = CardData.get_ink_for(primary_color)
-	_apply_style_bg(desc_box, _desc_box_style, primary_color)
+	var desc_ink: Color = CardData.get_ink_for(accent_color)
+	_apply_style_bg(desc_box, _desc_box_style, accent_color)
 	title.text = card_data.title
 	title.add_theme_color_override("font_color", desc_ink)
 	desc.text = card_data.description
@@ -80,6 +89,7 @@ func _cache_styles() -> void:
 	_desc_box_style = _prepare_stylebox(desc_box, "panel", FALLBACK_PRIMARY)
 	_type_label_style = _prepare_stylebox(type, "normal", FALLBACK_ACCENT)
 	_effects_label_style = _prepare_stylebox(effects, "normal", FALLBACK_ACCENT)
+	_dc_label_style = _prepare_stylebox(dc, "normal", FALLBACK_ACCENT)
 
 func _prepare_stylebox(control: Control, style_name: StringName, fallback: Color) -> StyleBoxFlat:
 	if control == null: return null

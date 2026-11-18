@@ -10,8 +10,6 @@ title = "Spear"
 suit = 2
 sort = 2
 type = 9
-description = "+1 extra Raw Fish whenever Raw Fish gained
-+5 Encounter"
 effects = "+1 extra Fish
 +5 Encounter"
 art = ExtResource("1_r00km")

@@ -5,10 +5,11 @@ class_name CardRecipe
 # data
 @export var card_data: CardData
 @onready var title: Label = $VBoxContainer/HBoxContainer/VBoxContainer/Title
-@onready var effects: Label = $VBoxContainer/HBoxContainer/VBoxContainer/Effects
+@onready var dc: Label = $VBoxContainer/HBoxContainer/VBoxContainer/DC
 @onready var desc: RichTextLabel = $VBoxContainer/Desc
 @onready var image: TextureRect = $VBoxContainer/HBoxContainer/Art/Image
 @onready var frame: PanelContainer = $VBoxContainer/HBoxContainer/Art/Frame
+@onready var effects: Label = $VBoxContainer/Effects
 
 # state machine
 @onready var card_state_machine: CardStateMachine = $CardStateMachine as CardStateMachine
@@ -26,6 +27,7 @@ var _root_style: StyleBoxFlat
 var _image_frame_style: StyleBoxFlat
 var _title_label_style: StyleBoxFlat
 var _desc_label_style: StyleBoxFlat
+var _dc_label_style: StyleBoxFlat
 var _effects_label_style: StyleBoxFlat
 
 func _ready() -> void:
@@ -55,9 +57,13 @@ func refresh_ui() -> void:
 	title.text = card_data.title
 	_apply_label_badge(title, _title_label_style, accent_color)
 
-	# Effects badge (DC)
+	# Effects badge
 	effects.text = card_data.effects
-	_apply_label_badge(effects, _effects_label_style, primary_color)
+	_apply_label_badge(effects, _effects_label_style, accent_color)
+	
+	# DC badge
+	dc.text = card_data.difficulty_class
+	_apply_label_badge(dc, _dc_label_style, primary_color)
 
 	# Art frame & texture
 	_apply_style_bg(frame, _image_frame_style, accent_color)
@@ -72,6 +78,7 @@ func _cache_styles() -> void:
 	_image_frame_style = _prepare_stylebox(frame, "panel", FALLBACK_PRIMARY)
 	_title_label_style = _prepare_stylebox(title, "normal", FALLBACK_PRIMARY)
 	_desc_label_style = _prepare_stylebox(desc, "normal", FALLBACK_PRIMARY)
+	_dc_label_style = _prepare_stylebox(dc, "normal", FALLBACK_ACCENT)
 	_effects_label_style = _prepare_stylebox(effects, "normal", FALLBACK_ACCENT)
 
 func _prepare_stylebox(control: Control, style_name: StringName, fallback: Color) -> StyleBoxFlat:
@@ -110,7 +117,7 @@ func _apply_rich_label_badge(label: RichTextLabel, style: StyleBoxFlat, bg_color
 func _clear_ui() -> void:
 	title.text = ""
 	desc.text = ""
-	effects.text = ""
+	dc.text = ""
 	image.texture = null
 
 func _input(event: InputEvent) -> void:

@@ -10,7 +10,6 @@ title = "Basket"
 suit = 2
 sort = 2
 type = 9
-description = "+5 Hand size"
 effects = "+5 Hand size"
 art = ExtResource("1_a62w2")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"

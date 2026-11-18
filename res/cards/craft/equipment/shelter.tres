@@ -10,8 +10,6 @@ title = "Shelter"
 suit = 2
 sort = 2
 type = 9
-description = "+1 Crafting
-+3 Environment"
 effects = "+1 Crafting
 +3 Environment"
 art = ExtResource("1_uf1fp")

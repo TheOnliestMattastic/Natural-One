@@ -10,10 +10,9 @@ title = "Campfire"
 suit = 2
 sort = 2
 type = 8
-description = "+2 Crafting
-+5 Environment
-Cost:
--1 Wood"
-effects = "DC 5"
+description = "-1 Wood"
+effects = "+2 Crafting
++5 Environment"
+difficulty_class = "DC 5"
 art = ExtResource("1_kb2wv")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"

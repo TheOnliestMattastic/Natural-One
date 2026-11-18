@@ -10,9 +10,11 @@ title = "Traps"
 suit = 2
 sort = 2
 type = 8
-description = "+2 Wild Hare & River Trout to Day deck
-Cost:
--1 Food, Wood, & Fiber"
-effects = "DC 11"
+description = "-1 Fiber
+-1 Food
+-1 Wood"
+effects = "Add to the Day deck:
++2 Wild Hare & River Trout"
+difficulty_class = "DC 11"
 art = ExtResource("1_r7j7u")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"

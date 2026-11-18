@@ -10,10 +10,11 @@ title = "Grizzly Bear"
 suit = 2
 sort = 1
 type = 6
-description = "Nat20: +3 Raw Meat
-17+: -2 Health +3 Raw Meat
-<17: -5 Health
+description = "Oh no, a bear!"
+effects = "Nat20: +3 Raw Meat
+d20>17: -2 Health +3 Raw Meat
+d20<17: -5 Health
 Nat1: Death"
-effects = "DC 17"
+difficulty_class = "DC 17"
 art = ExtResource("1_akkls")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"

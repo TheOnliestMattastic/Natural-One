@@ -10,8 +10,6 @@ title = "Knife"
 suit = 2
 sort = 2
 type = 9
-description = "+5 Crafting
-+1 Encounter"
 effects = "+5 Crafting
 +1 Encounter"
 art = ExtResource("1_v13vn")

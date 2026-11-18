@@ -10,10 +10,11 @@ title = "Wolf Pack"
 suit = 2
 sort = 1
 type = 6
-description = "Nat20: +3 Raw Meat
-16+: -1 Health +3 Raw Meat
-<16: -4 Health
+description = "Oh no, a pack of wolves!"
+effects = "Nat20: +2 Raw Meat
+d20>16: -1 Health +2 Raw Meat
+d20<16: -4 Health
 Nat1: Death"
-effects = "DC 16"
+difficulty_class = "DC 16"
 art = ExtResource("1_8ppkr")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"

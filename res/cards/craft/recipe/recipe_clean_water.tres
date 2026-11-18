@@ -10,9 +10,9 @@ title = "Clean Water"
 suit = 2
 sort = 2
 type = 8
-description = "Requires a Campfire:
-+1 Clean Water
+description = "Requires a Campfire
 -1 Water"
-effects = "DC 5"
+effects = "+2 Stamina"
+difficulty_class = "DC 5"
 art = ExtResource("1_meav5")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"

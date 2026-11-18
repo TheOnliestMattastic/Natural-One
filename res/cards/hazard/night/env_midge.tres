@@ -10,8 +10,9 @@ title = "Midge Swarm"
 suit = 1
 sort = 1
 type = 7
-description = "Thick clouds of biting insects circle the camp in the dark. 
--1 Health & Stamina"
-effects = "DC 13"
+description = "Thick clouds of biting insects circle the camp in the dark. "
+effects = "-1 Health
+-1 Stamina"
+difficulty_class = "DC 15"
 art = ExtResource("1_7tlje")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"

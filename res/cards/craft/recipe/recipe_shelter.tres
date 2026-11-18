@@ -10,11 +10,10 @@ title = "Shelter"
 suit = 2
 sort = 2
 type = 8
-description = "+1 Crafting
-+3 Environment
-Cost:
--2 Stone
+description = "-2 Stone
 -1 Fiber"
-effects = "DC 6"
+effects = "+1 Crafting
++3 Environment"
+difficulty_class = "DC 6"
 art = ExtResource("1_ncvv8")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"

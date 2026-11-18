@@ -40,7 +40,7 @@ corner_radius_bottom_right = 17
 corner_radius_bottom_left = 17
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_38dkq"]
-size = Vector2(412, 713)
+size = Vector2(388, 689)
 
 [node name="CardDeck" type="PanelContainer" unique_id=1644298931]
 custom_minimum_size = Vector2(412, 713)
@@ -55,12 +55,24 @@ card_data = ExtResource("3_xnwbo")
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1143576023]
 layout_mode = 2
 
-[node name="Type" type="Label" parent="VBoxContainer" unique_id=572454450]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=4051636]
 layout_mode = 2
-size_flags_horizontal = 0
+
+[node name="Type" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=572454450]
+layout_mode = 2
+size_flags_horizontal = 2
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_s8enn")
 text = "BUFF"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DC" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=793509155]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_s8enn")
+text = "DC 21"
 horizontal_alignment = 1
 vertical_alignment = 1
 
