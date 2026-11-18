@@ -10,8 +10,8 @@ title = "Axe"
 suit = 2
 sort = 2
 type = 9
-description = "+1 extra Wood whenever Wood gained
-+3 Encounter"
+description = "+1 extra Wood (whenever Wood gained)
++3 Encounter (breaks upon use)"
 effects = "+1 extra Wood
 +3 Encounter"
 art = ExtResource("1_fsuq6")

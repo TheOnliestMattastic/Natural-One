@@ -60,7 +60,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_s8enn")
-text = "TYPE"
+text = "BUFF"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -96,7 +96,7 @@ layout_mode = 2
 [node name="Title" type="Label" parent="VBoxContainer/DescBox/VBoxContainer" unique_id=1859254402]
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
-text = "Name"
+text = "Triforce"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -106,17 +106,18 @@ size_flags_vertical = 3
 mouse_filter = 1
 theme_override_font_sizes/normal_font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxEmpty_pl73o")
-text = "A short description"
+text = "An artifact imbued with the combined powers of Wisdom, Courage, and Power."
 
 [node name="Effects" type="Label" parent="VBoxContainer" unique_id=2080699199]
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_6u4wf")
-text = "+1 Effect"
+text = "+1 Bravery"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="DropPointDetector" type="Area2D" parent="." unique_id=1918830611]
+visible = false
 collision_layer = 0
 collision_mask = 0
 monitorable = false

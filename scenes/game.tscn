@@ -28,10 +28,10 @@
 [ext_resource type="Script" uid="uid://k5a4pggidva8" path="res://scripts/sys/input_controller.gd" id="21_suyxu"]
 [ext_resource type="Resource" uid="uid://dndhe2gb1opii" path="res://res/cards/hazard/day/warn_bear.tres" id="22_458eo"]
 [ext_resource type="Resource" uid="uid://d1kn1cbvonnfv" path="res://res/cards/hazard/night/enc_rats.tres" id="22_bnuda"]
-[ext_resource type="Script" uid="uid://b0uuep758nd8" path="res://scripts/menu_tab_container.gd" id="22_pl11u"]
+[ext_resource type="Script" uid="uid://b0uuep758nd8" path="res://scripts/utl/menu_tab_container.gd" id="22_pl11u"]
 [ext_resource type="Resource" uid="uid://d2cbp62w1f6m4" path="res://res/cards/hazard/night/enc_spider.tres" id="23_0rmfi"]
-[ext_resource type="Script" uid="uid://c7m40actab011" path="res://scripts/hand.gd" id="23_bt5mj"]
-[ext_resource type="Script" uid="uid://b3eh1ywktd5qb" path="res://scripts/equipment.gd" id="24_e1j6l"]
+[ext_resource type="Script" uid="uid://c7m40actab011" path="res://scripts/utl/hand.gd" id="23_bt5mj"]
+[ext_resource type="Script" uid="uid://b3eh1ywktd5qb" path="res://scripts/utl/equipment.gd" id="24_e1j6l"]
 [ext_resource type="Resource" uid="uid://u4lctj0jqrvd" path="res://res/cards/hazard/night/env_ants.tres" id="24_xbak0"]
 [ext_resource type="Resource" uid="uid://bc8nwdbbcnxp4" path="res://res/cards/hazard/night/env_fog.tres" id="25_3x28f"]
 [ext_resource type="Resource" uid="uid://djwn5dwc1d5ec" path="res://res/cards/hazard/night/env_midge.tres" id="26_l6q63"]
@@ -67,7 +67,7 @@
 [ext_resource type="Resource" uid="uid://dygrmmokxqctx" path="res://res/cards/resource/hand/stone.tres" id="56_uxocx"]
 [ext_resource type="Resource" uid="uid://td2hun3ftln1" path="res://res/cards/resource/hand/water.tres" id="57_7nv0b"]
 [ext_resource type="Resource" uid="uid://l4tq2lficpw5" path="res://res/cards/resource/hand/wood.tres" id="58_o8oq8"]
-[ext_resource type="Script" uid="uid://c72isboaf0yi1" path="res://scripts/center.gd" id="64_weeiq"]
+[ext_resource type="Script" uid="uid://c72isboaf0yi1" path="res://scripts/utl/play_area.gd" id="64_weeiq"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fl3o2"]
 
@@ -91,14 +91,6 @@ reserve_database = Array[ExtResource("2_37s47")]([ExtResource("29_uxocx"), ExtRe
 [node name="InputController" type="Node" parent="." unique_id=862894232]
 unique_name_in_owner = true
 script = ExtResource("21_suyxu")
-
-[node name="Background" type="ColorRect" parent="." unique_id=1578591557]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.09411765, 0.101960786, 0.105882354, 1)
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=68547935 groups=["ui_layer"]]
 unique_name_in_owner = true
@@ -299,6 +291,7 @@ layout_mode = 2
 text = "Quit"
 
 [node name="CardDropArea" type="Area2D" parent="." unique_id=558984230]
+visible = false
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CardDropArea" unique_id=2061524743]

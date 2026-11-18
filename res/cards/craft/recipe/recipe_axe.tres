@@ -10,8 +10,8 @@ title = "Axe"
 suit = 2
 sort = 2
 type = 8
-description = "+1 extra Wood whenever Wood gained
-+3 Encounter
+description = "+1 extra Wood (whenever Wood gained)
++3 Encounter (breaks upon use)
 Cost:
 -1 Wood, Stone, & Fiber"
 effects = "DC 12"
