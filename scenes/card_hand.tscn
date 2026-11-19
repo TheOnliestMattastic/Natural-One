@@ -26,36 +26,28 @@ corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rp7l2"]
-content_margin_left = 8.0
-content_margin_right = 8.0
+content_margin_left = 12.0
+content_margin_right = 12.0
 bg_color = Color(0.5372549, 0.3647059, 0.24705882, 1)
-corner_radius_top_left = 12
-corner_radius_top_right = 12
-corner_radius_bottom_right = 12
-corner_radius_bottom_left = 12
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sn7xr"]
 bg_color = Color(0.5372549, 0.3647059, 0.24705882, 1)
-corner_radius_top_left = 48
-corner_radius_top_right = 48
-corner_radius_bottom_right = 48
-corner_radius_bottom_left = 48
+corner_radius_top_left = 80
+corner_radius_top_right = 80
+corner_radius_bottom_right = 80
+corner_radius_bottom_left = 80
 corner_detail = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6rdkt"]
-content_margin_left = 8.0
-content_margin_right = 8.0
-bg_color = Color(0.5372549, 0.3647059, 0.24705882, 1)
-corner_radius_top_left = 12
-corner_radius_top_right = 12
-corner_radius_bottom_right = 12
-corner_radius_bottom_left = 12
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f73s1"]
 size = Vector2(95, 170)
 
 [node name="CardHand" type="PanelContainer" unique_id=1644298931]
-custom_minimum_size = Vector2(103, 178)
+custom_minimum_size = Vector2(165, 285)
+custom_maximum_size = Vector2(165, 285)
 offset_right = 103.0
 offset_bottom = 178.0
 size_flags_horizontal = 4
@@ -68,7 +60,6 @@ card_data = ExtResource("2_wnc42")
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-theme_override_font_sizes/font_size = 12
 theme_override_styles/normal = SubResource("StyleBoxFlat_rp7l2")
 text = "Triforce"
 horizontal_alignment = 1
@@ -85,21 +76,18 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_sn7xr")
 
 [node name="Image" type="TextureRect" parent="Art" unique_id=405269288]
 self_modulate = Color(0.84705883, 0.80784315, 0.7372549, 1)
-custom_minimum_size = Vector2(64, 64)
-custom_maximum_size = Vector2(64, 64)
+custom_minimum_size = Vector2(108, 108)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("5_rp7l2")
 expand_mode = 1
-stretch_mode = 4
 
 [node name="Effects" type="Label" parent="." unique_id=1991204196]
 layout_mode = 2
 size_flags_vertical = 8
-theme_override_constants/line_spacing = -4
-theme_override_font_sizes/font_size = 10
-theme_override_styles/normal = SubResource("StyleBoxFlat_6rdkt")
+theme_override_constants/line_spacing = -6
+theme_override_styles/normal = SubResource("StyleBoxFlat_rp7l2")
 text = "+1 Bravery
 +1 Power"
 horizontal_alignment = 1
