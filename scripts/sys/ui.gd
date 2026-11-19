@@ -6,17 +6,17 @@ extends CanvasLayer
 
 # nodes
 @onready var game_master: GameMaster = %GameMaster
-@onready var health: RichTextLabel = $VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer2/Health
-@onready var hunger: RichTextLabel = $VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer2/Hunger
-@onready var thirst: RichTextLabel = $VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer2/Thirst
-@onready var day: RichTextLabel = $VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer/Day
-@onready var actions: RichTextLabel = $VBoxContainer/Header/HBoxContainer/VBoxContainer/HBoxContainer/Actions
-@onready var campfire: TextureRect = $VBoxContainer/Header/HBoxContainer/AspectRatioContainer/Campfire
-@onready var play_area: PlayArea = $VBoxContainer/PlayArea
-@onready var resources: HBoxContainer = $VBoxContainer/MenuTabContainer/Hand/Resources
-@onready var items: HBoxContainer = $VBoxContainer/MenuTabContainer/Equipment/Items
-@onready var hand: Hand = $VBoxContainer/MenuTabContainer/Hand
-@onready var equipment: Equipment = $VBoxContainer/MenuTabContainer/Equipment
+@onready var play_area: PlayArea = %PlayArea
+@onready var health: RichTextLabel = $Header/HBoxContainer/VBoxContainer/HBoxContainer2/Health
+@onready var hunger: RichTextLabel = $Header/HBoxContainer/VBoxContainer/HBoxContainer2/Hunger
+@onready var thirst: RichTextLabel = $Header/HBoxContainer/VBoxContainer/HBoxContainer2/Thirst
+@onready var day: RichTextLabel = $Header/HBoxContainer/VBoxContainer/HBoxContainer/Day
+@onready var actions: RichTextLabel = $Header/HBoxContainer/VBoxContainer/HBoxContainer/Actions
+@onready var campfire: TextureRect = $Header/HBoxContainer/AspectRatioContainer/Campfire
+@onready var hand: Hand = $MenuTabContainer/Hand
+@onready var resources: HBoxContainer = $MenuTabContainer/Hand/Resources
+@onready var equipment: Equipment = $MenuTabContainer/Equipment
+@onready var items: HBoxContainer = $MenuTabContainer/Equipment/Items
 
 # crafting menu
 const CRAFTING_MENU := preload("uid://qgf6n34ehc5f")

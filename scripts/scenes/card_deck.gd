@@ -2,20 +2,14 @@
 extends PanelContainer
 class_name CardDeck
 
-const FALLBACK_BG := Color("D8CEBC")
-const FALLBACK_PRIMARY := Color("1E2D2F")
-const FALLBACK_ACCENT := Color("895D3F")
-
 @export var card_data: CardData
 
 # Nodes
-@onready var type: Label = $VBoxContainer/HBoxContainer/Type
+@onready var title: Label = $VBoxContainer/HBoxContainer/Title
 @onready var dc: Label = $VBoxContainer/HBoxContainer/DC
 @onready var frame: PanelContainer = $VBoxContainer/Art/Frame
 @onready var image: TextureRect = $VBoxContainer/Art/Image
-@onready var desc_box: PanelContainer = $VBoxContainer/DescBox
-@onready var title: Label = $VBoxContainer/DescBox/VBoxContainer/Title
-@onready var desc: RichTextLabel = $VBoxContainer/DescBox/VBoxContainer/Desc
+@onready var desc: RichTextLabel = $VBoxContainer/Desc
 @onready var effects: Label = $VBoxContainer/Effects
 
 # state machine
@@ -25,12 +19,15 @@ const FALLBACK_ACCENT := Color("895D3F")
 signal reparent_requested(card: Control)
 
 # Cached style overrides to avoid repeated heap allocations
+const FALLBACK_BG := Color("D8CEBC")
+const FALLBACK_PRIMARY := Color("1E2D2F")
+const FALLBACK_ACCENT := Color("895D3F")
 var _root_style: StyleBoxFlat
 var _image_frame_style: StyleBoxFlat
-var _desc_box_style: StyleBoxFlat
-var _type_label_style: StyleBoxFlat
 var _effects_label_style: StyleBoxFlat
+var _title_label_style: StyleBoxFlat
 var _dc_label_style: StyleBoxFlat
+var _desc_label_style: StyleBoxFlat
 
 func _ready() -> void:
 	_cache_styles()
@@ -54,11 +51,10 @@ func refresh_ui() -> void:
 	# Base card background
 	_apply_style_bg(self, _root_style, bg_color)
 	_apply_style_border(_root_style, primary_color)
-
-	# Type badge
-	var raw_sort_key: Variant = CardData.Sort.find_key(card_data.sort)
-	type.text = str(raw_sort_key) if raw_sort_key != null else "UNKNOWN"
-	_apply_label_badge(type, _type_label_style, primary_color)
+	
+	# Title badge
+	title.text = card_data.title
+	_apply_label_badge(title, _title_label_style, primary_color)
 	
 	# DC badge
 	dc.text = card_data.difficulty_class
@@ -70,26 +66,26 @@ func refresh_ui() -> void:
 	# Art frame & texture
 	_apply_style_bg(frame, _image_frame_style, accent_color)
 	image.texture = card_data.art
+	image.self_modulate = bg_color
+
+	# Description
+	desc.text = card_data.description
+	_apply_rich_label_badge(desc, _desc_label_style, accent_color)
 
 	# Effects badge
 	effects.text = card_data.effects
-	_apply_label_badge(effects, _effects_label_style, primary_color)
-
-	# Title & description ink
-	var desc_ink: Color = CardData.get_ink_for(accent_color)
-	_apply_style_bg(desc_box, _desc_box_style, accent_color)
-	title.text = card_data.title
-	title.add_theme_color_override("font_color", desc_ink)
-	desc.text = card_data.description
-	desc.add_theme_color_override("default_color", desc_ink)
+	if effects.text == "": effects.visible = false
+	else: 
+		effects.visible = true
+		_apply_label_badge(effects, _effects_label_style, primary_color)
 
 func _cache_styles() -> void:
 	_root_style = _prepare_stylebox(self, "panel", FALLBACK_BG)
-	_image_frame_style = _prepare_stylebox(frame, "panel", FALLBACK_ACCENT)
-	_desc_box_style = _prepare_stylebox(desc_box, "panel", FALLBACK_PRIMARY)
-	_type_label_style = _prepare_stylebox(type, "normal", FALLBACK_ACCENT)
-	_effects_label_style = _prepare_stylebox(effects, "normal", FALLBACK_ACCENT)
+	_title_label_style = _prepare_stylebox(title, "normal", FALLBACK_PRIMARY)
 	_dc_label_style = _prepare_stylebox(dc, "normal", FALLBACK_ACCENT)
+	_image_frame_style = _prepare_stylebox(frame, "panel", FALLBACK_ACCENT)
+	_desc_label_style = _prepare_stylebox(desc, "normal", FALLBACK_ACCENT)
+	_effects_label_style = _prepare_stylebox(effects, "normal", FALLBACK_PRIMARY)
 
 func _prepare_stylebox(control: Control, style_name: StringName, fallback: Color) -> StyleBoxFlat:
 	if control == null: return null
@@ -118,9 +114,15 @@ func _apply_label_badge(label: Label, style: StyleBoxFlat, bg_color: Color) -> v
 	var box_ink: Color = CardData.INK_LIGHT if bg_color.get_luminance() < 0.35 else CardData.INK_DARK
 	label.add_theme_color_override("font_color", box_ink)
 
+func _apply_rich_label_badge(label: RichTextLabel, style: StyleBoxFlat, bg_color: Color) -> void:
+	if label == null: return
+	_apply_style_bg(label, style, bg_color)
+	var box_ink: Color = CardData.INK_LIGHT if bg_color.get_luminance() < 0.35 else CardData.INK_DARK
+	label.add_theme_color_override("default_color", box_ink)
+
 func _clear_ui() -> void:
-	type.text = ""
 	title.text = ""
+	dc.text = ""
 	desc.text = ""
 	effects.text = ""
 	image.texture = null

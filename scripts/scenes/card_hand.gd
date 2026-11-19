@@ -56,6 +56,7 @@ func refresh_ui() -> void:
 	# Art frame & texture
 	_apply_style_bg(frame, _image_frame_style, accent_color)
 	image.texture = card_data.art
+	image.self_modulate = bg_color
 
 	# Effects badge
 	effects.text = card_data.effects
@@ -66,8 +67,8 @@ func refresh_ui() -> void:
 
 func _cache_styles() -> void:
 	_root_style = _prepare_stylebox(self, "panel", FALLBACK_BG)
-	_image_frame_style = _prepare_stylebox(frame, "panel", FALLBACK_ACCENT)
 	_title_label_style = _prepare_stylebox(title, "normal", FALLBACK_ACCENT)
+	_image_frame_style = _prepare_stylebox(frame, "panel", FALLBACK_ACCENT)
 	_effects_label_style = _prepare_stylebox(effects, "normal", FALLBACK_ACCENT)
 
 func _prepare_stylebox(control: Control, style_name: StringName, fallback: Color) -> StyleBoxFlat:
