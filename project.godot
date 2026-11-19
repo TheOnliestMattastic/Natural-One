@@ -47,6 +47,8 @@ right_mouse={
 
 2d_physics/layer_1="card_play_area"
 2d_physics/layer_2="card_consume_area"
+2d_physics/layer_3="card_hand_area"
+2d_physics/layer_4="discard_area"
 
 [physics]
 

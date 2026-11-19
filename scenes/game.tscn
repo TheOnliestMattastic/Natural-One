@@ -67,8 +67,6 @@
 [ext_resource type="Resource" uid="uid://td2hun3ftln1" path="res://res/cards/resource/hand/water.tres" id="57_7nv0b"]
 [ext_resource type="Resource" uid="uid://l4tq2lficpw5" path="res://res/cards/resource/hand/wood.tres" id="58_o8oq8"]
 [ext_resource type="Script" uid="uid://c72isboaf0yi1" path="res://scripts/utl/play_area.gd" id="64_weeiq"]
-[ext_resource type="Script" uid="uid://bfrod3mmccx5a" path="res://scripts/utl/card_play_area.gd" id="68_weeiq"]
-[ext_resource type="Script" uid="uid://grra37d0af88" path="res://scripts/utl/card_consume_area.gd" id="69_uxocx"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fl3o2"]
 
@@ -122,10 +120,16 @@ HScrollBar/styles/scroll = SubResource("StyleBoxEmpty_sxt1d")
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hwfa1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f73s1"]
-size = Vector2(648, 536)
+size = Vector2(648, 366)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pl73o"]
-size = Vector2(648, 1)
+size = Vector2(648, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hwfa1"]
+size = Vector2(648, 192)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gi7a4"]
+size = Vector2(648, 68)
 
 [node name="Game" type="Node" unique_id=568490508]
 script = ExtResource("1_iywne")
@@ -157,6 +161,7 @@ campfire_icon = ExtResource("16_1kice")
 campfire_lit_icon = ExtResource("17_1kice")
 
 [node name="Header" type="PanelContainer" parent="UI" unique_id=1018927282]
+z_index = 1
 custom_minimum_size = Vector2(0, 68)
 custom_maximum_size = Vector2(-1, 68)
 anchors_preset = 10
@@ -354,17 +359,31 @@ script = ExtResource("21_suyxu")
 
 [node name="CardPlayArea" type="Area2D" parent="InputController" unique_id=558984230]
 collision_mask = 0
-script = ExtResource("68_weeiq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InputController/CardPlayArea" unique_id=2061524743]
-position = Vector2(324, 532)
+position = Vector2(324, 434)
 shape = SubResource("RectangleShape2D_f73s1")
 
 [node name="CardConsumeArea" type="Area2D" parent="InputController" unique_id=1039186972]
 collision_layer = 2
 collision_mask = 0
-script = ExtResource("69_uxocx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InputController/CardConsumeArea" unique_id=394672118]
-position = Vector2(324, 1151.5)
+position = Vector2(324, 1151)
 shape = SubResource("RectangleShape2D_pl73o")
+
+[node name="CardHandArea" type="Area2D" parent="InputController" unique_id=698892185]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InputController/CardHandArea" unique_id=1282535125]
+position = Vector2(324, 927)
+shape = SubResource("RectangleShape2D_hwfa1")
+
+[node name="DiscardArea" type="Area2D" parent="InputController" unique_id=59685768]
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InputController/DiscardArea" unique_id=1972192987]
+position = Vector2(324, 34)
+shape = SubResource("RectangleShape2D_gi7a4")
