@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://dsm0gysm47txb" path="res://scenes/button.tscn" id="2_yqjtg"]
 [ext_resource type="Resource" uid="uid://cygpsacm6ph0n" path="res://res/cards/resource/deck/water_1.tres" id="3_ir15t"]
 [ext_resource type="Resource" uid="uid://bc67mcp8korej" path="res://res/cards/hazard/day/enc_boar.tres" id="3_kvuet"]
-[ext_resource type="StyleBox" uid="uid://dg52ryekxhwl5" path="res://res/styles/style_panel_border.tres" id="3_p57ef"]
 [ext_resource type="Resource" uid="uid://c1xetk86koaek" path="res://res/cards/resource/deck/water_3.tres" id="4_ca42v"]
 [ext_resource type="Resource" uid="uid://degnogti5ejxl" path="res://res/cards/hazard/day/enc_hungry_wolf.tres" id="4_trtic"]
 [ext_resource type="Resource" uid="uid://o6wjucj4bpcq" path="res://res/cards/resource/deck/fiber_1.tres" id="5_gxtfn"]
@@ -71,6 +70,14 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fl3o2"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mmvbu"]
+bg_color = Color(0.13725491, 0.15294118, 0.16078432, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.13725491, 0.15294118, 0.16078432, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_weeiq"]
 content_margin_left = 8.0
 content_margin_top = 8.0
@@ -121,7 +128,7 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 65.0
 grow_horizontal = 2
-theme_override_styles/panel = ExtResource("3_p57ef")
+theme_override_styles/panel = SubResource("StyleBoxFlat_mmvbu")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="UI/Header" unique_id=204845859]
 layout_mode = 2
