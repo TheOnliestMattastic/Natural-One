@@ -71,12 +71,11 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fl3o2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mmvbu"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
 bg_color = Color(0.13725491, 0.15294118, 0.16078432, 1)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
-border_color = Color(0.13725491, 0.15294118, 0.16078432, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_weeiq"]
 content_margin_left = 8.0
