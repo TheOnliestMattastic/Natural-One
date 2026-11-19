@@ -1,7 +1,7 @@
 extends PanelContainer
 class_name Hand
 
-@onready var resources: HBoxContainer = $Resources
+@onready var resources: HBoxContainer = $ScrollContainer/Resources
 
 func connect_hand() -> void:
 	for card in resources.get_children():

@@ -24,9 +24,7 @@ corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_row00"]
-content_margin_left = 0.0
 content_margin_top = 10.0
-content_margin_right = 0.0
 content_margin_bottom = 10.0
 
 [sub_resource type="Theme" id="Theme_udled"]

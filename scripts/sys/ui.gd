@@ -14,7 +14,7 @@ extends CanvasLayer
 @onready var actions: RichTextLabel = $Header/HBoxContainer/VBoxContainer/HBoxContainer/Actions
 @onready var campfire: TextureRect = $Header/HBoxContainer/AspectRatioContainer/Campfire
 @onready var hand: Hand = $MenuTabContainer/Hand
-@onready var resources: HBoxContainer = $MenuTabContainer/Hand/Resources
+@onready var resources: HBoxContainer = $MenuTabContainer/Hand/ScrollContainer/Resources
 @onready var equipment: Equipment = $MenuTabContainer/Equipment
 @onready var items: HBoxContainer = $MenuTabContainer/Equipment/Items
 
