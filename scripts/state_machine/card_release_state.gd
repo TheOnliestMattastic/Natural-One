@@ -3,14 +3,12 @@ extends CardState
 var played: bool
 
 func enter() -> void:
-	print("CardState: RELEASED")
 	played = false
 	if card.targets.is_empty(): return
 	played = true
 	
 	# TODO: refactor to handle resolving card
 	# consider adding signal to emit target for other scripts to connect and handle
-	print("Card played!", card.targets)
 	var target = card.targets[0]
 	match target.name:
 		"CardConsumeArea": print("Consuming card: ", card.title.text)

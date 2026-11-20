@@ -20,12 +20,13 @@ var day_win: int = 7
 var campfire_lit: bool = false
 
 func _ready() -> void:
+	EventBus.gain_menu_requested.connect(_on_gain_menu_requested)
+	
 	# prepare decks
 	deck_day = day_database.duplicate()
 	deck_day.shuffle()
 	deck_night = night_database.duplicate()
 	deck_night.shuffle()
-	
 	for card in reserve_database:
 		if card and not card.id.is_empty():
 			reserve_deck[card.id] = card
@@ -64,3 +65,6 @@ func new_day() -> void:
 
 func toggle_campfire() -> void:
 	campfire_lit = not campfire_lit
+
+func _on_gain_menu_requested(_card, _gained) -> void: 
+	print("_on_gain_menu_requested: ", _card.card_data.title, ". Gaining: ", _gained)
