@@ -7,7 +7,7 @@
 script = ExtResource("2_ajm5e")
 id = "water_3"
 title = "Rainwater Puddle"
-description = "Clear water gathered from a running stream"
-effects = "+1 Clean Water"
+description = "Clear water gathered from a running stream."
+effects = "+3 Water"
 art = ExtResource("1_bq6bf")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"

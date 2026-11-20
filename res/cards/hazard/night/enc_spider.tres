@@ -10,8 +10,8 @@ title = "Giant Spider"
 suit = 1
 sort = 1
 type = 6
-effects = "-1 Health
--1 Stamina"
+effects = "-2 Stamina
+-1 Health"
 difficulty_class = "DC 13"
 art = ExtResource("1_e5cm2")
 metadata/_custom_type_script = "uid://bbvbfp88y36by"
