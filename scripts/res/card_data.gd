@@ -40,6 +40,7 @@ const INK_DARK := Color("1E1B18")
 @export var suit: Suit 
 @export var sort: Sort
 @export var type: Type
+@export var action: CardAction
 @export_multiline var description: String = ""
 @export_multiline var effects: String = ""
 @export var difficulty_class: String = ""

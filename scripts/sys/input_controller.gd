@@ -51,7 +51,9 @@ func _handle_draw(deck, spend_action: bool) -> void:
 		ui.refresh_actions()
 
 	# Resolve card-type / card-specific behavior
-	if card is CardDeck:
+	if card is CardDeck and card.card_data.action != null:
+		card.card_data.action.execute(card, self)
+	elif card is CardDeck:
 		_resolve_by_type(card)
 
 func _resolve_by_type(card: CardDeck) -> void:

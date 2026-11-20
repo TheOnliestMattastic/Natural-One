@@ -1,13 +1,22 @@
 [gd_resource type="Resource" script_class="CardData" format=3 uid="uid://o6wjucj4bpcq"]
 
+[ext_resource type="Script" uid="uid://db64pdif6km8r" path="res://scripts/card_actions/card_gain_action.gd" id="1_4yno8"]
 [ext_resource type="Texture2D" uid="uid://3o54kbuaasum" path="res://assets/icon-packs/lorc/curling-vines.svg" id="1_ikh2h"]
 [ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_4yno8"]
+
+[sub_resource type="Resource" id="Resource_mmvbu"]
+script = ExtResource("1_4yno8")
+gained = {
+"fiber": 1
+}
+metadata/_custom_type_script = "uid://db64pdif6km8r"
 
 [resource]
 script = ExtResource("2_4yno8")
 id = "fiber_1"
 title = "Plant Fibers"
 type = 3
+action = SubResource("Resource_mmvbu")
 description = "Pliable strands stripped from nearby plants, ideal for basic binding and lashing."
 effects = "+1 Fiber"
 art = ExtResource("1_ikh2h")
