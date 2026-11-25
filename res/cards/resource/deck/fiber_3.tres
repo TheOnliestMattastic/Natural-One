@@ -1,13 +1,22 @@
 [gd_resource type="Resource" script_class="CardData" format=3 uid="uid://5vbwtsu5f1qo"]
 
+[ext_resource type="Script" uid="uid://db64pdif6km8r" path="res://scripts/card_actions/card_gain_action.gd" id="1_j8mme"]
 [ext_resource type="Texture2D" uid="uid://b87idaqplj0uf" path="res://assets/icon-packs/caro-asercion/willow-tree.svg" id="1_rqwny"]
 [ext_resource type="Script" uid="uid://bbvbfp88y36by" path="res://scripts/res/card_data.gd" id="2_j8mme"]
+
+[sub_resource type="Resource" id="Resource_js426"]
+script = ExtResource("1_j8mme")
+gained = {
+"fiber": 3
+}
+metadata/_custom_type_script = "uid://db64pdif6km8r"
 
 [resource]
 script = ExtResource("2_j8mme")
 id = "fiber_3"
 title = "Bark Strips"
 type = 3
+action = SubResource("Resource_js426")
 description = "Soft, fibrous layers harvested from the inner bark of willow trees."
 effects = "+3 Fiber"
 art = ExtResource("1_rqwny")

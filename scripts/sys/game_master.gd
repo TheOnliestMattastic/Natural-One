@@ -66,5 +66,10 @@ func new_day() -> void:
 func toggle_campfire() -> void:
 	campfire_lit = not campfire_lit
 
-func _on_gain_menu_requested(_card, _gained) -> void: 
-	print("_on_gain_menu_requested: ", _card.card_data.title, ". Gaining: ", _gained)
+func _on_gain_menu_requested(_card: CardDeck, _gained: Dictionary) -> void: 
+	var card = _card
+	var gained = _gained.duplicate()
+	var amount: int
+	for id: String in gained.keys():
+		amount = int(gained[id])
+		print("_on_gain_menu_requested: ", card.card_data.title, ". Gaining ", id, ": ", amount)

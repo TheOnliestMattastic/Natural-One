@@ -22,8 +22,8 @@
 [ext_resource type="Resource" uid="uid://br2h8xpb5ulyy" path="res://res/cards/resource/deck/stone_1.tres" id="13_05nbr"]
 [ext_resource type="Resource" uid="uid://bdy0oqj6ydt08" path="res://res/cards/resource/deck/stone_2.tres" id="14_0sl42"]
 [ext_resource type="Resource" uid="uid://o3yctsvowg55" path="res://res/cards/resource/deck/stone_3.tres" id="15_oaba0"]
-[ext_resource type="Texture2D" uid="uid://b7fcgd502agg1" path="res://assets/campfire-unlit.png" id="16_1kice"]
-[ext_resource type="Texture2D" uid="uid://cd7q6vk6jy8ph" path="res://assets/campfire-lit.png" id="17_1kice"]
+[ext_resource type="Texture2D" uid="uid://b7fcgd502agg1" path="res://assets/custom_icons/campfire-unlit.png" id="16_1kice"]
+[ext_resource type="Texture2D" uid="uid://cd7q6vk6jy8ph" path="res://assets/custom_icons/campfire-lit.png" id="17_1kice"]
 [ext_resource type="Script" uid="uid://k5a4pggidva8" path="res://scripts/sys/input_controller.gd" id="21_suyxu"]
 [ext_resource type="Resource" uid="uid://dndhe2gb1opii" path="res://res/cards/hazard/day/warn_bear.tres" id="22_458eo"]
 [ext_resource type="Resource" uid="uid://d1kn1cbvonnfv" path="res://res/cards/hazard/night/enc_rats.tres" id="22_bnuda"]
@@ -67,6 +67,7 @@
 [ext_resource type="Resource" uid="uid://td2hun3ftln1" path="res://res/cards/resource/hand/water.tres" id="57_7nv0b"]
 [ext_resource type="Resource" uid="uid://l4tq2lficpw5" path="res://res/cards/resource/hand/wood.tres" id="58_o8oq8"]
 [ext_resource type="Script" uid="uid://c72isboaf0yi1" path="res://scripts/utl/play_area.gd" id="64_weeiq"]
+[ext_resource type="PackedScene" uid="uid://b06q0f2dfc0s0" path="res://scenes/d20_die.tscn" id="67_weeiq"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fl3o2"]
 
@@ -336,21 +337,28 @@ layout_mode = 2
 text = "Quit"
 
 [node name="Button" parent="UI" unique_id=701325892 instance=ExtResource("2_yqjtg")]
-offset_left = 603.0
-offset_top = 800.0
-offset_right = 648.0
-offset_bottom = 831.0
+offset_left = 1.0
+offset_top = 799.0
+offset_right = 46.0
+offset_bottom = 830.0
 size_flags_horizontal = 10
 size_flags_vertical = 10
 text = "Take"
 
 [node name="Button2" parent="UI" unique_id=1543390844 instance=ExtResource("2_yqjtg")]
-offset_top = 800.0
-offset_right = 67.0
-offset_bottom = 831.0
+offset_left = 47.0
+offset_top = 799.0
+offset_right = 114.0
+offset_bottom = 830.0
 size_flags_horizontal = 2
 size_flags_vertical = 10
 text = "Recipes"
+
+[node name="D20Die" parent="UI" unique_id=1835711689 instance=ExtResource("67_weeiq")]
+offset_left = 580.0
+offset_top = 763.0
+offset_right = 644.0
+offset_bottom = 827.0
 
 [node name="InputController" type="Node" parent="." unique_id=862894232]
 unique_name_in_owner = true
