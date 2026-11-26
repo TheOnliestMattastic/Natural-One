@@ -36,4 +36,4 @@ face_textures = Array[Texture2D]([ExtResource("1_ms6ug"), ExtResource("3_pyrgb")
 [node name="RollTimer" type="Timer" parent="." unique_id=321537915]
 one_shot = true
 
-[node name="StepTimer" type="Timer" parent="." unique_id=2044502969]
+[node name="StepTimer" type="Timer" parent="." unique_id=768558241]

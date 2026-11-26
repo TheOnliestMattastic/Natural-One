@@ -3,7 +3,7 @@ class_name D20Die
 
 @export var face_textures: Array[Texture2D] = []
 @export var roll_duration: float = 0.8
-@export var flip_interval: float = 0.06
+@export var flip_interval: float = 0.032
 @export var disable_while_rolling: bool = true
 
 @onready var roll_timer: Timer = $RollTimer
@@ -20,7 +20,6 @@ func _ready() -> void:
 	roll_timer.timeout.connect(_on_roll_timer_timeout)
 	step_timer.timeout.connect(_on_step_timer_timeout)
 	resized.connect(_update_pivot)
-	
 	_update_pivot()
 	set_face(20)
 
@@ -35,7 +34,7 @@ func roll() -> void:
 	if is_rolling or face_textures.is_empty(): return
 	is_rolling = true
 	
-	if disable_while_rolling: disabled = true
+	if disable_while_rolling:disabled = true
 	EventBus.roll_started.emit()
 	step_timer.wait_time = flip_interval
 	roll_timer.wait_time = roll_duration
@@ -48,29 +47,29 @@ func _on_pressed() -> void:
 
 func _on_step_timer_timeout() -> void:
 	_show_random_face()
-	scale = Vector2(1.2, 1.2)
-	rotation_degrees = randf_range(-8.0, 8.0)
-	step_timer.wait_time = minf(step_timer.wait_time * 1.12, 0.22)
+	scale = Vector2(1.1, 1.1)
+	rotation_degrees = randf_range(-180.0, 180.0)
 
 func _on_roll_timer_timeout() -> void:
 	step_timer.stop()
 	var final_result := randi_range(1, 20)
 	set_face(final_result)
-	
+
 	# anim
 	var tween := create_tween().set_parallel(true)
-	tween.tween_property(self, "scale", Vector2.ONE, 0.12)
-	tween.tween_property(self, "rotation_degrees", 0.0, 0.12)
-	
+	tween.tween_property(self, "scale", Vector2.ONE, 0.16)
+	tween.tween_property(self, "rotation_degrees", 0.0, 0.16)
+
 	is_rolling = false
-	if disable_while_rolling: disabled = false
+	if disable_while_rolling:disabled = false
 	EventBus.roll_finished.emit(final_result)
 
 func _show_random_face() -> void:
 	var next_idx := randi_range(0, face_textures.size() - 1)
+	# Avoid repeating the exact same texture twice in a row when possible
 	if face_textures.size() > 1 and next_idx == _last_shown_index:
 		next_idx = (next_idx + 1) % face_textures.size()
-	
+
 	_last_shown_index = next_idx
 	texture_normal = face_textures[next_idx]
 
